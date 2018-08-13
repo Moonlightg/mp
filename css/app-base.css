@@ -126,6 +126,8 @@ img {
   text-align: right !important;
 }
 .mp-main {
+  display: -webkit-flex;
+  display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 100%;
@@ -928,6 +930,8 @@ footer {
   overflow: hidden;
 }
 .user-head {
+  display: -webkit-flex;
+  display: flex;
   -webkit-align-items: center;
   align-items: center;
   padding: 1rem 0 1rem 1rem;

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>V1.0</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <!-- 公共头部 -->
+      <!-- <header>
+        <p>header</p>
+      </header> -->
+      <!-- 个人中心 -->
+      <div class="user-head">
+        <div class="user-head-l">
+          <div class="user-box">
+            <a href="javascript:;">
+              <div class="user user_xl">
+                <img src="images/user.jpg" alt="Moonlight">
+              </div>
+              <div class="user-text">
+                <p class="user-name">李大伟</p>
+                <p>ID:25645</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="user-head-r waves-light">
+          <a href="vip-open.html" class="mp-btn mp-btn-info vip0">开通会员</a>
+        </div>
+      </div>
+      <div class="mp-bar"></div>
+      <!-- 内容区域 -->
+      <section class="mp-container">
+        <div class="mp-menu mp-menu_two">
+          <a href="myArticle.html" class="waves">
+            <i class="icon-article mp-color9"></i>
+            <span>我的文章</span>
+          </a>
+          <a href="javascript:;" class="waves">
+            <i class="icon-sign-in mp-color10"></i>
+            <span>打卡签到</span>
+          </a>
+        </div>
+        <!-- banner -->
+        <div class="mp-banner">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide waves-light"><img src="images/banner1.jpg" alt="banner1" /></div>
+                <div class="swiper-slide waves-light"><img src="images/banner2.jpg" alt="banner2" /></div>
+                <div class="swiper-slide waves-light"><img src="images/banner3.jpg" alt="banner3" /></div>
+            </div>
+            <!-- 分页器 -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="mp-bar"></div>
+        <div class="mp-menu">
+          <ul>
+            <li class="waves">
+              <a href="pageTiny.html">
+                <span><i class="icon-wz-set mp-color1"></i></span>
+                <span>微页设置</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="javascript:;">
+                <span><i class="icon-my-circle mp-color2"></i></span>
+                <span>我的圈子</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="javascript:;">
+                <span><i class="icon-heart mp-color3"></i></span>
+                <span>素材管理</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="myExtend.html">
+                <span><i class="icon-purse mp-color4"></i></span>
+                <span>我的推广</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="visiting.html">
+                <span><i class="icon-card mp-color5"></i></span>
+                <span>编辑名片</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="h5.html">
+                <span><i class="icon-video mp-color6"></i></span>
+                <span>微场景</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="security.html">
+                <span><i class="icon-security mp-color7"></i></span>
+                <span>安全中心</span>
+              </a>
+            </li>
+            <li class="waves">
+              <a href="help.html">
+                <span><i class="icon-help mp-color8"></i></span>
+                <span>帮助教程</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function(){
+        // banner轮播
+        var mySwiper = new Swiper ('.swiper-container', {
+          // 分页器
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          autoplay: {
+            delay: 2000,//1秒切换一次
+          }
+        });  
+
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves', ['waves-button', 'waves-float']);
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

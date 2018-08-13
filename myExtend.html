@@ -262,26 +262,8 @@
     <script>
       $(function () {
         /*swiper选项卡切换*/
-        var tabSwiper;
-        tabSwiper = new Swiper('.swiper-container', {
-          speed : 500,
-          onSlideChangeStart : function() {
-            $(".mp-tab .active").removeClass('active');
-            $(".mp-tab span").eq(tabSwiper.activeIndex).addClass('active');
-          }
-        });
-      
-        $(".mp-tab span").on('touchstart mousedown', function(e) {
-          e.preventDefault()
-          $(".mp-tab .active").removeClass('active');
-          $(this).addClass('active');
-          tabSwiper.slideTo($(this).index());
-      
-        });
-      
-        $(".mp-tab span").click(function(e) {
-          e.preventDefault();
-        });
+        $('.mp-tab span').eq(0).addClass('active');
+        tabs('.mp-tab span','.swiper-container','active');
 
         // 波浪涟漪效果
         Waves.init();

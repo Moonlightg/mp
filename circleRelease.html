@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>安全中心</title>
+    <title>发布圈子文章</title>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
     <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="lib/waves/css/waves.min.css">
     <link rel="stylesheet" href="css/app-base.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,54 +20,35 @@
   </head>
   <body>
     <div id="app" class="mp-main">
-      <section class="mp-container flex-box"> 
-        <form class="register-form security">
-          <div class="res-item">
-            <label>绑定微信</label>
-            <input type="text" placeholder="" class="input-item">
-          </div>
-          <div class="res-item">
-            <label>绑定手机号</label>
-            <input type="tel" placeholder="" class="input-item">
-          </div>
-          <div class="res-item">
-            <label>手机号码</label>
-            <input type="tel" placeholder="输入11位数手机号码" class="input-item">
-          </div>
-          <div class="res-item v-code">
-            <label>验证码</label>
-            <input type="text" placeholder="手机短信验证码" class="input-item mima">
-            <div class="v-code-box">
-              <span>获取验证码</span>
+      <header>
+        <a href="circleAdmin.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">发布文章</p>
+      </header>
+      <section class="mp-container flex-box">
+        <div class="auto ">
+          <p class="text-center "><< 发布文章前先选择以下分类标签 >></p>
+          <!-- 分类标签 可左右滑动-->
+          <div class="swiper-container">
+            <div class="swiper-wrapper industry-list">
+              <div class="swiper-slide"><span>资讯</span></div>
+              <div class="swiper-slide"><span>行业</span></div>
+              <div class="swiper-slide"><span>正能量</span></div>
+              <div class="swiper-slide"><span>事业</span></div>
+              <div class="swiper-slide"><span>产品</span></div>
+              <div class="swiper-slide"><span>科技</span></div>
+              <div class="swiper-slide"><span>娱乐</span></div>
+              <div class="swiper-slide"><span>教育</span></div>
+              <div class="swiper-slide"><span>文化</span></div>
+              <div class="swiper-slide"><span>搞笑</span></div>
             </div>
           </div>
-          <div class="res-btn waves-light">
-            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info ">确认绑定</a> 
+          <div class="footer-btn_tip">
+            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info">生成我的文章</a>
+            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info">新建文章</a>
           </div>
-          <div class="mp-bar"></div>
-          <div class="res-item">
-            <label>设置新密码</label>
-            <input type="password" placeholder="" class="input-item">
-          </div>
-          <div class="res-item">
-            <label>新密码</label>
-            <input type="password" placeholder="6-18位输入登录密码" class="input-item">
-          </div>
-          <div class="res-item">
-            <label>确认</label>
-            <input type="password" placeholder="再次登陆确认" class="input-item">
-          </div>
-          <div class="res-item v-code">
-            <label>验证码</label>
-            <input type="text" placeholder="手机短信验证码" class="input-item mima">
-            <div class="v-code-box">
-              <span>获取验证码</span>
-            </div>
-          </div>
-          <div class="res-btn waves-light">
-            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info ">确认修改</a> 
-          </div>
-        </form>
+        </div>  
       </section>
       <!-- 公共底部 -->
       <footer>
@@ -99,6 +82,11 @@
     </div>
     <script>
       $(function () {
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 5,
+          freeMode: true,
+          pagination: false
+        });
         // 波浪涟漪效果
         Waves.init();
         Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);

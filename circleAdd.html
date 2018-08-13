@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>申请创建圈子</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container flex-box">
+        <div class="auto">
+          <ul class="mp-list circle">
+            <li>
+              <div class="upload-cover flex">
+                <div class="upload-cover_tip">
+                  <p>封面<br/><span>必选</span></p>
+                </div>
+                <div class="upload-cover_img">
+                  <img src="images/user3.png" style="display: none;">
+                  <span><i class="icon-img"></i></span>
+                </div>
+                <input class="upload-file" type="file" id="file" name="file" value="" accept="images/*">
+              </div> 
+            </li>
+            <li>
+              <div class="mp-list-item mp-list_info">
+                <input type="text" placeholder="圈子名称（设置成功后不能更改）"/>
+              </div>
+            </li>
+            <li>
+              <div class="mp-list-item mp-list_info">
+                <div class="circle-textarea">
+                  <textarea name="" id="circleIntroduce" rows="3" placeholder="圈子介绍"></textarea>
+                  <div class="textareaTip">您还可以再输入<strong id="textareaCount">30</strong>个字</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="footer-btn_tip">
+            <a href="circleAdmin.html" class="mp-btn mp-btn_xl mp-btn-info">申请创建</a>
+            <p class="tip text-left">为您的团队，公司，品牌，项目，平台，商品等创建一个专业的圈子快速带领团队走向人生巅峰</p>
+          </div>
+        </div>  
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        // 文字输入限制
+        $('textarea').keyup(function(event) {
+          // 限制最大文字的个数
+          var maxLength = 30;
+          var len = $('#circleIntroduce').val().length;
+          $('#textareaCount').html(maxLength - len);
+          if(parseInt($('#textareaCount').text()) < 0){
+            $('#textareaCount').html('0');
+            var res = $(this).val().substring(0,30);
+            $(this).val(res);
+          }
+        });
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

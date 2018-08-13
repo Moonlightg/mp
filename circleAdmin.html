@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>圈子管理</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container flex-box">
+        <ul class="mp-list circle auto">
+          <li>
+            <div class="upload-cover flex">
+              <div class="upload-cover_img">
+                <img src="images/user3.png" style="display: none;">
+                <span><i class="icon-img"></i></span>
+                <input class="upload-file" type="file" id="file" name="file" value="" accept="images/*">
+              </div>
+              <div class="upload-cover_tip">
+                <p>圈子名称</p>
+                <div class="circle-textarea">
+                  <textarea name="" id="circleIntroduce" rows="2" placeholder="圈子介绍"></textarea>
+                  <div class="textareaTip">还可输入<strong id="textareaCount">30</strong>字</div>
+                </div>
+              </div>
+            </div> 
+          </li>
+          <li>
+            <div class="mp-list-item mp-link">
+              <a href="circleRelease.html">
+                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">发布内容</span>
+              </a>
+              <a href="javascript:;">
+                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">内容管理</span>
+              </a>
+              <a href="javascript:;">
+                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">制作微页</span>
+              </a>
+              <a href="javascript:;">
+                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">圈子成员</span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="javascript:;" class="mp-list-item" style="border: none;">
+              <div class="mp-list_start">是否显示圈子微链接</div>
+              <div class="mp-list_info text-right">
+                <label class="bui-switch-label bui-switch-anim">
+                  <input type="checkbox" name="s"/>
+                  <i class="bui-switch"></i>
+                </label>
+              </div>
+            </a>
+            <div class="mp-list-item mp-link" style="border: none;">
+              <a href="pageLink.html">
+                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">添加链接</span>
+              </a>
+              <a href="pageLink.html">
+                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">添加链接</span>
+              </a>
+              <a href="pageLink.html">
+                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">添加链接</span>
+              </a>
+              <a href="pageLink.html">
+                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
+                <span class="mp-link-name">添加链接</span>
+              </a>
+            </div>
+            <p class="tip text-left">
+              温馨提示：<br/>
+              1.禁止发布违反互联网相关法律法规内容。<br/>
+              2.禁止发布违反微信平台内容传播的规则。
+            </p>
+          </li>
+        </ul>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        // 文字输入限制
+        $('textarea').keyup(function(event) {
+          // 限制最大文字的个数
+          var maxLength = 30;
+          var len = $('#circleIntroduce').val().length;
+          $('#textareaCount').html(maxLength - len);
+          if(parseInt($('#textareaCount').text()) < 0){
+            $('#textareaCount').html('0');
+            var res = $(this).val().substring(0,30);
+            $(this).val(res);
+          }
+        });
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

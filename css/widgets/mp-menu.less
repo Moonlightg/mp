@@ -34,7 +34,13 @@
 	}
 	&.mp-tab{
 		height: 4rem;
-		a{ color: #000000; }
+		a{ 
+			color: #000000; 
+			border-bottom: .1rem solid #fff;
+			&.active{
+				border-color: @brand_primary;
+			}
+		}
 		a:first-child{
 			position: relative;
 			&:after{

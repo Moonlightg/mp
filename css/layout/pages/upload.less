@@ -1,0 +1,82 @@
+/*
+ * upload.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.12 Moonlight
+ *
+*/
+
+.upload-qr{
+     position: relative;
+     width: 8rem;
+     height: 8rem;
+     margin: 1.5rem auto;
+     background: #fff;
+     border: 1px solid #bbb;
+     border-radius: .5rem;
+     text-align: center;
+     i{
+          font-size: 2rem;
+          color: #666;
+          margin: 1rem 0 .5rem;
+          display: inline-block;
+     }
+     span{
+          display: block;
+          font-size: @fs8;
+          margin-top: .2rem;
+          color: #777;
+     }
+     img{ width: 100%; height: 100%;}
+}
+.upload-qr_icon,
+.upload-qr_file{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 8rem;
+     height: 8rem;
+     z-index: 1;
+}
+.upload-qr_file{
+     z-index: 2;
+     opacity: 0;
+}
+
+// 广告设置
+.upload-ad{
+     position: relative;
+     margin: 1rem;
+     background: #eee;
+     border-radius: .4rem;
+     text-align: center;
+     overflow: hidden;
+     .upload-qr_file{
+          width: 100%;
+          height: 100%;
+     }
+}
+.upload-ad_icon{
+     padding: 1rem;
+     line-height: 1.2rem;
+     color: #979797;
+     i{
+          font-size: 2rem;
+          margin: 1rem 0;
+          display: block;
+     }
+}
+.upload-ad_link{
+     .flex_direction(column);
+     &>div{
+          width: 100%;
+     }
+     .mp-list_start{
+          padding: .5rem 0;
+          border-bottom: 1px solid #eee;
+     }
+     input{
+          line-height: 2rem;
+          padding-bottom: 2rem;
+          width: 100%;
+     }
+}

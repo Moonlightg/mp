@@ -1,0 +1,32 @@
+/*
+ * mp-tab.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.10 Moonlight
+ *
+*/
+
+.mp-tab{
+     height: 2.2rem;
+     width: 100%;
+     text-align: center;
+     .part{
+          display: block;
+          float: left;
+          width: 50%;
+          color: #fff;
+          text-align: center;
+          line-height: 2.2rem;
+          background: #ff8a00;
+          &:first-child{background: #353439}
+     }
+     a{
+          display:block;
+          color:#fff;
+          text-align:center;
+     }
+     span.active a{color:#fff;}
+}
+.mp-tab-wrap{
+     display: flex;
+     flex-direction: column;
+}

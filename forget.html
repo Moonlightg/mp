@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>忘记密码</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="register.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">名片信息填写</p>
+      </header>
+      <section class="mp-container">
+        <div class="forget-head">
+          <i class="icon-security"></i>
+        </div>   
+        <form class="register-form forget">
+          <div class="res-item">
+              <input type="tel" placeholder="手机号码" class="input-item mobile">
+          </div>
+          <div class="res-item v-code">
+              <input type="text" placeholder="验证码" class="input-item mima">
+              <div class="v-code-box">
+                <span>获取验证码</span>
+              </div>
+          </div>
+          <div class="res-btn waves-light">
+              <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info ">下一步</a> 
+          </div>
+        </form>
+      </section>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

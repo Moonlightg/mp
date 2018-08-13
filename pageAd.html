@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>广告图片设置</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container flex-box">
+        <div class="auto">
+          <div class="upload-ad">
+            <img src="images/banner3.jpg" style="display: none;">
+            <div class="upload-ad_icon">
+              <i class="icon-img"></i>
+              <p>点击上传广告图片<br/>(建议图片尺寸为长方形)</p>
+            </div>
+            <input class="upload-qr_file" type="file" id="file" name="file" value="" accept="images/*">
+          </div>  
+
+          <ul class="mp-list">
+            <li>
+              <a href="javascript:;" class="mp-list-item upload-ad_link">
+                <div class="mp-list_start">图片链接（选填）：</div>
+                <div class="mp-list_info">
+                  <input type="text" name="" placeholder="输入你复制的链接网址">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;" class="mp-list-item">
+                <div class="mp-list_start">是否投放</div>
+                <div class="mp-list_info text-right">
+                  <label class="bui-switch-label bui-switch-anim">
+                    <input type="checkbox" name="s"/>
+                    <i class="bui-switch"></i>
+                  </label>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="profit-btn">
+            <a href="pageTiny.html" class="mp-btn mp-btn_xl mp-btn-info ">保存设置</a>
+            <p class="text-left">温馨提示：上传你的商品广告，公司，项目等图片，该图片会出现在你分享的文章底部，推广效果更佳</p>
+          </div>
+        </div>  
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

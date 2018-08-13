@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>帮助中心</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <div class="help-head">
+        <i class="icon-service"></i>
+        <span>有疑问？可点击下方咨询按钮哦</span>
+      </div>
+      <div class="mp-bar"></div>
+      <div class="help-btn">
+        <a href="tel:13112224413"><i class="icon-service-tel"></i></a>
+        <a href="javascript:;" class="open-modal"><i class="icon-service-wc"></i></a>
+      </div>
+      <div class="mp-bar"></div>
+      <section class="mp-container flex-box">     
+        <ul class="help-list">
+          <li>
+            <a href="javascript:;">
+              <div class="help-list-text">“超级伙伴”移动工作室能为我带来什么</div>
+              <div class="help-list-info"><i class="icon-more"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="help-list-text">如何在微信中快速找到“超级伙伴”移动工作室</div>
+              <div class="help-list-info"><i class="icon-more"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="help-list-text">退出工作室后，下次我能从哪里进去</div>
+              <div class="help-list-info"><i class="icon-more"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="help-list-text">使用“超级伙伴”移动工作室是否需要付费</div>
+              <div class="help-list-info"><i class="icon-more"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="help-list-text">工作室可以更换品牌吗</div>
+              <div class="help-list-info"><i class="icon-more"></i></div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="help-list-text">如何更换文章库里的文章</div>
+              <div class="help-list-info"><i class="icon-more"></i></div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- 弹窗 -->
+    <div class="mp-modal">
+      <div class="mp-modal-bg close-modal"></div>
+      <div class="mp-modal-main">
+        <div class="qr-img">
+          <img src="images/qr.png">
+          <p>扫描二维码联系客服</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+        $(".open-modal").click(function(){
+          $(".mp-modal").fadeIn();
+        });
+        $(".close-modal").click(function(){
+          $(".mp-modal").fadeOut();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>安全中心</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container"> 
+        <form class="register-form security">
+          <div class="res-item">
+            <label>绑定微信</label>
+            <input type="text" placeholder="" class="input-item">
+          </div>
+          <div class="res-item">
+            <label>绑定手机号</label>
+            <input type="tel" placeholder="" class="input-item">
+          </div>
+          <div class="res-item">
+            <label>手机号码</label>
+            <input type="tel" placeholder="输入11位数手机号码" class="input-item">
+          </div>
+          <div class="res-item v-code">
+            <label>验证码</label>
+            <input type="text" placeholder="手机短信验证码" class="input-item mima">
+            <div class="v-code-box">
+              <span>获取验证码</span>
+            </div>
+          </div>
+          <div class="res-btn waves-light">
+            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info ">确认绑定</a> 
+          </div>
+          <div class="mp-bar"></div>
+          <div class="res-item">
+            <label>设置新密码</label>
+            <input type="password" placeholder="" class="input-item">
+          </div>
+          <div class="res-item">
+            <label>新密码</label>
+            <input type="password" placeholder="6-18位输入登录密码" class="input-item">
+          </div>
+          <div class="res-item">
+            <label>确认</label>
+            <input type="password" placeholder="再次登陆确认" class="input-item">
+          </div>
+          <div class="res-item v-code">
+            <label>验证码</label>
+            <input type="text" placeholder="手机短信验证码" class="input-item mima">
+            <div class="v-code-box">
+              <span>获取验证码</span>
+            </div>
+          </div>
+          <div class="res-btn waves-light">
+            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info ">确认修改</a> 
+          </div>
+        </form>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

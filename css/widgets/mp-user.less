@@ -1,0 +1,128 @@
+/*
+ * mp-user.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.9 Moonlight
+ *
+*/
+
+//默认头像规格
+.user-w (@w:30px) {
+    width: @w;
+    height: @w;
+    font-size: @w / 2.8;
+    .border_radius(@w); 
+}
+//默认头像
+.user {
+    .user-w();
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 10px 0 0;
+    flex-shrink: 0;
+    &.user-img{
+        background: none;
+    }
+    img{ 
+        display: block;
+        width: 100%;
+    }
+}
+
+//小号头像
+.user_s{
+    .user-w (@user_s);
+}
+
+//中号头像
+.user_m{
+    .user-w (@user_m);
+}
+
+//大号头像
+.user_l{
+    .user-w (@user_l);
+}
+
+//加大号头像
+.user_xl{
+    .user-w (@user_xl);
+}
+.user-box{
+    a{
+        .display;
+        .align_items_center;
+        line-height: 1.6rem;
+        overflow: hidden;
+    }
+}
+.user-head{
+    .align_items_center;
+    padding: 1rem 0 1rem 1rem;
+    background: #fff;
+    &-l{
+        .flex_initial(1);
+    }
+    &-r{
+        .vip0{
+            margin-right: 1rem;
+        }
+    }
+    .user-box a{line-height: 2rem;}
+    .user-name {font-size: 1.4rem;}
+}
+.user-text{
+    margin-left: .4rem;
+}
+.user-name{
+    font-size: 1.2rem;
+    i{
+        margin-right: .5rem;
+        display: inline-block;
+        vertical-align: text-top;
+        margin-top: .2rem;
+        color: #bfbfbf;
+    }
+}
+.user-vein-wrap{
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+    .swiper-container{
+        display: flex;
+        height: 100%;
+        padding-bottom: 2.2rem;
+        .swiper-slide{ 
+            .touch();
+            overflow: auto; 
+        }
+    }
+    .mp-bar + .swiper-container{
+        padding-bottom: 4rem;
+    }
+}
+.user-vein-list{
+    .user-name i{ 
+        color: #ff8a00; 
+        &.icon-ck-member{
+            color: #e0005a;
+        }
+    }
+}
+
+.user-list{
+    li{
+        border-bottom: 1px solid #eeeeee;
+        a{
+            padding: 1rem;
+        }
+    }
+}
+.user-name span,
+.user-tit{
+    font-size: .8rem;
+    color: #848484;
+}
+
+

@@ -1,0 +1,53 @@
+/*
+ * article.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.11 Moonlight
+ *
+*/
+
+@listH:  4.8rem;
+.article-list{
+     li{
+          padding: 1rem;
+          border-bottom: .25rem solid #eeeeee;
+          overflow: hidden;
+     }
+}
+.article-list-start{
+     width: @listH;
+     height: @listH;
+     flex-shrink: 0;
+     float: left;
+     img{
+          width: 100%;
+          display: block;
+     }
+}
+.article-list-info{
+     margin-left: @listH + 1rem;
+     h1{
+          .flow();
+          min-height: 2.25rem;
+          font-size: 1rem;
+     }
+     p{
+          overflow: hidden;
+          font-size: @fs8;
+          color: #999;
+          margin: .25rem 0;
+     }
+     .article-btn{
+          overflow: hidden;
+          span{
+               font-size: .8rem;
+               color: red;
+          }
+          a{
+               float: right;
+               line-height: 1;
+               padding: .2rem;
+               margin: 0 0 0 .5rem;
+               border-radius: 3px;
+          }
+     }
+}

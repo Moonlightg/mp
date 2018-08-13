@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>提现</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="myExtend.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">提现</p>
+      </header>
+      
+      <section class="mp-container flex-box"> 
+        <div class="profit-box">    
+          <div class="profit-head">
+            <p>提现到账户</p>
+            <p class="mp-color9">342955925@qq.com</p>
+            <p>李蓬良</p>
+          </div>
+          <div class="profit-sum">
+            <p>输入体现金额</p>
+            <div class="profit-sum_input">
+              <label>¥</label>
+              <input type="number" name="" placeholder="0.00"/>
+            </div>
+          </div>
+          <div class="profit-btn">
+            <a href="profitAccount.html" class="mp-btn mp-btn_xl mp-btn-info ">提现</a>
+            <a href="profitAccount.html" class="mp-btn mp-btn_xl mp-btn-gray ">修改提现账户</a>
+            <p>1-3个工作日到账</p>
+          </div>
+          <div class="profit-table">
+            <p class="profit-table_title">提现记录</p>
+            <ul>
+              <li class="profit-table_th">
+                <span>金额</span>
+                <span>时间</span>
+                <span>状态</span>
+              </li>
+              <li>
+                <span>110</span>
+                <span>2018-05-06</span>
+                <span class="mp-color2">待审核</span>
+              </li>
+              <li>
+                <span>560</span>
+                <span>2018-02-07</span>
+                <span class="mp-color4">未通过</span>
+              </li>
+              <li>
+                <span>350</span>
+                <span>2018-01-01</span>
+                <span class="mp-color6">已结算</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

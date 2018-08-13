@@ -1,0 +1,49 @@
+/*
+ * mp-waves.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.10 Moonlight
+ *
+*/
+
+.mp-waves{
+}
+
+ .waves-effect .waves-ripple{
+     position:absolute;
+     border-radius:50%;
+     width:100px;
+     height:100px;
+     margin-top:-50px;
+     margin-left:-50px;
+     opacity:0;
+     background:rgba(254,138,3,.2);
+     background:-webkit-radial-gradient(rgba(254,138,3,.2) 0,rgba(254,138,3,.3) 40%,rgba(254,138,3,.4) 50%,rgba(254,138,3,.5) 60%,rgba(255,255,255,0) 70%);
+     background:-o-radial-gradient(rgba(254,138,3,.2) 0,rgba(254,138,3,.3) 40%,rgba(254,138,3,.4) 50%,rgba(254,138,3,.5) 60%,rgba(255,255,255,0) 70%);
+     background:-moz-radial-gradient(rgba(254,138,3,.2) 0,rgba(254,138,3,.3) 40%,rgba(254,138,3,.4) 50%,rgba(254,138,3,.5) 60%,rgba(255,255,255,0) 70%);
+     background:radial-gradient(rgba(254,138,3,.2) 0,rgba(254,138,3,.3) 40%,rgba(254,138,3,.4) 50%,rgba(254,138,3,.5) 60%,rgba(255,255,255,0) 70%);
+     -webkit-transition:all .5s ease-out;
+     -moz-transition:all .5s ease-out;
+     -o-transition:all .5s ease-out;
+     transition:all .5s ease-out;
+     -webkit-transition-property:-webkit-transform,opacity;
+     -moz-transition-property:-moz-transform,opacity;
+     -o-transition-property:-o-transform,opacity;
+     transition-property:transform,opacity;
+     -webkit-transform:scale(0) translate(0,0);
+     -moz-transform:scale(0) translate(0,0);
+     -ms-transform:scale(0) translate(0,0);
+     -o-transform:scale(0) translate(0,0);
+     transform:scale(0) translate(0,0);
+     pointer-events:none
+ }
+.waves-button,
+.waves-button:hover,
+.waves-button:visited{
+	padding: 0;
+	border-radius: 0;
+	font-size: .7rem;
+}
+.waves-float,
+.waves-float:active{
+	box-shadow:none;
+}

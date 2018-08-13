@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>名片信息填写</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/iosSelect/iosSelect.js"></script>
+    <link rel="stylesheet" href="lib/iosSelect/iosSelect.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="index.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">名片信息填写</p>
+      </header>
+      <section class="mp-container flex-box">     
+        <form>
+          <div class="input-item">
+            <label>姓名</label>
+            <input type="text" placeholder="请填写姓名" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>单位</label>
+            <input type="text" placeholder="请填写公司名称" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>职位</label>
+            <input type="text" placeholder="请填写职位名称" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>手机</label>
+            <input type="tel" placeholder="请填写手机号码" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>微信号</label>
+            <input type="text" placeholder="请填写微信号码" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>网址</label>
+            <input type="text" placeholder="请填写网址" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>邮箱</label>
+            <input type="text" placeholder="请填写邮箱号码" class="mp-input">
+          </div>
+          <div class="input-item">
+            <label>QQ</label>
+            <input type="number" placeholder="请填写QQ号码" class="mp-input">
+          </div>
+          <div class="input-item flex-wrap_wrap">
+            <label>地址</label>
+            <input type="text" placeholder="" class="mp-input">
+            <div class="seat">
+              <p>点击图标选择地址 <i class="icon-address-2 mp-color10"></i></p>
+            </div>
+          </div>
+          <div class="input-item">
+            <label>行业标签</label>
+            <div class="mp-input">
+              <input type="hidden" name="bank_id" id="bankId" value=""> <span id="showBank">选择行业标签</span> 
+            </div>
+          </div>
+          <div class="upload-qr">
+            <img src="" style="display: none;">
+            <div class="upload-qr_icon">
+              <i class="icon-upload-fill"></i>
+              <span>点击上传</span>
+              <span>微信二维码</span>
+              <span>（选填）</span>
+            </div>
+            <input class="upload-qr_file" type="file" id="file" name="file" value="" accept="images/*">
+          </div>
+          <div class="footer-btn">
+            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-info ">保存信息</a>
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="container"></div>
+    <script>
+      var data = [
+        {'id': '10001', 'value': '互联网'},
+        {'id': '10002', 'value': '电子商务'},
+        {'id': '10003', 'value': '微商'},
+        {'id': '10004', 'value': '建筑工程'},
+        {'id': '10005', 'value': '动物宠物'},
+        {'id': '10006', 'value': '广告设计'},
+        {'id': '10007', 'value': '贸易'},
+        {'id': '10008', 'value': '酒店'},
+        {'id': '10009', 'value': '影视传媒'},
+        {'id': '10010', 'value': '科技'},
+        {'id': '10011', 'value': '旅游'},
+        {'id': '10012', 'value': '文化'},
+        {'id': '10013', 'value': '汽车'},
+        {'id': '10014', 'value': '金融'},
+        {'id': '10015', 'value': '餐饮'},
+        {'id': '10016', 'value': '时尚 - 美容'},
+        {'id': '10017', 'value': '教育'},
+        {'id': '10018', 'value': '健身'},
+        {'id': '10019', 'value': '保险'},
+        {'id': '10020', 'value': '健康养生'},
+        {'id': '10021', 'value': '农业'},
+        {'id': '10022', 'value': '律师'},
+        {'id': '10023', 'value': '体育'},
+        {'id': '10024', 'value': '娱乐'},
+        {'id': '10025', 'value': '运输'},
+        {'id': '10026', 'value': '机械 - 制造'},
+        {'id': '10027', 'value': '房产'},
+        {'id': '10028', 'value': '其他'}
+      ];
+      var showBankDom = document.querySelector('#showBank');
+      var bankIdDom = document.querySelector('#bankId');
+      showBankDom.addEventListener('click', function () {
+        var bankId = showBankDom.dataset['id'];
+        var bankName = showBankDom.dataset['value'];
+        var bankSelect = new IosSelect(1, 
+        [data],
+        {
+          container: '.container',
+          title: '行业标签',
+          itemHeight: 50,
+          itemShowCount: 3,
+          oneLevelId: bankId,
+          callback: function (selectOneObj) {
+            bankIdDom.value = selectOneObj.id;
+            showBankDom.innerHTML = selectOneObj.value;
+            showBankDom.dataset['id'] = selectOneObj.id;
+            showBankDom.dataset['value'] = selectOneObj.value;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

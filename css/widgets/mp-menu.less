@@ -1,0 +1,72 @@
+/*
+ * mp-menu.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.9 Moonlight
+ *
+*/
+
+.mp-menu{
+	.display;
+	ul{
+		.display;
+		flex-wrap:wrap;
+		width: 100%;
+		li{
+			width: 25%;
+			height: 6rem;
+			a{
+				.display;
+				.align_items_center;
+				.justify_content_center;
+				.flex_direction(column);
+				height: 100%;
+				font-size: .85rem;
+				span:first-child{
+					width:2.5rem;
+					height: 2.5rem;
+				}
+				i{
+					font-size: 1.6rem;
+					display: block;
+				}
+			}
+		}
+	}
+	&.mp-tab{
+		height: 4rem;
+		a{ color: #000000; }
+		a:first-child{
+			position: relative;
+			&:after{
+				position: absolute;
+				content: "";
+				width: 1px;
+				height: 2rem;
+				top: 1rem;
+				right: 0;
+				background: #eeeeee;
+			}
+		}
+	}
+}
+.mp-menu_two{
+	a{
+		.display;
+		.align_items_center;
+		.justify_content_center;
+		width: 50%;
+		height: 4rem;
+		font-size: 1rem;
+		i{
+			font-size: 1.8rem;
+		}
+		span{
+			margin-left: .85rem;
+		}
+	}
+	.waves-button, 
+	.waves-button:hover, 
+	.waves-button:visited{
+		font-size: 1rem;
+	}
+}

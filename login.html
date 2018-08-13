@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>新用户注册</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main login">
+      <div class="register-head">
+        <div class="register-head_logo">
+          <img src="images/login-icon.png">
+        </div>
+      </div>
+      <section class="mp-container">     
+        <form class="register-form">
+          <div class="res-item">
+              <input type="tel" placeholder="请输入手机号" class="input-item mobile">
+              <i class="res-icon icon-tel-fill"></i>
+          </div>
+          <div class="res-item">
+              <input type="password" placeholder="请输入密码" class="input-item mima">
+              <i class="res-icon icon-user2"></i>
+          </div>
+          <p class="res-tit"><a href="forget.html">忘记密码？</a></p>
+          <div class="res-btn waves-light">
+              <a href="index.html" class="mp-btn mp-btn_xl mp-btn-info ">登录</a> 
+          </div>
+          <div class="res-ck">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" checked="" name="xy"/><i class="bui-checkbox"></i><span>登录或注册代表您同意超级工作室<b>《用户服务协议》</b></span>
+            </label>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

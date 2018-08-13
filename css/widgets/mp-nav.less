@@ -1,0 +1,30 @@
+/*
+ * mp-nav.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.9 Moonlight
+ *
+*/
+
+.mp-nav{
+	.display;
+	height: 100%;
+	li{
+		flex-grow: 1;
+		a{
+			.display;
+			.flex_direction(column);
+		    .justify_content_center;
+		    .align_items_center;
+		    height: 100%;
+		    font-size: @fs7;
+		    color: @brand_gray;
+		    i{
+		    	margin-bottom: .5rem;
+		    	font-size: 1.4rem;
+		    }
+		    &.active{
+		    	color: @brand_primary;
+		    }
+	    }
+	}
+}

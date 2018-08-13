@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>开通会员</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="index.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">开通会员</p>
+      </header>
+      
+      <section class="mp-container flex-box"> 
+        <div class="profit-box" id="vip-box">  
+          <div>
+            <img src="images/vip-bg.jpg">
+            <img src="images/vip-bg.jpg">
+            <img src="images/vip-bg.jpg">
+          </div>  
+          <ul id="row_8" class="vip-open-list">
+            <li>
+              <span>1年VIP会员</span>
+              <span>¥198 <s>原价365</s></span>
+              <a href="vip1.html" class="mp-btn mp-btn-gold">
+                开通
+              </a>
+            </li>
+            <li>
+              <span>2年VIP会员</span>
+              <span>¥298 <s>原价730</s></span>
+              <a href="javascript:;" class="mp-btn mp-btn-gold">
+                开通
+              </a>
+            </li>
+            <li>
+              <span>3年VIP会员</span>
+              <span>¥398 <s>原价1095</s></span>
+              <a href="javascript:;" class="mp-btn mp-btn-gold">
+                开通
+              </a>
+            </li>
+            <li>
+              <span>4年VIP会员</span>
+              <span>¥498 <s>原价1460</s></span>
+              <a href="javascript:;" class="mp-btn mp-btn-gold">
+                开通
+              </a>
+            </li>
+            <li>
+              <p>开通既视为同意 <span>《超级工作室会员-用户协议》</span> </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <a href="javascript:;" class="vip-open-btn">
+        开通会员
+      </a>
+    </div>
+    <script>
+      $(function () {
+        scrollToLocation();
+      });
+
+      function scrollToLocation() {
+        $(".vip-open-btn").on("click",function(){
+          var mainContainer = $('#vip-box'),
+          scrollToContainer = mainContainer.find('#row_8 li:last');
+          //非动画效果
+          //mainContainer.scrollTop(
+          //  scrollToContainer.offset().top - mainContainer.offset().top + mainContainer.scrollTop()
+          //);
+          //动画效果
+          mainContainer.animate({
+            scrollTop: scrollToContainer.offset().top - mainContainer.offset().top + mainContainer.scrollTop()
+          }, 2000);//2秒滑动到指定位置
+        });
+      }
+    </script>
+  </body>
+</html>

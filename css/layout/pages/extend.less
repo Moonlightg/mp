@@ -1,0 +1,63 @@
+/*
+ * extend.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.10 Moonlight
+ *
+*/
+
+.extend-head{
+	padding: 1rem;
+    background: #353439;
+    color: #fff;
+    overflow: hidden;
+}
+.extend-sum{
+	width: 50%;
+    float: left;
+    span{
+    	display: block;
+    	font-size: @fs8;
+    	&:first-child{
+			margin:.7rem 0 .3rem;
+    	}
+    }
+    p{
+    	font-size: 2.6rem;
+	    letter-spacing: .2rem;
+    }
+}
+.extend-put{
+	width: 5rem;
+	margin-right: 2rem;
+	float: right;
+	text-align: center;
+	a{
+		margin-top: .5rem;
+		display: block;
+		color: #fff;
+		&.extend-put-link{
+			margin-top: @fs8;
+			font-size: @fs8;
+		}
+	}
+	
+}
+
+.extend-count{
+	overflow: hidden;
+	padding: .7rem @margin;
+	&.isgray{
+		padding: .4rem @margin;
+		background: #eeeeee;
+		.fl { 
+			line-height: 1.8rem;
+			color: #585858;
+		}
+	}
+	.fl{
+		color: #ff8a00;
+	}
+	.fr{
+		letter-spacing: .1rem;
+	}
+}

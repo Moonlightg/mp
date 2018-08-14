@@ -18,17 +18,30 @@
   </head>
   <body>
     <div id="app" class="mp-main">
-      <section class="mp-container flex-box">
-        <ul class="mp-list circle auto">
+      <header class="isSearch">
+        <a href="index.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <div class="header-input">
+          <input type="text" name="" placeholder="输入关键词搜素文章">
+        </div>
+        <div class="header-info">
+          <a href="javascript:;" class="mp-btn mp-btn-blue">
+            搜索
+          </a>
+        </div>
+      </header>
+      <section class="mp-container auto flex-box">
+        <ul class="mp-list circle">
           <li>
-            <div class="upload-cover flex">
+            <div class="upload-cover tx flex">
               <div class="upload-cover_img">
                 <img src="images/user3.png" style="display: none;">
-                <span><i class="icon-img"></i></span>
+                <span><i class="icon-upload"></i><p>头像图片</p></span>
                 <input class="upload-file" type="file" id="file" name="file" value="" accept="images/*">
               </div>
               <div class="upload-cover_tip">
-                <p>圈子名称</p>
+                <p class="circle-name">圈子名称</p>
                 <div class="circle-textarea">
                   <textarea name="" id="circleIntroduce" rows="2" placeholder="圈子介绍"></textarea>
                   <div class="textareaTip">还可输入<strong id="textareaCount">30</strong>字</div>
@@ -39,58 +52,62 @@
           <li>
             <div class="mp-list-item mp-link">
               <a href="circleRelease.html">
-                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
+                <span class="mp-link-icon no-bg"><i class="icon-fb-set mp-color2"></i></span>
                 <span class="mp-link-name">发布内容</span>
               </a>
               <a href="javascript:;">
-                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
-                <span class="mp-link-name">内容管理</span>
+                <span class="mp-link-icon no-bg"><i class="icon-link mp-color3"></i></span>
+                <span class="mp-link-name">微链接</span>
               </a>
               <a href="javascript:;">
-                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
-                <span class="mp-link-name">制作微页</span>
+                <span class="mp-link-icon no-bg"><i class="icon-home mp-color6"></i></span>
+                <span class="mp-link-name">编辑微站</span>
               </a>
               <a href="javascript:;">
-                <span class="mp-link-icon no-bg"><i class="icon-wz-set"></i></span>
+                <span class="mp-link-icon no-bg"><i class="icon-member mp-color1"></i></span>
                 <span class="mp-link-name">圈子成员</span>
               </a>
             </div>
           </li>
-          <li>
-            <a href="javascript:;" class="mp-list-item" style="border: none;">
-              <div class="mp-list_start">是否显示圈子微链接</div>
-              <div class="mp-list_info text-right">
-                <label class="bui-switch-label bui-switch-anim">
-                  <input type="checkbox" name="s"/>
-                  <i class="bui-switch"></i>
-                </label>
-              </div>
-            </a>
-            <div class="mp-list-item mp-link" style="border: none;">
-              <a href="pageLink.html">
-                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
-                <span class="mp-link-name">添加链接</span>
-              </a>
-              <a href="pageLink.html">
-                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
-                <span class="mp-link-name">添加链接</span>
-              </a>
-              <a href="pageLink.html">
-                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
-                <span class="mp-link-name">添加链接</span>
-              </a>
-              <a href="pageLink.html">
-                <span class="mp-link-icon "><i class="icon-wz-set"></i></span>
-                <span class="mp-link-name">添加链接</span>
-              </a>
-            </div>
-            <p class="tip text-left">
-              温馨提示：<br/>
-              1.禁止发布违反互联网相关法律法规内容。<br/>
-              2.禁止发布违反微信平台内容传播的规则。
-            </p>
-          </li>
         </ul>
+        <div class="folder">
+          <div class="folder-head">
+            <span class="fl">文章文件夹</span>
+            <span class="fr">管理</span>
+          </div>
+          <div class="folder-link flex">
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">更多</div>
+            </div>
+          </div>
+        </div>
+        <p class="tip text-left">
+          温馨提示：<br/>
+          1.发布圈子内容，圈内成员可分享文章时带有会员的个人信息等<br/>
+          2.禁止发布违反互联网相关法律法规内容<br/>
+          3.禁止发布违反微信平台内容传播的规则
+        </p>
       </section>
       <!-- 公共底部 -->
       <footer>

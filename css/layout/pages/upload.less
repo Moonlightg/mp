@@ -94,6 +94,9 @@
           z-index: 2;
           opacity: 0;
      }
+     &.tx{
+          padding: 1rem 1rem 0;
+     }
 }
 .upload-cover_tip{
      .flex_initial(1);
@@ -103,10 +106,10 @@
           color: #888;
      }
      .circle-textarea{
-          padding: 0;
+          padding: .5rem 0;
           textarea,
           .textareaTip{
-               font-size: @fs7;
+               font-size: @fs8;
           }
      }
 }
@@ -117,12 +120,22 @@
      height: 4rem;
      span{
           display: block;
-          line-height: 4rem;
           text-align: center;
-          font-size: 2rem;
-          background: #d0d0d0;
+          font-size: 4rem;
+          color: #979797;
+          &.cover-icon{
+               width: 4rem;
+               height: 4rem;
+               font-size: 2rem;
+               line-height: 4.4rem;
+               background: #ddd;
+               color: #666;
+          }
+          p{
+               font-size: @fs8;
+          }
      }
      &+ .upload-cover_tip{
-          padding-left: .5rem;
+          padding-left: @fs7;
      }
 }

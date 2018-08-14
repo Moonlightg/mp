@@ -11,6 +11,10 @@ header{
 	line-height: @headerH;
 	background: #fff;
 	border-bottom: 1px solid #eee;
+	&.isSearch{
+		background:#fafafa;
+		.align_items_center;
+	}
 }
 .header-return{
 	width: @headerH;
@@ -19,8 +23,27 @@ header{
     color: #353439;
 }
 .header-tit{
-	flex: 1;
+	.flex_initial(1);
 	margin-left: -@headerH;
 	text-align: center;
 	font-size: 1.2rem;
+}
+.header-input{
+	.flex_initial(1);
+	padding: 0 .5rem;
+	input{
+		display: block;
+	    width: 100%;
+	    line-height: 2.25rem;
+	    border: 1px solid #ddd;
+	    border-radius: .2rem;
+	    padding: 0 .5rem;
+	    margin: 0;
+	}
+}
+.header-info{
+	.flex(0);
+	.mp-btn{
+		margin-right:1rem;
+	}
 }

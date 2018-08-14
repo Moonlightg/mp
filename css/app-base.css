@@ -2152,12 +2152,28 @@ footer {
 .folder-link {
   flex-wrap: wrap;
 }
+.folder-link.active .folder-icon {
+  border: 1px dashed  #00a0e9;
+}
+.folder-link.active .folder-icon i {
+  display: block;
+}
+.folder-link.active .folder-name {
+  color: #00a0e9;
+}
+.folder-link.active .folder-item:last-child .folder-icon {
+  border: 1px solid #e7e7e7;
+}
+.folder-link.active .folder-item:last-child .folder-name {
+  color: #333;
+}
 .folder-item {
   width: 33.33333%;
   margin-bottom: 1rem;
   text-align: center;
 }
 .folder-icon {
+  position: relative;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -2168,6 +2184,15 @@ footer {
   margin: 0 auto;
   border: 1px solid #e7e7e7;
   border-radius: .25rem;
+}
+.folder-icon i {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  border-radius: 50%;
+  color: #fff;
+  background: red;
+  display: none;
 }
 .folder-name {
   margin: 1rem 0;

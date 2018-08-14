@@ -20,6 +20,25 @@
 }
 .folder-link{
      .flex-wrap_wrap;
+     &.active{
+          .folder-icon{
+               border: 1px dashed  #00a0e9;
+               i{
+                    display: block;
+               }
+          }
+          .folder-name{
+               color: #00a0e9;
+          }
+          .folder-item:last-child{
+              .folder-icon{
+                    border: 1px solid #e7e7e7;
+               }
+               .folder-name{
+                    color: #333;
+               } 
+          }
+     }
 }
 .folder-item{
      width: 33.33333%;
@@ -27,6 +46,7 @@
      text-align: center;
 }
 .folder-icon{
+     position: relative;
      .display;
      .align_items_center;
      width: 4rem;
@@ -35,6 +55,15 @@
      margin: 0 auto;
      border: 1px solid #e7e7e7;
      border-radius: .25rem;
+     i{
+          position: absolute;
+          top: -.5rem;
+          right: -.5rem;
+          border-radius: 50%;
+          color: #fff;
+          background: red;
+          display: none;
+     }
 }
 .folder-name{
      margin:@margin 0;

@@ -73,27 +73,27 @@
         <div class="folder">
           <div class="folder-head">
             <span class="fl">文章文件夹</span>
-            <span class="fr">管理</span>
+            <span class="fr isEdit">管理</span>
           </div>
           <div class="folder-link flex">
             <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
               <div class="folder-name">推荐文章</div>
             </div>
             <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
               <div class="folder-name">新建文件夹</div>
             </div>
             <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
               <div class="folder-name">新建文件夹</div>
             </div>
             <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
               <div class="folder-name">推荐文章</div>
             </div>
             <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
               <div class="folder-name">新建文件夹</div>
             </div>
             <div class="folder-item">
@@ -141,6 +141,8 @@
     </div>
     <script>
       $(function () {
+        folderEdit();
+        folderDel();
         // 文字输入限制
         $('textarea').keyup(function(event) {
           // 限制最大文字的个数
@@ -153,10 +155,34 @@
             $(this).val(res);
           }
         });
+
         // 波浪涟漪效果
         Waves.init();
         Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
       });
+
+      // 点击管理开启编辑状态
+      function folderEdit() {
+        var mpState = 1,
+            mpBtn = $('.isEdit');
+        $('.isEdit').on('click', function() {
+          if(mpState){
+            mpState = 0;
+            mpBtn.text('保存');
+          } else {
+            mpState = 1;
+            mpBtn.text('管理');
+          }
+          $('.folder-link').toggleClass('active');
+        });
+      }
+
+      // 删除文件夹
+      function folderDel(){
+        $('.icon-close').on('click', function() {
+          $(this).parents('.folder-item').remove();
+        });
+      }
     </script>
   </body>
 </html>

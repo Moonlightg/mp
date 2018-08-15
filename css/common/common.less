@@ -56,12 +56,13 @@ input[type=button], input[type=text], input[type=password],[type=tel],[type=numb
   outline: none;
   font-family: 微软雅黑;
   font-size:@fs8;
+  width: 100%;
 }
 
 input::-webkit-input-placeholder {
   font-weight: normal;
 }
-
+textarea{resize: none;}
 // 去掉input=number箭头
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -122,6 +123,11 @@ img{
 .flex-box{
  .display; 
  .flex_direction(column);
+}
+.flex-center{
+  .display;
+  .align_items_center;
+  .justify_content_center;
 }
 //隐藏滚动条
 ::-webkit-scrollbar {

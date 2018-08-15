@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>发布圈子文章</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="circleAdmin.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">发布圈子文章</p>
+      </header>
+      <section class="mp-container flex-box">
+        <div class="auto ">
+          <p class="text-center article-tag_tit"><< 发布文章前先选择以下分类标签 >></p>
+          <div class="article-tag flex">
+            <a href="javascript:;" class="active">产品资料库</a>
+            <a href="javascript:;">联盟商</a>
+            <a href="javascript:;">广州商家</a>
+            <a href="javascript:;">产品视频教程</a>
+            <a href="javascript:;">智慧机器人</a>
+            <a href="javascript:;">公司发展历程</a>
+            <a href="javascript:;">产品视频教程</a>
+            <a href="javascript:;">智慧机器人</a>
+            <a href="javascript:;">公司发展历程</a>
+          </div>
+          <div class="article-link-box">
+            <textarea name="" id="circleIntroduce" rows="3" placeholder="粘贴公众号文章链接在此处,导入文章，请勿发布违反《互联网法律法规》等不良传播内容"></textarea>
+          </div>
+          <div class="footer-btn_tip">
+            <a href="javascript:;" class="mp-btn mp-btn_xl mp-btn-blue">导入文章</a>
+            <a href="articleAdd.html" class="mp-btn mp-btn_xl mp-btn-info">新建文章</a>
+          </div>
+        </div>  
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        $(".article-tag a").click(function() {
+          $(this).siblings('a').removeClass('active');
+          $(this).addClass('active');
+        });
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

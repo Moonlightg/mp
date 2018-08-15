@@ -98,9 +98,13 @@ textarea {
   outline: none;
   font-family: 微软雅黑;
   font-size: 0.875rem;
+  width: 100%;
 }
 input::-webkit-input-placeholder {
   font-weight: normal;
+}
+textarea {
+  resize: none;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -152,6 +156,14 @@ img {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+.flex-center {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -716,6 +728,192 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   color: #888;
 }
 /*
+ * mp-popup.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.15 Moonlight
+ *
+*/
+.mp-popup {
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  transition: transform 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+}
+.mp-popup_up {
+  top: 0;
+}
+.mp-popup_down {
+  bottom: 0;
+  border-top: 1px solid #e7e7e7;
+}
+.mp-popup_tit {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.mp-popmaskbg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+}
+.pop-coverbg,
+.pub-popmask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 101;
+}
+.pub-pop-inputbox {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background: #fff;
+  max-width: 95%;
+  min-width: 80%;
+  padding-top: 10px;
+}
+.pub-pop-inputbox-hd {
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.pub-pop-inputbox-hd .name {
+  font-size: 0.875rem;
+  color: #424242;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+}
+.pub-pop-inputbox-cnt {
+  padding: 10px 20px 25px;
+}
+.pub-pop-inputbox-cnt .input-item {
+  min-height: 36px;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  border: none;
+}
+.pub-pop-inputbox .flexbox,
+.pop-comfirmDelete .flexbox {
+  display: -webkit-flex;
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #e5e5e5;
+}
+.pub-pop-inputbox .flexbox a,
+.pop-comfirmDelete .flexbox a {
+  flex: 1;
+  color: #030303;
+  text-align: center;
+}
+.pub-pop-inputbox .flexbox a:first-child,
+.pop-comfirmDelete .flexbox a:first-child {
+  border-right: 1px solid #e5e5e5;
+}
+.pub-pop-inputbox .flexbox a.comform,
+.pop-comfirmDelete .flexbox a.comform {
+  color: #2999ff;
+}
+.noticeTis-cont,
+.noticeTis-toast {
+  -webkit-animation: fadeInOut 3s linear forwards;
+}
+.noticeTis-toast {
+  position: absolute;
+  z-index: 7;
+  text-align: center;
+  top: 70%;
+  width: 100%;
+  left: 0;
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+.noticeTis-cont {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  padding: .5rem 1rem;
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  max-width: 90%;
+}
+.noticeTis-cont span.iconbox {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  background-color: #1f8ff3;
+  margin-right: 5px;
+}
+.noticeTis-cont span.iconbox i {
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+@-webkit-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  99% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+  }
+}
+.pop-coverbg {
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.pop-coverbg.active {
+  display: flex;
+}
+.pop-comfirmDelete {
+  width: 85%;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.pop-comfirmDelete .ic-dyclose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: #F90;
+  background-size: 16px 16px;
+}
+.pop-comfirmDelete .cnt {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 200%;
+}
+/*
  * input.less
  * v1.0 MIT License
  * Copyright (c) 2018.8.12 Moonlight
@@ -887,9 +1085,17 @@ header.isSearch {
  *
 */
 footer {
+  position: relative;
   height: 3.5rem;
   border-top: 1px solid #e7e7e7;
   background: #fff;
+  z-index: 100;
+}
+footer .folder {
+  bottom: -28rem;
+}
+footer .mp-popup.active {
+  bottom: 3.5rem;
 }
 .footer-btn {
   position: fixed;
@@ -912,6 +1118,7 @@ footer {
 .footer-btn_tip .tip {
   margin-left: -3rem;
   margin-right: -3rem;
+  margin-top: 1rem;
 }
 /*
  * mp-user.less
@@ -1419,6 +1626,65 @@ footer {
   margin: 0 0 0 .5rem;
   border-radius: 3px;
 }
+.article-tag {
+  padding: 1rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.article-tag_tit {
+  margin-top: 1rem;
+  color: #888;
+  font-size: 0.875rem;
+}
+.article-tag a {
+  width: 30%;
+  margin: .4rem 0;
+  border-radius: .25rem;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  line-height: 2.5rem;
+  background: #fff;
+  font-size: .875rem;
+}
+.article-tag a.active {
+  border: 1px solid #fe8a03;
+  background: #fe8a03;
+  color: #fff;
+}
+.article-link-box {
+  padding: 1rem;
+  margin: 0 1rem;
+  border: 1px solid #e7e7e7;
+  border-radius: .25rem;
+}
+.article-link-box textarea {
+  width: 100%;
+}
+.article-add_head .upload-cover_tip .circle-textarea {
+  padding: 0;
+}
+.article-add_textarea {
+  padding: 1rem;
+}
+.article-add_textarea textarea {
+  padding: .5rem 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+.article-footer_btn {
+  position: relative;
+  padding: .45rem .5rem;
+  background: #fff;
+  z-index: 100;
+}
+.article-footer_btn a {
+  width: 45%;
+  font-size: 1.1rem;
+  border-radius: 0;
+}
+.article-footer_btn a.mp-btn-gray {
+  color: #fff;
+}
 /*
  * register.less
  * v1.0 MIT License
@@ -1449,7 +1715,6 @@ footer {
 .register-form .res-item {
   position: relative;
   width: 100%;
-  border-radius: .25rem;
   margin-bottom: 1rem;
   padding-left: 2.5rem;
   background-color: #fff;
@@ -1782,6 +2047,7 @@ footer {
   opacity: 0;
 }
 .upload-cover.tx {
+  min-height: 7rem;
   padding: 1rem 1rem 0;
 }
 .upload-cover_tip {
@@ -2118,8 +2384,11 @@ footer {
   border-bottom: 1px solid #eee;
   padding-bottom: .5rem;
 }
+.circle-name input {
+  width: 100%;
+}
 .tip {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   padding: 0 1rem;
   font-size: 0.875rem;
   line-height: 1.2rem;
@@ -2142,12 +2411,10 @@ footer {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
-  padding: 1rem;
+  padding: .5rem 1rem;
+  line-height: 1.8rem;
   background: #fafafa;
   overflow: hidden;
-}
-.folder-head .fr {
-  color: #00a0e9;
 }
 .folder-link {
   flex-wrap: wrap;
@@ -2169,8 +2436,14 @@ footer {
 }
 .folder-item {
   width: 33.33333%;
-  margin-bottom: 1rem;
+  margin: .5rem 0;
   text-align: center;
+}
+.folder-item.active .folder-icon {
+  border-color: #2577ff;
+}
+.folder-item.active .folder-name {
+  color: #2577ff;
 }
 .folder-icon {
   position: relative;
@@ -2178,6 +2451,8 @@ footer {
   display: flex;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   width: 4rem;
   height: 4rem;
   padding: .5rem;
@@ -2185,16 +2460,83 @@ footer {
   border: 1px solid #e7e7e7;
   border-radius: .25rem;
 }
-.folder-icon i {
+.folder-icon i.icon-close {
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
   border-radius: 50%;
   color: #fff;
   background: red;
-  display: none;
+  -webkit-transform: scale(0);
+}
+.folder-icon i.icon-close.hide {
+  -webkit-animation: scaleSmall .3s linear;
+  -webkit-transform: scale(0);
+}
+.folder-icon i.icon-close.show {
+  -webkit-animation: scaleBig .2s linear;
+  -webkit-transform: scale(1);
 }
 .folder-name {
   margin: 1rem 0;
   font-size: 0.875rem;
+}
+.shake .folder-icon {
+  -webkit-animation: shake .3s linear infinite;
+}
+@-webkit-keyframes shake {
+  25% {
+    -webkit-transform: rotate(-2deg);
+  }
+  100%,
+  50% {
+    -webkit-transform: rotate(0);
+  }
+  75% {
+    -webkit-transform: rotate(2deg);
+  }
+}
+@-webkit-keyframes shakeEven {
+  25% {
+    -webkit-transform: rotate(2deg);
+  }
+  100%,
+  50% {
+    -webkit-transform: rotate(0);
+  }
+  75% {
+    -webkit-transform: rotate(-2deg);
+  }
+}
+@-webkit-keyframes scaleBig {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaleBig {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleSmall {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+  }
+}
+@keyframes scaleSmall {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }

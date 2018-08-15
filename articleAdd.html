@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>我的文章</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- 引入百度上传插件 -->
+    <script src="lib/eleditor/webuploader.min.js"></script>
+    <!-- 插件核心 -->
+    <script src="lib/eleditor/Eleditor.min.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container auto flex-box">
+          <div class="article-add_head">
+            <div class="upload-cover flex">
+              <div class="upload-cover_img">
+                <img src="images/user3.png" style="display: none;">
+                <span><i class="icon-upload"></i><p>文章封面</p></span>
+                <input class="upload-file" type="file" id="file" name="file" value="" accept="images/*">
+              </div>
+              <div class="upload-cover_tip">
+                <div class="circle-textarea">
+                  <textarea name="" id="circleIntroduce" rows="3" placeholder="输入标题"></textarea>
+                </div>
+              </div>
+            </div> 
+            <div class="article-add_textarea">
+              <textarea name="" id="circleIntroduce" rows="2" placeholder="输入文章简介"></textarea>
+            </div>
+          </div> 
+          <div id="article-body">
+            <p style="text-align: center;">点击开始编辑文章</p>
+          </div>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <div class="article-footer_btn flex">
+          <a href="javascript:;" class="mp-btn mp-btn-gray">存草稿</a>
+          <a href="javascript:;" class="mp-btn mp-btn-blue release">发布</a>
+        </div>
+        <!-- 文章选择标签 -->
+        <div class="mp-popup mp-popup_down folder">
+          <p class="mp-popup_tit">请选择文件夹标签</p>
+          <div class="folder-link flex">
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item">
+              <div class="folder-icon"><img src="images/folder.png"></div>
+              <div class="folder-name">更多</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    </div>
+    <script>
+      $(function(){
+        /*实例化一个编辑器*/
+        var artEditor = new Eleditor({
+          el: '#article-body',
+          upload:{
+            server: '/',
+            fileSizeLimit: 2
+          }
+        });
+        //弹出底部菜单
+        $('.mp-main').on('click','.release',function(){
+            if($('.mp-popup_down').hasClass('active')){
+                footerPop.hide();
+            }else{
+                footerPop.show();
+            }
+        });
+        $('body').on('click','.mp-popmaskbg',function(){
+            footerPop.hide();
+            return false;
+        });
+        // 文件夹选择状态
+        $('.folder-link').on('click','.folder-item',function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>文件夹管理</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header class="isSearch">
+        <a href="index.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">文件夹管理 - <span>5</span></p>
+      </header>
+      <section class="mp-container auto flex-box">
+        <div class="folder">
+          <div class="folder-head">
+            <span class="fl">文章文件夹</span>
+            <span class="fr mp-btn mp-btn-link del">删除</span>
+          </div>
+          <div class="folder-link flex">
+            <div class="folder-item brick more">
+              <div class="folder-icon"><i class="icon-upload"></i></div>
+              <div class="folder-name">添加文件夹</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">推荐文章</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+              <div class="folder-name">新建文件夹</div>
+            </div>
+          </div>
+        </div>
+        <p class="tip text-left">
+          温馨提示：<br/>
+          1.发布圈子内容，圈内成员可分享文章时带有会员的个人信息等<br/>
+          2.禁止发布违反互联网相关法律法规内容<br/>
+          3.禁止发布违反微信平台内容传播的规则
+        </p>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        folderAdd();
+        folderEdit();
+        folderDel();
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+
+      var _window = $('.mp-main');
+      var initMethod={
+        // 切换删除状态
+        switchFoldShow:function (obj) {
+          if(!obj.hasClass('edit')){
+            obj.addClass('edit');
+            obj.html("完成");
+            $('.folder-link').removeClass('nodrag');
+            $('.folder-link .icon-close').addClass('show').removeClass('hide');
+            $('.folder-link').find('.brick:not(.more)').addClass('shake');
+          }else{
+            obj.removeClass('edit');
+            obj.html("删除");
+            $('.folder-link').addClass('nodrag');
+            $('.folder-link .icon-close').removeClass('show').addClass('hide');
+            $('.folder-link').find('.brick:not(.more)').removeClass('shake');
+          }
+        }
+      }
+
+      // 点击管理开启编辑状态
+      function folderEdit() {
+        // 管理文件夹
+        _window.on('click','.del',function(){
+            var obj = $(this);
+            initMethod.switchFoldShow(obj);
+        });
+      }
+
+      // 删除文件夹
+/*      function folderDel(){
+        $('.icon-close').on('click', function() {
+          $(this).parents('.folder-item').remove();
+        });
+      }*/
+
+      // 弹出提示框
+      function noticeTis (content,icon){
+        var id = parseInt(Math.random() * 100);
+        var html = '';
+        html += '<div class="noticeTis-toast"  id="noticeTis'+id+'">';
+        if(icon == undefined){
+            html += '<div class="noticeTis-cont"><span class="txt">默认的Toast通知</span></div>';
+        }else{
+            html += '<div class="noticeTis-cont"><span class="iconbox"><i class="'+icon+'"></i></span><span class="txt">'+content+'</span></div>';
+        }
+        html += '</div>';
+        if($('.viewbox').length >0 ){
+            $('.viewbox').first().append(html);
+        }else{
+            $('body').append(html);
+        }
+        $("#noticeTis"+id).find('.txt').html(content);
+        setTimeout(function(){$("#noticeTis"+id).remove();},3000);
+      }
+
+      // 二次确认弹出框 head,cnt,num,fun,data 
+      function longtimetips(options){
+        var defaults = {
+          cnt :"", //输入提示语句
+          num :"",// 输入框文字
+          fun:'', //确定调用函数
+          data:'',//确定调用函数参数
+        };
+        var opts2 = $.extend({}, defaults, options);
+        var id = parseInt(Math.random() * 1000);
+        var html = '';
+        html+='<div class="pop-coverbg flex-center active" id="j-toast-default'+id+'">';
+        html+='<div class="pop-comfirmDelete">';
+        html+='<i class="ic-dypub ic-dyclose" id="closebtn'+id+'"></i>';
+        html+='<div class="head toast-hd'+id+'"></div><div class="cnt toast-cont'+id+'"></div>';
+        html+='<div class="flexbox">';
+        html+='<a href="javascript:" id="cancle'+id+'">取消</a><a href="javascript:" class="comform" id="comfirm'+id+'">确定</a>';
+        html+='</div></div></div>';
+        $('body').append(html);
+        //$("#j-toast-default"+id+" .toast-hd"+id).html(head);
+        $("#j-toast-default"+id+" .toast-cont"+id).html(opts2.cnt);
+        $('#cancle'+id).on('click',function(){
+            $("#j-toast-default"+id).remove();
+        });
+        $('#closebtn'+id).on('click',function(){
+            $("#j-toast-default"+id).remove();
+        });
+        $('#comfirm'+id).on('click',function(){
+            opts2.fun(opts2.data);
+            $("#j-toast-default"+id).remove();
+        });
+      }
+
+      // 弹出输入框
+      function popInputbox(options){
+        var defaults = {
+          head:"", // 标题
+          inputTips :"", //输入提示语句
+          valueTxt :"",// 输入框文字
+          maxlength :"",// 输入框最大字符
+          num : '2 ', // 底部按钮个数
+          cancleTxt :"取消", // 取消类文字
+          comfirmTxt :"确定",// 确定类文字
+          fun:'', //确定调用函数
+          data:'',//确定调用函数参数
+          insertDirect:0
+        };
+        var opts = $.extend({}, defaults, options);
+        var id = parseInt(Math.random() * 1000);
+        var html= ''
+            +'<div class="pub-popmask flex-center" id="popInputbox'+id+'">'
+            +   '<div class="pub-pop-inputbox">'
+            +       '<div class="pub-pop-inputbox-hd">'
+            +           '<h1 class="name">'+opts.head+'</h1>'
+            +       '</div>'
+            +       '<div class="pub-pop-inputbox-cnt">'
+            +           '<div class="input-item">'
+            +               '<input type="text" class="flex pub-input" placeholder="'+opts.inputTips+'" value="'+opts.valueTxt+'"  maxlength= "'+opts.maxlength+'" >'
+            +           '</div>'
+            +       '</div>'
+            +       '<div class="flexbox">'
+            +           '<a href="javascript:" id="cancle'+id+'">'+opts.cancleTxt+'</a>'
+            +           '<a href="javascript:" class="comform" id="comfirm'+id+'">'+opts.comfirmTxt+'</a>'
+            +       '</div>'
+            +   '</div>'
+            +'</div>';
+        if(opts.insertDirect ==0){
+          $('body').append(html);
+        }else{
+          $('.mp-main').first().append(html);
+        }
+        $('#cancle'+id).on('click',function(){
+          $("#popInputbox"+id).remove();
+        });
+        $('#comfirm'+id).on('click',function(){
+          if(typeof opts.fun == 'function'){
+            var stata=opts.fun(opts.data);
+            // console.log(stata);
+            if(stata !== 0){ //错误信息不想移除弹出框
+              $("#popInputbox"+id).remove();
+            }
+          }
+        });
+      }
+
+      // 管理文件夹
+      function folderAdd() {
+        // 添加文件夹
+        _window.on('click','.more',function(){
+          popInputbox({ head:"新建文件夹",inputTips:"1-16个字符",maxlength:'16',fun:comfirmNewFolder,insertDirect:1})
+        });
+      }
+      function folderDel() {
+        // 删除文件夹
+        _window.on('click','.icon-close',function(){
+          var obj = $(this).parents('.folder-item');
+          // console.log(obj);
+          longtimetips({cnt:'删除文件夹不会删除里面的单页，单页将移至首页,确定要删除吗？',num:1,fun:comfirmFoldNode,data:obj});
+          console.log(comfirmFoldNode);
+        });
+      }
+
+      // 确认添加文件夹
+      function comfirmNewFolder() { 
+          var foldName = $('.pub-pop-inputbox input').val();
+          if(foldName ==""){
+              noticeTis("文件夹名不能为空");
+              return false;
+          };
+          newFoldAppend(foldName);
+      }
+
+      // 添加文件夹调用
+      function newFoldAppend(foldName) {
+        var id2 = parseInt(Math.random() * 1000);
+        var name = foldName;
+        var html = ''
+            +'<div class="folder-item brick" data-fold ="'+id2+'">'
+            +   '<div class="folder-icon">'
+            +     '<img src="images/folder.png">'
+            +     '<i class="icon-close"></i>'
+            +   '</div>'
+            +   '<div class="folder-name">'+name+'</div>'
+            +'</div>';
+        $(html).insertAfter($('.folder-link .brick.more'));
+        //var num = $('.header-tit em').html();
+        var num = parseInt($('.header-tit span').html()) + 1;
+        $('.header-tit span').html(num);
+        noticeTis("添加成功");
+      }
+
+      // 确认删除文件夹
+      function comfirmFoldNode(obj){
+          console.log(obj);
+          var id = obj.attr("data-fold");
+          obj.remove();
+          noticeTis("删除成功");
+          var num = parseInt($('.header-tit span').html()) -1;
+          $('.header-tit span').html(num);
+      }   
+    </script>
+  </body>
+</html>

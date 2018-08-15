@@ -51,3 +51,66 @@
           }
      }
 }
+
+// 导入文章
+.article-tag{
+     padding: @margin;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     &_tit{
+          margin-top: @margin;
+          color: #888;
+          font-size: @fs8;
+     }
+     a{
+          width: 30%;
+          margin: .4rem 0;
+          border-radius: .25rem;
+          border: 1px solid #e7e7e7;
+          text-align: center;
+          line-height: 2.5rem;
+          background: #fff;
+          font-size: .875rem;
+          &.active{
+               border: 1px solid @brand_primary;
+               background: @brand_primary;
+               color: #fff;
+          }
+     }
+}
+.article-link-box{
+     padding: 1rem;
+     margin: 0 1rem;
+     border: 1px solid #e7e7e7;
+     border-radius: .25rem;
+     textarea{
+          width: 100%;
+     }
+}
+.article-add_head {
+     .upload-cover_tip .circle-textarea{
+          padding: 0;
+     }
+}
+.article-add_textarea{
+     padding: 1rem;
+     textarea{
+          padding: .5rem 0;
+          border-top: 1px solid #e7e7e7;
+          border-bottom: 1px solid #e7e7e7;
+     }
+}
+.article-footer_btn{
+     position: relative;
+     padding: .45rem .5rem;
+     background: #fff;
+     z-index: 100;
+     a{
+          width: 45%;
+          font-size: 1.1rem;
+          border-radius: 0;
+          &.mp-btn-gray{
+               color: #fff;
+          }
+     }
+}

@@ -6,9 +6,17 @@
 */
 
 footer{
+    position: relative;
 	height: @footerH;
 	border-top: 1px solid #e7e7e7;
 	background: #fff;
+    z-index: 100;
+    .folder{
+        bottom: -28rem;
+    }
+    .mp-popup.active{
+        bottom: @footerH;
+    }
 }
 .footer-btn{
 	position: fixed;
@@ -30,5 +38,6 @@ footer{
     .tip{
         margin-left: -3rem;
         margin-right: -3rem;
+        margin-top:1rem;
     }
 }

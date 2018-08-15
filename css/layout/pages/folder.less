@@ -11,12 +11,10 @@
 }
 .folder-head{
      .flex_initial(1);
-     padding: 1rem;
+     padding: .5rem 1rem;
+     line-height: 1.8rem;
      background: #fafafa;
      overflow: hidden;
-     .fr{
-          color: #00a0e9;
-     }
 }
 .folder-link{
      .flex-wrap_wrap;
@@ -42,30 +40,78 @@
 }
 .folder-item{
      width: 33.33333%;
-     margin-bottom: @margin;
+     margin: .5rem 0;
      text-align: center;
+     &.active{
+          .folder-icon{
+               border-color: @brand_blue;
+          }
+          .folder-name{
+               color: @brand_blue;
+          }
+     }
 }
 .folder-icon{
      position: relative;
      .display;
      .align_items_center;
+     .justify_content_center;
      width: 4rem;
      height: 4rem;
      padding: .5rem;
      margin: 0 auto;
      border: 1px solid #e7e7e7;
      border-radius: .25rem;
-     i{
+     i.icon-close{
           position: absolute;
           top: -.5rem;
           right: -.5rem;
           border-radius: 50%;
           color: #fff;
           background: red;
-          display: none;
+          -webkit-transform: scale(0);
+          &.hide {
+              -webkit-animation: scaleSmall .3s linear;
+              -webkit-transform: scale(0);
+          }
+          &.show {
+              -webkit-animation: scaleBig .2s linear;
+              -webkit-transform: scale(1);
+          }
      }
 }
 .folder-name{
      margin:@margin 0;
      font-size: @fs8;
+}
+
+// 文件夹管理状态
+.shake .folder-icon{
+     -webkit-animation: shake .3s linear infinite;
+}
+@-webkit-keyframes shake{
+    25%{-webkit-transform:rotate(-2deg)}
+    100%,50%{-webkit-transform:rotate(0)}
+    75%{-webkit-transform:rotate(2deg)}
+}
+@-webkit-keyframes shakeEven{
+    25%{-webkit-transform:rotate(2deg)}
+    100%,50%{-webkit-transform:rotate(0)}
+    75%{-webkit-transform:rotate(-2deg)}
+}
+@-webkit-keyframes scaleBig{
+    0%{transform:scale(0)}
+    100%{transform:scale(1)}
+}
+@keyframes scaleBig{
+    0%{transform:scale(0)}
+    100%{transform:scale(1)}
+}
+@-webkit-keyframes scaleSmall{
+    0%{-webkit-transform:scale(1)}
+    100%{-webkit-transform:scale(0)}
+}
+@keyframes scaleSmall{
+    0%{transform:scale(1)}
+    100%{transform:scale(0)}
 }

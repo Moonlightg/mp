@@ -1,0 +1,177 @@
+/*
+ * mp-popup.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.15 Moonlight
+ *
+*/
+
+.mp-popup{
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    padding: @margin;
+    background: rgba(255,255,255,.95);
+    transition: transform .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+}
+.mp-popup_up { 
+    top: 0;
+}
+.mp-popup_down { 
+    bottom: 0;
+    border-top: 1px solid #e7e7e7;
+}
+.mp-popup_tit{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.mp-popmaskbg{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background: rgba(0,0,0,.5);
+}
+
+// 弹出
+.pop-coverbg,
+.pub-popmask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 101;
+}
+.pub-pop-inputbox {
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 8px;
+    background: #fff;
+    max-width: 95%;
+    min-width: 80%;
+    padding-top: 10px;
+}
+.pub-pop-inputbox-hd {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.pub-pop-inputbox-hd .name {
+    font-size: @fs8;
+    color: #424242;
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+}
+.pub-pop-inputbox-cnt {
+    padding: 10px 20px 25px;
+}
+.pub-pop-inputbox-cnt .input-item {
+    min-height: 36px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border: none;
+}
+.pub-pop-inputbox .flexbox,
+.pop-comfirmDelete .flexbox {
+	.display;
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #e5e5e5;
+    a{
+    	flex: 1;
+    	color: #030303;
+    	text-align: center;
+    	&:first-child {
+		    border-right: 1px solid #e5e5e5;
+		}
+		&.comform {
+		    color: #2999ff;
+		}
+    }
+}
+
+// 弹出提示框
+.noticeTis-cont,
+.noticeTis-toast{
+    -webkit-animation:fadeInOut 3s linear forwards
+}
+.noticeTis-toast{
+    position:absolute;
+    z-index:7;
+    text-align:center;
+    top:70%;
+    width:100%;
+    left:0;
+    display:block;
+    font-size:@fs8;
+    line-height:1.2
+ }
+ .noticeTis-cont{
+     background:rgba(0,0,0,.8);
+     border:1px solid #000;
+     border-radius:4px;
+     color:#fff;
+     display:inline-block;
+     padding:.5rem 1rem;
+     -webkit-box-shadow:0 0 12px rgba(0,0,0,.3);
+     box-shadow:0 0 12px rgba(0,0,0,.3);
+     text-align:left;
+     max-width:90%
+ }
+ .noticeTis-cont span.iconbox{
+     display:inline-block;
+     width:18px;
+     height:18px;
+     text-align:center;
+     line-height:18px;
+     border-radius:50%;
+     background-color:#1f8ff3;
+     margin-right:5px
+}
+.noticeTis-cont span.iconbox i{
+    font-size:@fs8;
+    color:#fff
+ }
+ @-webkit-keyframes fadeInOut{
+     0%,100%{opacity:0}
+     10%{opacity:1}
+     90%{opacity:1;-webkit-transform:translateY(0)}
+     99%{opacity:0;-webkit-transform:translateY(-30px)}
+}
+
+.pop-coverbg {
+    z-index: 5;
+    background: rgba(0,0,0,.5);
+    display: none;
+    &.active {
+	    display: flex;
+	}
+}
+.pop-comfirmDelete {
+    width: 85%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    .ic-dyclose {
+	    position: absolute;
+	    top: 10px;
+	    right: 10px;
+	    padding: 10px;
+	    background: #F90;
+	    background-size: 16px 16px;
+	}
+	.cnt {
+	    padding: 20px 10px;
+	    text-align: center;
+	    font-size: @fs8;
+	    color: #666;
+	    line-height: 200%;
+	}
+}

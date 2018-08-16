@@ -171,6 +171,9 @@ img {
 ::-webkit-scrollbar {
   display: none;
 }
+.Eleditor-textEditor {
+  z-index: 200;
+}
 /*
  * font-icon.less
  * v1.1.1 MIT License

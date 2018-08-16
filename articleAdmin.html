@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>圈子文章管理</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header class="isSearch">
+        <a href="circleAdmin.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <div class="header-input">
+          <input type="text" name="" placeholder="输入关键词搜素文章">
+        </div>
+        <div class="header-info">
+          <a href="javascript:;" class="mp-btn mp-btn-blue">
+            搜索
+          </a>
+        </div>
+      </header>
+      <section class="mp-container auto flex-box">
+        <div class="folder">
+          <div class="folder-head">
+            <span>文件夹名称</span>
+            <p class="folder-num">共 <span>4</span> 篇文章</p>
+          </div>
+          <ul class="article-list">
+            <li>
+              <div class="article-list-start">
+                <img src="images/wz.jpg" alt="">
+              </div>
+              <div class="article-list-info">
+                <h1>这两个地区的领导人首次被纳入中央决策组织，这里要有大动作</h1>
+                <p><span class="fl">2018-04-28</span> <span class="fr">625154 浏览</span></p>
+                <div class="article-btn">
+                  <span>已删除：文章含有违规内容</span>
+                  <a href="javascript:;" class="mp-btn-link del">删除</a>
+                  <a href="articleEdit.html" class="mp-btn-link edit">编辑</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-list-start">
+                <img src="images/user.jpg" alt="">
+              </div>
+              <div class="article-list-info">
+                <h1>广东云蚨五一双重大回馈</h1>
+                <p><span class="fl">2018-04-28</span> <span class="fr">625154 浏览</span></p>
+                <div class="article-btn">
+                  <span></span>
+                  <a href="javascript:;" class="mp-btn-link del">删除</a>
+                  <a href="javascript:;" class="mp-btn-link edit">编辑</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-list-start">
+                <img src="images/user3.png" alt="">
+              </div>
+              <div class="article-list-info">
+                <h1>广东云蚨五一双重大回馈</h1>
+                <p><span class="fl">2018-04-28</span> <span class="fr">625154 浏览</span></p>
+                <div class="article-btn">
+                  <span></span>
+                  <a href="javascript:;" class="mp-btn-link del">删除</a>
+                  <a href="javascript:;" class="mp-btn-link edit">编辑</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="article-list-start">
+                <img src="images/user4.png" alt="">
+              </div>
+              <div class="article-list-info">
+                <h1>广东云蚨五一双重大回馈</h1>
+                <p><span class="fl">2018-04-28</span> <span class="fr">625154 浏览</span></p>
+                <div class="article-btn">
+                  <span></span>
+                  <a href="javascript:;" class="mp-btn-link del">删除</a>
+                  <a href="javascript:;" class="mp-btn-link edit">编辑</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        articleCheck();
+        articleDel();
+
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+
+      // 查看文章
+      function articleCheck(){
+        // 点击跳转到文章详情
+        $(".article-list").on('click','li',function(){
+            window.location.href="articleDetails.html";
+        });
+      }
+
+      // 删除文章
+      function articleDel(){
+        $('.article-list').on('click','.del',function(event){
+          event.stopPropagation();// 阻止冒泡
+          var obj = $(this).parents('li');
+          longtimetips({cnt:'文章删除后无法恢复,确定要删除吗？',num:2,fun:articleDelNode,data:obj});
+        });
+      }
+
+      // 确认删除文章
+      function articleDelNode(obj){
+        obj.remove();
+        noticeTis("删除成功");
+        var num = parseInt($('.folder-num span').html()) -1;
+        $('.folder-num span').html(num);
+      }
+    </script>
+  </body>
+</html>

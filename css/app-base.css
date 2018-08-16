@@ -803,6 +803,9 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   background-color: #f2f2f2;
   border: none;
 }
+.pub-pop-inputbox-cnt input {
+  background-color: #f2f2f2;
+}
 .pub-pop-inputbox .flexbox,
 .pop-comfirmDelete .flexbox {
   display: -webkit-flex;
@@ -2370,7 +2373,6 @@ footer .mp-popup.active {
 .circle-textarea textarea {
   resize: none;
   font-family: 微软雅黑;
-  color: #888;
 }
 .circle-textarea .textareaTip {
   text-align: right;
@@ -2415,6 +2417,13 @@ footer .mp-popup.active {
   line-height: 1.8rem;
   background: #fafafa;
   overflow: hidden;
+}
+.folder-head .folder-num {
+  font-size: 0.6rem;
+  color: #888;
+}
+.folder-head + .article-list {
+  border-top: 1px solid #e7e7e7;
 }
 .folder-link {
   flex-wrap: wrap;

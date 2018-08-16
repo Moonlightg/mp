@@ -60,22 +60,25 @@
     height: 40px;
     line-height: 40px;
     position: relative;
-}
-.pub-pop-inputbox-hd .name {
-    font-size: @fs8;
-    color: #424242;
-    width: 100%;
-    font-weight: 400;
-    text-align: center;
+    .name {
+        font-size: @fs8;
+        color: #424242;
+        width: 100%;
+        font-weight: 400;
+        text-align: center;
+    }
 }
 .pub-pop-inputbox-cnt {
     padding: 10px 20px 25px;
-}
-.pub-pop-inputbox-cnt .input-item {
-    min-height: 36px;
-    padding: 5px 10px;
-    background-color: #f2f2f2;
-    border: none;
+    .input-item {
+        min-height: 36px;
+        padding: 5px 10px;
+        background-color: #f2f2f2;
+        border: none;
+    }
+    input{
+        background-color: #f2f2f2;
+    }
 }
 .pub-pop-inputbox .flexbox,
 .pop-comfirmDelete .flexbox {
@@ -111,8 +114,8 @@
     display:block;
     font-size:@fs8;
     line-height:1.2
- }
- .noticeTis-cont{
+}
+.noticeTis-cont{
      background:rgba(0,0,0,.8);
      border:1px solid #000;
      border-radius:4px;
@@ -122,22 +125,22 @@
      -webkit-box-shadow:0 0 12px rgba(0,0,0,.3);
      box-shadow:0 0 12px rgba(0,0,0,.3);
      text-align:left;
-     max-width:90%
- }
- .noticeTis-cont span.iconbox{
-     display:inline-block;
-     width:18px;
-     height:18px;
-     text-align:center;
-     line-height:18px;
-     border-radius:50%;
-     background-color:#1f8ff3;
-     margin-right:5px
+     max-width:90%;
+     span.iconbox{
+         display:inline-block;
+         width:18px;
+         height:18px;
+         text-align:center;
+         line-height:18px;
+         border-radius:50%;
+         background-color:#1f8ff3;
+         margin-right:5px;
+         i{
+            font-size:@fs8;
+            color:#fff
+         }
+    }
 }
-.noticeTis-cont span.iconbox i{
-    font-size:@fs8;
-    color:#fff
- }
  @-webkit-keyframes fadeInOut{
      0%,100%{opacity:0}
      10%{opacity:1}

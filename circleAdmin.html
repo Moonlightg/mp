@@ -96,7 +96,7 @@
               <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
               <div class="folder-name">新建文件夹</div>
             </div>
-            <div class="folder-item">
+            <div class="folder-item more">
               <div class="folder-icon"><img src="images/folder.png"></div>
               <div class="folder-name">更多</div>
             </div>
@@ -153,6 +153,15 @@
             $(this).val(res);
           }
         });
+
+        // 点击跳转到文件夹中的文章列表
+        $(".folder-link").on('click','.folder-item',function(){
+            window.location.href="articleAdmin.html";
+        });
+        $(".folder-link").on('click','.folder-item.more',function(){
+            window.location.href="folderAdmin.html";
+        });
+        
 
         // 波浪涟漪效果
         Waves.init();

@@ -17,7 +17,7 @@ var footerPop={
 		$('.mp-popmaskbg').remove();
 		$('.mp-popup_down').toggleClass('active');
 		if(!($('.mp-popmaskbg').length > 0)){
-			$('.mp-main').append("<div class='mp-popmaskbg'></div>");
+			$('.mp-container').append("<div class='mp-popmaskbg'></div>");
 		}else{
 			$('.mp-popmaskbg').remove();
 		}

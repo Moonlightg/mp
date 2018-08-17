@@ -99,6 +99,7 @@ textarea {
   font-family: 微软雅黑;
   font-size: 0.875rem;
   width: 100%;
+  border-radius: 0;
 }
 input::-webkit-input-placeholder {
   font-weight: normal;
@@ -170,6 +171,9 @@ img {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+.Eleditor-textEditor {
+  z-index: 200;
 }
 /*
  * font-icon.less
@@ -2419,7 +2423,7 @@ footer .mp-popup.active {
   overflow: hidden;
 }
 .folder-head .folder-num {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: #888;
 }
 .folder-head + .article-list {
@@ -2454,7 +2458,8 @@ footer .mp-popup.active {
 .folder-item.active .folder-name {
   color: #2577ff;
 }
-.folder-icon {
+.folder-icon,
+.link-icon {
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -2469,22 +2474,31 @@ footer .mp-popup.active {
   border: 1px solid #e7e7e7;
   border-radius: .25rem;
 }
-.folder-icon i.icon-close {
+.folder-icon i.icon-close,
+.link-icon i.icon-close {
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
   border-radius: 50%;
+  font-size: 1rem;
   color: #fff;
   background: red;
   -webkit-transform: scale(0);
 }
-.folder-icon i.icon-close.hide {
+.folder-icon i.icon-close.hide,
+.link-icon i.icon-close.hide {
   -webkit-animation: scaleSmall .3s linear;
   -webkit-transform: scale(0);
 }
-.folder-icon i.icon-close.show {
+.folder-icon i.icon-close.show,
+.link-icon i.icon-close.show {
   -webkit-animation: scaleBig .2s linear;
   -webkit-transform: scale(1);
+}
+.link-icon {
+  border-radius: 50%;
+  font-size: 4rem;
+  color: #fff;
 }
 .folder-name {
   margin: 1rem 0;

@@ -18,6 +18,19 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      footer{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+      .Eleditor-wrap.Eleditor-mask{
+        position: fixed;
+      }
+      .Eleditor-method{
+        z-index: 99999;
+      }
+    </style>
   </head>
   <body>
     <div id="app" class="mp-main">
@@ -58,56 +71,56 @@
 
 
           </div>
+          <!-- 公共底部 -->
+          <footer>
+            <div class="article-footer_btn flex">
+              <a href="javascript:;" class="mp-btn mp-btn-info" onclick="goBack(-1)">保存</a>
+              <a href="javascript:;" class="mp-btn mp-btn-blue release">发布</a>
+            </div>
+            <!-- 文章选择标签 -->
+            <div class="mp-popup mp-popup_down folder">
+              <p class="mp-popup_tit">请选择文件夹标签</p>
+              <div class="folder-link flex">
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">推荐文章</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">新建文件夹</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">新建文件夹</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">推荐文章</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">新建文件夹</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">新建文件夹</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">推荐文章</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
+                  <div class="folder-name">新建文件夹</div>
+                </div>
+                <div class="folder-item">
+                  <div class="folder-icon"><img src="images/folder.png"></div>
+                  <div class="folder-name">更多</div>
+                </div>
+              </div>
+            </div>
+          </footer>
       </section>
-      <!-- 公共底部 -->
-      <footer>
-        <div class="article-footer_btn flex">
-          <a href="javascript:;" class="mp-btn mp-btn-info" onclick="goBack(-1)">保存</a>
-          <a href="javascript:;" class="mp-btn mp-btn-blue release">发布</a>
-        </div>
-        <!-- 文章选择标签 -->
-        <div class="mp-popup mp-popup_down folder">
-          <p class="mp-popup_tit">请选择文件夹标签</p>
-          <div class="folder-link flex">
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">推荐文章</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">新建文件夹</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">新建文件夹</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">推荐文章</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">新建文件夹</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">新建文件夹</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">推荐文章</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"><i class="icon-close"></i></div>
-              <div class="folder-name">新建文件夹</div>
-            </div>
-            <div class="folder-item">
-              <div class="folder-icon"><img src="images/folder.png"></div>
-              <div class="folder-name">更多</div>
-            </div>
-          </div>
-        </div>
-      </footer>
       
     </div>
     <script>

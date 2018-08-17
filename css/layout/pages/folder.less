@@ -16,7 +16,7 @@
      background: #fafafa;
      overflow: hidden;
      .folder-num{
-          font-size: @fs6;
+          font-size: @fs7;
           color: #888;
      }
      &+.article-list{
@@ -58,7 +58,8 @@
           }
      }
 }
-.folder-icon{
+.folder-icon,
+.link-icon{
      position: relative;
      .display;
      .align_items_center;
@@ -74,6 +75,7 @@
           top: -.5rem;
           right: -.5rem;
           border-radius: 50%;
+          font-size: 1rem;
           color: #fff;
           background: red;
           -webkit-transform: scale(0);
@@ -86,6 +88,11 @@
               -webkit-transform: scale(1);
           }
      }
+}
+.link-icon{
+  border-radius:50%;
+  font-size: 4rem;
+  color:#fff;
 }
 .folder-name{
      margin:@margin 0;

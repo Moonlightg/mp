@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>圈子名称微站</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <div class="register-head">
+        <div class="register-head_logo">
+          <img src="images/user2.png">
+        </div>
+        <p>圈子名称的微站</p>
+      </div>
+      <section class="mp-container"> 
+        <div class="circle-register_btn">
+          <a href="login.html" class="mp-btn mp-btn_xl mp-btn-info "><i class="icon-add-user"></i>新用户注册</a> 
+          <a href="login.html" class="mp-btn mp-btn_xl mp-btn-pink "><i class="icon-user2"></i>已注册用户登录</a> 
+          <a href="circleHotspot.html" class="mp-btn mp-btn_xl mp-btn-blue "><i class="icon-circle"></i>查看圈子名称的微站</a> 
+          <p>推荐人：李大伟</p>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function () {
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

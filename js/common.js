@@ -62,7 +62,7 @@ function longtimetips(options){
   var html = '';
   html+='<div class="pop-coverbg flex-center active" id="j-toast-default'+id+'">';
   html+='<div class="pop-comfirmDelete">';
-  html+='<i class="ic-dypub ic-dyclose" id="closebtn'+id+'"></i>';
+  html+='<i class="ic-dyclose icon-close" id="closebtn'+id+'"></i>';
   html+='<div class="head toast-hd'+id+'"></div><div class="cnt toast-cont'+id+'"></div>';
   html+='<div class="flexbox">';
   html+='<a href="javascript:" id="cancle'+id+'">取消</a><a href="javascript:" class="comform" id="comfirm'+id+'">确定</a>';

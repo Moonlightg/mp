@@ -55,7 +55,8 @@
 // 导入文章
 .article-tag{
      padding: @margin;
-     justify-content: space-around;
+     .flex(0);
+     justify-content: space-between;
      flex-wrap: wrap;
      &_tit{
           margin-top: @margin;
@@ -112,5 +113,43 @@
           &.mp-btn-gray{
                color: #fff;
           }
+     }
+}
+// 圈子热点文章列表
+.article-item_right{
+     margin-top: -1rem;
+     li{ border-bottom: 1px solid #eeeeee;}
+     .article-list-start{
+          float: right;
+          width: 6.8rem;
+          overflow: hidden;
+     }
+     .article-list-info{
+          margin-left: 0;
+          margin-right: 7.8rem;
+          p{
+               margin-top: 1.25rem;
+          }
+     }
+}
+// 圈子微站注册引导
+.circle-register_btn{
+     padding: 1rem 2.5rem;
+     a{
+          margin-bottom: @margin*1.5;
+          font-size: 1rem;
+          line-height: 3rem;
+          text-align: left;
+          i{
+               margin-right: @fs7;
+               font-size: 1.5rem;
+               vertical-align: middle;
+          }
+     }
+     p{
+          text-align: center;
+          font-size: .875rem;
+          color: #888;
+          margin-top: -.5rem;
      }
 }

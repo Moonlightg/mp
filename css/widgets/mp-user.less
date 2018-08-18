@@ -51,10 +51,21 @@
 }
 .user-box{
     a{
+        position: relative;
         .display;
         .align_items_center;
         line-height: 1.6rem;
         overflow: hidden;
+    }
+}
+.user-tip{
+    padding: .5rem 1rem;
+    line-height: 1.8rem;
+    background: #fafafa;
+    span{
+        color: #888;
+        font-size: @fs7;
+        margin-left: .5rem;
     }
 }
 .user-head{
@@ -75,6 +86,7 @@
 }
 .user-text{
     margin-left: .4rem;
+    .flex_initial(1);
 }
 .user-name{
     font-size: 1.2rem;
@@ -84,6 +96,31 @@
         vertical-align: text-top;
         margin-top: .2rem;
         color: #bfbfbf;
+    }
+}
+.user-info{
+    .flex(0);
+    .mp-btn-gray{
+        line-height: 1.8rem;
+        font-size: .85rem;
+    }
+}
+.user-job{
+    position: absolute;
+    bottom: .5rem;
+    left: 1.3rem;
+    width: 2.4rem;
+    border-radius: 2rem;
+    color: #fff;
+    text-align: center;
+    font-size: .6rem;
+    line-height: 1;
+    padding: .1rem;
+    &.job-1{
+        background-image: -webkit-linear-gradient(top, #13f14d, #28a919);
+    }
+    &.job-2{
+        background-image: -webkit-linear-gradient(top, #84b7f7, #0d4cda);
     }
 }
 .user-vein-wrap{

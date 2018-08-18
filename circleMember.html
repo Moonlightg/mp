@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>圈子管理</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="javascript:;" class="header-return" onclick="goBack(-1)">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">圈子成员</p>
+      </header>
+      <section class="mp-container auto flex-box">
+        <div class="user-tip">
+            <p>管理员<span>上线3人，可发布圈子信息</span></p>
+        </div>
+        <ul class="user-list">
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user2.png" alt="李大伟">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">李大伟</p>
+                </div>
+                <!-- 职位标签 -->
+                <div class="user-job job-1">圈主</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user.jpg" alt="郭嘉宝">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">郭嘉宝</p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-gray">取消管理</div>
+                </div>
+                <!-- 职位标签 -->
+                <div class="user-job job-2">达人</div>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div class="user-tip">
+            <p>成员</p>
+        </div>
+        <ul class="user-list">
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user2.png" alt="李大伟">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">李大伟</p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-link">设为管理</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user.jpg" alt="郭嘉宝">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">郭嘉宝</p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-link">设为管理</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user3.png" alt="朱茵">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">朱茵 </p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-link">设为管理</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user4.png" alt="梁伟祥">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">梁伟祥</p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-link">设为管理</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user5.png" alt="吴杨慧">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">吴杨慧</p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-link">设为管理</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="user-box">
+              <a href="javascript:;">
+                <div class="user user_m">
+                  <img src="images/user6.png" alt="王业坤">
+                </div>
+                <div class="user-text">
+                  <p class="user-name">王业坤</p>
+                </div>
+                <div class="user-info">
+                  <div class="mp-btn mp-btn-link">设为管理</div>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="register.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () { 
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

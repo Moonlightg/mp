@@ -52,3 +52,58 @@
 
      }
 }
+// 圈子热点
+.circle-hotspot-tip{
+     span{
+          margin-right: .5rem;
+          font-size: @fs7;
+     }
+     .mp-btn{
+          margin-left: .5rem;
+     }
+}
+.circle-hotspot-bar{
+     padding: 0 1rem;
+     margin-bottom: -1rem;
+     .flex(0);
+     justify-content: space-between;
+     h2{
+          flex: 1;
+          font-size: 1.2rem;
+          font-weight: 700;
+     }
+     i{
+          margin-left: -.25rem;
+          font-size: @fs8;
+     }
+}
+.circle-choice-list{
+     padding: 0 1rem;
+     li{
+          .display;
+          padding: 1rem 0;
+          border-bottom: 1px solid #eeeeee;
+          overflow: hidden;
+          .circle-choice-list_start{
+               width: 4.8rem;
+               height: 4.8rem;
+               .flex(0);
+          }
+          .circle-choice-list_info{
+               padding: 0 .5rem;
+               .flex_initial(1);
+               h1{
+                    font-size: 1.2rem;
+                    margin-bottom: .5rem;
+               }
+               p{
+                    color: #666;
+               }
+          }
+          .circle-choice-list_end{
+               .display;
+               .align_items_center;
+               .flex(0);
+          }
+     }
+}

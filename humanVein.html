@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>我的推广</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <script src="lib/swiper/js/swiperTab.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <script src="lib/iosSelect/iosSelect.js"></script>
+    <link rel="stylesheet" href="lib/iosSelect/iosSelect.css">
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header class="isSearch">
+        <a href="index.html" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <div class="header-input">
+          <input type="text" name="" placeholder="输入名称搜索">
+        </div>
+        <div class="header-info">
+          <a href="javascript:;" class="mp-btn mp-btn-info">
+            搜索
+          </a>
+        </div>
+      </header>
+      <ul class="mp-list">
+        <li>
+          <a href="javascript:;" class="mp-list-item">
+            <div class="mp-list_start">公开我的名片信息</div>
+            <div class="mp-list_info text-right">
+              <label class="bui-switch-label bui-switch-anim">
+                <input type="checkbox" name="s"/>
+                <i class="bui-switch"></i>
+              </label>
+            </div>
+          </a>
+        </li>
+        <li>
+          <div class="mp-list-item mp-link human-sort mp-tab">
+            <a href="circleArticleRelease.html" hidefocus="true">
+              <span class="mp-link-icon"><i class="icon-add-user mp-color3"></i></span>
+              <span class="mp-link-name">发现人脉</span>
+            </a>
+            <a href="microLink.html" hidefocus="true">
+              <span class="mp-link-icon"><i class="icon-addres-fill mp-color3"></i></span>
+              <span class="mp-link-name">同城人脉</span>
+            </a>
+            <a href="javascript:;" hidefocus="true">
+              <span class="mp-link-icon"><i class="icon-collection-me mp-color3"></i></span>
+              <span class="mp-link-name">我的收藏</span>
+            </a>
+            <a href="circleMember.html" hidefocus="true">
+              <span class="mp-link-icon"><i class="icon-member-2 mp-color3"></i></span>
+              <span class="mp-link-name">我的粉丝</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="mp-bar"></div>
+      <section class="mp-container mp-tab-wrap">
+        <div class="user-vein-wrap">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+                <div class="content-slide">
+                  <div class="screening flex">
+                    <a href="javascript:;"><input type="hidden" name="bank_id" id="bankId" value=""> <span id="showBank">选择行业</span> </a>
+                    <a href="javascript:;"><span id="sel_city">选择地区</span></a>
+                  </div>
+                  <ul class="user-list">
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user2.png" alt="李大伟">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>李大伟 <span>执行董事</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user.jpg" alt="郭嘉宝">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>郭嘉宝 <span> 前端工程师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user3.png" alt="朱茵">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>朱茵 <span> 演员</span></p>
+                            <p class="user-tit">香港凯艺娱乐发展有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user4.png" alt="梁伟祥">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>梁伟祥 <span> 运营主管</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user5.png" alt="吴杨慧">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>吴杨慧 <span> 平面设计师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user6.png" alt="王业坤">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>王业坤 <span> 研发工程师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content-slide">
+                  <ul class="user-list user-vein-list">
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user6.png" alt="王业坤">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>王业坤 <span> 研发工程师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user2.png" alt="李大伟">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>李大伟 <span>执行董事</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user3.png" alt="朱茵">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-ck-member"></i>朱茵 <span> 演员</span></p>
+                            <p class="user-tit">香港凯艺娱乐发展有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user.jpg" alt="郭嘉宝">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>郭嘉宝 <span> 前端工程师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user4.png" alt="梁伟祥">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>梁伟祥 <span> 运营主管</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user5.png" alt="吴杨慧">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>吴杨慧 <span> 平面设计师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content-slide">
+                  <ul class="user-list user-vein-list">
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user4.png" alt="梁伟祥">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>梁伟祥 <span> 运营主管</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user5.png" alt="吴杨慧">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>吴杨慧 <span> 平面设计师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content-slide">
+                  <ul class="user-list user-vein-list">
+                    <li>
+                      <div class="user-box">
+                        <a href="javascript:;">
+                          <div class="user user_m">
+                            <img src="images/user6.png" alt="王业坤">
+                          </div>
+                          <div class="user-text">
+                            <p class="user-name"><i class="icon-vip"></i>王业坤 <span> 研发工程师</span></p>
+                            <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-edit"></i>
+              <span>制作微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves active">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+      <div class="container"></div>
+    </div>
+    <script src="lib/picker/js/picker.min.js"></script>
+    <script src="lib/picker/js/city.js"></script>
+    <script src="lib/picker/js/base.js"></script>
+    <script>
+      $(function () {
+        /*swiper选项卡切换*/
+        $('.mp-tab a').eq(0).addClass('active');
+        tabs('.mp-tab a','.swiper-container','active');
+
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves', ['waves-button', 'waves-float']);
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+
+        // 选择行业
+        var data = [
+          {'id': '10001', 'value': '互联网'},
+          {'id': '10002', 'value': '电子商务'},
+          {'id': '10003', 'value': '微商'},
+          {'id': '10004', 'value': '建筑工程'},
+          {'id': '10005', 'value': '动物宠物'},
+          {'id': '10006', 'value': '广告设计'},
+          {'id': '10007', 'value': '贸易'},
+          {'id': '10008', 'value': '酒店'},
+          {'id': '10009', 'value': '影视传媒'},
+          {'id': '10010', 'value': '科技'},
+          {'id': '10011', 'value': '旅游'},
+          {'id': '10012', 'value': '文化'},
+          {'id': '10013', 'value': '汽车'},
+          {'id': '10014', 'value': '金融'},
+          {'id': '10015', 'value': '餐饮'},
+          {'id': '10016', 'value': '时尚 - 美容'},
+          {'id': '10017', 'value': '教育'},
+          {'id': '10018', 'value': '健身'},
+          {'id': '10019', 'value': '保险'},
+          {'id': '10020', 'value': '健康养生'},
+          {'id': '10021', 'value': '农业'},
+          {'id': '10022', 'value': '律师'},
+          {'id': '10023', 'value': '体育'},
+          {'id': '10024', 'value': '娱乐'},
+          {'id': '10025', 'value': '运输'},
+          {'id': '10026', 'value': '机械 - 制造'},
+          {'id': '10027', 'value': '房产'},
+          {'id': '10028', 'value': '其他'}
+        ];
+        var showBankDom = document.querySelector('#showBank');
+        var bankIdDom = document.querySelector('#bankId');
+        showBankDom.addEventListener('click', function () {
+          var bankId = showBankDom.dataset['id'];
+          var bankName = showBankDom.dataset['value'];
+          var bankSelect = new IosSelect(1, 
+          [data],
+          {
+            container: '.container',
+            title: '行业标签',
+            itemHeight: 50,
+            itemShowCount: 3,
+            oneLevelId: bankId,
+            callback: function (selectOneObj) {
+              bankIdDom.value = selectOneObj.id;
+              showBankDom.innerHTML = selectOneObj.value;
+              showBankDom.dataset['id'] = selectOneObj.id;
+              showBankDom.dataset['value'] = selectOneObj.value;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

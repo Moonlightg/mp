@@ -1,0 +1,65 @@
+/*
+ * human.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.18 Moonlight
+ *
+*/
+
+.human-sort{
+     padding: 0;
+     .mp-link-icon{
+          background: none;
+          font-size: 1.8rem;
+          .icon-member-2{
+               font-size: 1.6rem;
+          }
+     }
+     &.mp-tab{
+          height: inherit;
+          a{
+               padding: 1rem 0;
+               color: #333;
+               border-bottom: .25rem solid #fff;
+               &.active{
+                    border-color: #fe9113;
+               }
+          }
+     }
+}
+.screening{
+     line-height: 2.6rem;
+     border-bottom: 1px solid #e7e7e7;
+     text-align: center;
+     a{
+          width: 50%;
+     }
+     span{
+          position: relative;
+          &:after{
+               position:absolute;
+               top: .25rem;
+               right: -1.5rem;
+               content: "";
+               .arrow-down();
+          }
+     }
+}
+.picker .picker-panel .wheel-wrapper .wheel,
+.picker .picker-panel .picker-choose .picker-title{
+     font-size: 1rem !important;
+}
+.picker .picker-panel .picker-choose .picker-title{
+     height: 44px !important;
+     line-height: 44px !important;
+     font-size: 1rem;
+     font-weight: 400;
+     background: #eee;
+}
+.picker .picker-panel .picker-choose{
+     height: 44px !important;
+     font-size: 16px !important ;
+}
+.picker .picker-panel .picker-choose .cancel, 
+.picker .picker-panel .picker-choose .confirm{
+     top: 4px !important;
+}

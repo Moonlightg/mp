@@ -41,10 +41,10 @@
                   <ul class="article-list">
                     <li>
                       <div class="article-list-start">
-                        <img src="images/wz.jpg" alt="">
+                        <img src="images/wz3.jpg" alt="">
                       </div>
                       <div class="article-list-info">
-                        <h1>这两个地区的领导人首次被纳入中央决策组织，这里要有大动作</h1>
+                        <h1>世界杯，克罗地亚球员因世界杯喝红牛被FIFA开罚47万元</h1>
                         <p><span class="fl">2018-04-28</span> <span class="fr">625154 浏览</span></p>
                         <div class="article-btn">
                           <span>已删除：文章含有违规内容</span>
@@ -171,6 +171,7 @@
     </div>
     <script>
       $(function () {
+        articleCheck();
         /*swiper选项卡切换*/
         $('.mp-tab a').eq(0).addClass('active');
         tabs('.mp-tab a','.swiper-container','active');
@@ -180,6 +181,14 @@
         Waves.attach('.waves', ['waves-button', 'waves-float']);
         Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
       });
+
+      // 查看文章
+      function articleCheck(){
+        // 点击跳转到文章详情
+        $(".article-list").on('click','li',function(){
+            window.location.href="articleDetails.html";
+        });
+      }
     </script>
   </body>
 </html>

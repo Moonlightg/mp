@@ -9,6 +9,7 @@
     <script src="lib/swiper/js/swiper.min.js"></script>
     <script src="lib/swiper/js/swiperTab.js"></script>
     <script src="lib/waves/js/waves.min.js"></script>
+     <script src="js/common.js"></script>
     <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <script src="lib/iosSelect/iosSelect.js"></script>
     <link rel="stylesheet" href="lib/iosSelect/iosSelect.css">
@@ -67,7 +68,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color3"></i>
+                            <i class="icon-collection mp-color3 follow is_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -83,7 +84,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color3"></i>
+                            <i class="icon-collection mp-color3 follow is_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -99,7 +100,7 @@
                             <p class="user-tit">香港凯艺娱乐发展有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -115,7 +116,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -131,7 +132,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -147,7 +148,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -163,7 +164,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -179,7 +180,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -195,7 +196,7 @@
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
                           </div>
                           <div class="user-info">
-                            <i class="icon-collection mp-color8"></i>
+                            <i class="icon-collection mp-color8 follow off_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -348,7 +349,7 @@
           <li>
             <a href="microStation.html" class="waves">
               <i class="icon-edit"></i>
-              <span>制作微页</span>
+              <span>我的微页</span>
             </a>
           </li>
           <li>
@@ -378,6 +379,7 @@
     <script src="lib/picker/js/base.js"></script>
     <script>
       $(function () {
+        follow();
         /*swiper选项卡切换*/
         $('.mp-tab a').eq(0).addClass('active');
         tabs('.mp-tab a','.swiper-container','active');
@@ -440,6 +442,28 @@
           });
         });
       });
+
+      // 点击收藏
+      function follow() {
+        // 管理文件夹
+        $('.user-list').on('click','.follow',function(){
+            var obj = $(this);
+            if(!obj.hasClass('is_follow')){
+              obj.addClass('is_follow');
+              //obj.removeClass('off_follow');
+              noticeTis("收藏成功");
+            }else{
+              longtimetips({cnt:'亲，确定取消收藏吗？',num:1,fun:confirmFollowNode,data:obj});
+            }
+        });
+      } 
+
+      // 确认删除文件夹
+      function confirmFollowNode(obj){
+          console.log(obj);
+          obj.removeClass('is_follow');
+          noticeTis("取消收藏成功");
+      }   
     </script>
   </body>
 </html>

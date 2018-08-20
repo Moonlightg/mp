@@ -186,8 +186,8 @@ img {
 */
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?qu3xsp');
-  src: url('fonts/icomoon.eot?qu3xsp#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?qu3xsp') format('truetype'), url('fonts/icomoon.woff?qu3xsp') format('woff'), url('fonts/icomoon.svg?qu3xsp#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?w8414b');
+  src: url('fonts/icomoon.eot?w8414b#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?w8414b') format('truetype'), url('fonts/icomoon.woff?w8414b') format('woff'), url('fonts/icomoon.svg?w8414b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -204,6 +204,15 @@ img {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-ad-2:before {
+  content: "\e93e";
+}
+.icon-fwsl:before {
+  content: "\e93f";
+}
+.icon-wzsc:before {
+  content: "\e940";
 }
 .icon-link:before {
   content: "\e92d";
@@ -868,15 +877,13 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
 }
 .pub-pop-inputbox .flexbox,
 .pop-comfirmDelete .flexbox {
-  display: -webkit-flex;
-  display: flex;
   height: 40px;
   line-height: 40px;
-  border-top: 1px solid #e5e5e5;
 }
 .pub-pop-inputbox .flexbox a,
 .pop-comfirmDelete .flexbox a {
-  flex: 1;
+  float: right;
+  width: 4rem;
   color: #030303;
   text-align: center;
 }
@@ -886,7 +893,7 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
 }
 .pub-pop-inputbox .flexbox a.comform,
 .pop-comfirmDelete .flexbox a.comform {
-  color: #2999ff;
+  color: #69bf13;
 }
 .noticeTis-cont,
 .noticeTis-toast {
@@ -896,7 +903,7 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   position: absolute;
   z-index: 7;
   text-align: center;
-  top: 70%;
+  top: 50%;
   width: 100%;
   left: 0;
   display: block;
@@ -947,7 +954,7 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   }
 }
 .pop-coverbg {
-  z-index: 5;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.5);
   display: none;
 }
@@ -955,9 +962,8 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   display: flex;
 }
 .pop-comfirmDelete {
-  width: 85%;
+  width: 70%;
   background-color: #fff;
-  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -1076,7 +1082,8 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   -webkit-flex: 1;
   flex: 1;
 }
-.mp-list_info .icon-wz-set {
+.mp-list_info .icon-wz-set,
+.mp-list_info .icon-ad-2 {
   font-size: 1.4rem;
   margin-right: .5rem;
   margin-bottom: .25rem;
@@ -1312,6 +1319,13 @@ footer .mp-popup.active {
 .user-info .mp-btn-gray {
   line-height: 1.8rem;
   font-size: .85rem;
+}
+.user-info .icon-collection {
+  font-size: 1.4rem;
+  color: #8a8a8a;
+}
+.user-info .icon-collection.is_follow {
+  color: #ffbe22;
 }
 .user-job {
   position: absolute;
@@ -2775,9 +2789,12 @@ h3.circle-name {
 .circle-choice-list li .circle-choice-list_info h1 {
   font-size: 1.2rem;
   margin-bottom: .5rem;
+  font-weight: 400;
 }
 .circle-choice-list li .circle-choice-list_info p {
   color: #666;
+  font-size: 0.875rem;
+  line-height: 1.25;
 }
 .circle-choice-list li .circle-choice-list_end {
   display: -webkit-flex;
@@ -3097,8 +3114,10 @@ h3.circle-name {
   left: 1rem;
   font-size: .8rem;
 }
+.micro-statistics p {
+  margin-bottom: .4rem;
+}
 .micro-statistics i {
-  font-size: 1.2rem;
   color: #df6037;
   vertical-align: middle;
   margin-bottom: .1rem;
@@ -3108,11 +3127,28 @@ h3.circle-name {
   margin-left: .5rem;
   color: #999;
 }
-.mp-audio {
-  width: 3rem;
-  height: 3rem;
-  background: #F90;
+.micro-btn-box {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  width: 2.5rem;
+}
+.micro-btn-item {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: .25rem;
+}
+.micro-btn-item.mp-audio {
+  -webkit-animation: change 2s linear infinite;
+}
+@-webkit-keyframes change {
+   0% {
+    -webkit-transform: rotate(0deg);
+  }
+   50% {
+    -webkit-transform: rotate(180deg);
+  }
+   100% {
+    -webkit-transform: rotate(360deg);
+  }
 }

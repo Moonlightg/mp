@@ -82,19 +82,18 @@
 }
 .pub-pop-inputbox .flexbox,
 .pop-comfirmDelete .flexbox {
-	.display;
     height: 40px;
     line-height: 40px;
-    border-top: 1px solid #e5e5e5;
     a{
-    	flex: 1;
+        float: right;
+        width: 4rem;
     	color: #030303;
     	text-align: center;
     	&:first-child {
 		    border-right: 1px solid #e5e5e5;
 		}
 		&.comform {
-		    color: #2999ff;
+		    color: #69bf13;
 		}
     }
 }
@@ -108,7 +107,7 @@
     position:absolute;
     z-index:7;
     text-align:center;
-    top:70%;
+    top:50%;
     width:100%;
     left:0;
     display:block;
@@ -149,7 +148,7 @@
 }
 
 .pop-coverbg {
-    z-index: 5;
+    z-index: 999;
     background: rgba(0,0,0,.5);
     display: none;
     &.active {
@@ -157,9 +156,8 @@
 	}
 }
 .pop-comfirmDelete {
-    width: 85%;
+    width: 70%;
     background-color: #fff;
-    border-radius: 10px;
     position: relative;
     overflow: hidden;
     .ic-dyclose {

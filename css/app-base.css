@@ -186,8 +186,8 @@ img {
 */
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?haz8we');
-  src: url('fonts/icomoon.eot?haz8we#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?haz8we') format('truetype'), url('fonts/icomoon.woff?haz8we') format('woff'), url('fonts/icomoon.svg?haz8we#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?qu3xsp');
+  src: url('fonts/icomoon.eot?qu3xsp#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?qu3xsp') format('truetype'), url('fonts/icomoon.woff?qu3xsp') format('woff'), url('fonts/icomoon.svg?qu3xsp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -351,6 +351,18 @@ img {
 }
 .icon-wz-set:before {
   content: "\e928";
+}
+.icon-tel-a2:before {
+  content: "\e939";
+}
+.icon-wx-a2:before {
+  content: "\e93b";
+}
+.icon-xin:before {
+  content: "\e93c";
+}
+.icon-yl:before {
+  content: "\e93d";
 }
 .icon-close2:before {
   content: "\e938";
@@ -1301,11 +1313,6 @@ footer .mp-popup.active {
   line-height: 1.8rem;
   font-size: .85rem;
 }
-.user-info .mp-btn {
-  padding-left: .5rem;
-  padding-right: .5rem;
-  font-size: .75rem;
-}
 .user-job {
   position: absolute;
   bottom: .5rem;
@@ -1355,7 +1362,7 @@ footer .mp-popup.active {
 }
 .user-name span,
 .user-tit {
-  font-size: 0.6rem;
+  font-size: .85rem;
   color: #848484;
 }
 /*
@@ -3062,6 +3069,12 @@ h3.circle-name {
 .micro-head_btn a i {
   margin-right: .5rem;
 }
+.micro-head_btn a i.icon-wx-a2 {
+  font-size: 1.4rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: .25rem;
+}
 .micro-head_btn a:nth-child(1) {
   background: transparent;
 }
@@ -3075,4 +3088,29 @@ h3.circle-name {
 .micro-tit {
   text-align: center;
   margin-top: 1rem;
+}
+.micro-statistics {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: .8rem;
+}
+.micro-statistics i {
+  font-size: 1.2rem;
+  color: #df6037;
+  vertical-align: middle;
+  margin-bottom: .1rem;
+  display: inline-block;
+}
+.micro-statistics span {
+  margin-left: .5rem;
+  color: #999;
+}
+.mp-audio {
+  width: 3rem;
+  height: 3rem;
+  background: #F90;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }

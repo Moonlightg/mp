@@ -17,12 +17,6 @@
   </head>
   <body>
     <div id="app" class="mp-main">
-      <header>
-        <a href="javascript:;" class="header-return" onclick="goBack(-1)">
-          <i class="icon-arrow-left"></i>
-        </a>
-        <p class="header-tit">文章详情</p>
-      </header>
       <section class="mp-container auto flex-box">
         <div class="article-details">
           <div class="article-add_head">
@@ -45,7 +39,7 @@
             </div>
           </div> 
           <!-- 文章内容 -->
-          <div id="article-body" class="article-content" style="line-height: 1.5rem;">
+          <div id="article-body" class="article-content" style=" font-size: 1.1rem;line-height: 1.6rem;">
             <p>2018世界杯1/4决赛，克罗地亚在点球大战中击败东道主俄罗斯，闯进四强。不过，克罗地亚却因为在之前的1/8决赛中，有球员疑似误喝非官方赞助的能量饮料，被FIFA罚款7万瑞士法郎（约46.9609万元人民币）</p>
             <img src="images/wzxq.jpg">
             <p>据克罗地亚媒体《nogometplus》报道，主力中卫洛夫伦在与丹麦的比赛中饮用了红牛饮料，而世界杯官方赞助的能量饮料是可口可乐，因此FIFA开出了重磅罚单，洛夫伦被罚了7万瑞士法郎。</p>
@@ -97,7 +91,7 @@
               <div class="visiting-card_btn flex">
                 <a href="javascript:;"><i class="icon-ms"></i></a>
                 <a href="javascript:;"><i class="icon-tel-me"></i></a>
-                <a href="javascript:;"><i class="icon-add-friends"></i></a>
+                <a href="javascript:;" class="open-modal"><i class="icon-add-friends"></i></a>
               </div>
             </div>
             <!-- 广告板块 -->
@@ -134,10 +128,26 @@
         </div>
       </div>
     </div>
+    <!-- 弹窗 -->
+    <div class="mp-modal">
+      <div class="mp-modal-bg close-modal"></div>
+      <div class="mp-modal-main">
+        <div class="qr-img">
+          <img src="images/qr.jpg">
+          <p>扫码加我微信哦</p>
+        </div>
+      </div>
+    </div>
     <script>
       $(function(){
         articleFixe();
         articleAuto();
+        $(".open-modal").click(function(){
+          $(".mp-modal").fadeIn();
+        });
+        $(".close-modal").click(function(){
+          $(".mp-modal").fadeOut();
+        });
       });
 
       // 控制加载全部内容

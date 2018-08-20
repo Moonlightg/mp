@@ -38,7 +38,7 @@ ul, li {
 }
 .ios-select-widget-box header.iosselect-header a {
     font-size: 16px;
-    color: #e94643;
+    color: #fa8919;
     text-decoration: none;
 }
 .ios-select-widget-box header.iosselect-header a.close {
@@ -46,6 +46,7 @@ ul, li {
     padding-left: 15px;
     height: 44px;
     line-height: 44px;
+    color: #999;
 }
 .ios-select-widget-box header.iosselect-header a.sure {
     float: right;

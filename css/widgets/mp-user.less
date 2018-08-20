@@ -82,14 +82,22 @@
         }
     }
     .user-box a{line-height: 2rem;}
-    .user-name {font-size: 1.4rem;}
+    .user-name {
+        font-size: 1.2rem;
+        &+p{
+            font-size:@fs7;
+            line-height: 1;
+            margin-bottom: .5rem;
+            margin-top: .25rem;
+        }
+    }
 }
 .user-text{
     margin-left: .4rem;
     .flex_initial(1);
 }
 .user-name{
-    font-size: 1.2rem;
+    font-size: 1rem;
     i{
         margin-right: .5rem;
         display: inline-block;
@@ -103,6 +111,11 @@
     .mp-btn-gray{
         line-height: 1.8rem;
         font-size: .85rem;
+    }
+    .mp-btn{
+        padding-left: .5rem;
+        padding-right: .5rem;
+        font-size: .75rem;
     }
 }
 .user-job{
@@ -130,7 +143,6 @@
     .swiper-container{
         display: flex;
         height: 100%;
-        padding-bottom: 2.2rem;
         .swiper-slide{ 
             .touch();
             overflow: auto; 
@@ -153,13 +165,13 @@
     li{
         border-bottom: 1px solid #eeeeee;
         a{
-            padding: 1rem;
+            padding: .5rem 1rem;
         }
     }
 }
 .user-name span,
 .user-tit{
-    font-size: .8rem;
+    font-size: @fs6;
     color: #848484;
 }
 

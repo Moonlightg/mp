@@ -3045,6 +3045,7 @@ h3.circle-name {
  *
 */
 .micro-head {
+  position: relative;
   background: #000;
 }
 .micro-head .visiting-card {
@@ -3128,10 +3129,11 @@ h3.circle-name {
   color: #999;
 }
 .micro-btn-box {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   width: 2.5rem;
+  z-index: 2;
 }
 .micro-btn-item {
   width: 2.5rem;

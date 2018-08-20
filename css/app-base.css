@@ -1480,11 +1480,11 @@ footer .mp-popup.active {
   margin-bottom: .5rem;
   font-size: 1.4rem;
 }
-.mp-nav li a.active {
-  color: #fe8a03;
-}
 .mp-nav li a:visited {
   color: #7d7c8b;
+}
+.mp-nav li a.active {
+  color: #fe8a03;
 }
 /*
  * mp-banner.less
@@ -1746,6 +1746,8 @@ footer .mp-popup.active {
 }
 .article-list-info .article-btn {
   overflow: hidden;
+  line-height: 1.6rem;
+  margin-top: -0.25rem;
 }
 .article-list-info .article-btn span {
   font-size: 0.75rem;
@@ -1754,11 +1756,11 @@ footer .mp-popup.active {
   color: #999;
 }
 .article-list-info .article-btn a {
-  float: right;
-  line-height: 1;
-  padding: .2rem;
-  margin: 0 0 0 .5rem;
+  line-height: 1.6rem;
+  padding: 0 .6rem;
+  margin: 0 0 0 1rem;
   border-radius: 3px;
+  float: right;
 }
 .article-tag {
   padding: 1rem;
@@ -1769,7 +1771,7 @@ footer .mp-popup.active {
   flex-wrap: wrap;
 }
 .article-tag_tit {
-  margin-top: 1rem;
+  margin: 1rem 0;
   color: #888;
   font-size: 0.875rem;
 }

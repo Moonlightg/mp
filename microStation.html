@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>文章详情</title>
+    <title>李大伟的微站</title>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/app-base.css">
@@ -18,7 +18,80 @@
   <body>
     <div id="app" class="mp-main">
       <section class="mp-container auto flex-box">
-        <div class="article-details">
+        <div class="micro-head">
+          <!-- 浏览、收藏人数统计 -->
+          <div class="micro-statistics">
+            <p><i class="icon-yl"></i><span>24841</span></p>
+            <p><i class="icon-xin"></i><span>24841</span></p>
+          </div>
+          <!-- 背景音乐播放 -->
+          <div class="mp-audio">
+            <i class="icon-xin"></i>
+            <audio src="css/刘德华-17岁.mp3" autostart="true" loop="true" hidden="true">
+          </div>
+          <div class="visiting-card">
+            <div class="visiting-card_user">
+              <a href="javascript:;">
+                <div class="visiting-card_user_img">
+                  <img src="images/user2.png" alt="一个小灰猫">
+                </div>
+                <h3>一个小灰猫</h3>
+                <p>圈子名称</p>
+                <p>人生若只如初见，何事秋风悲画扇，等闲变却故人心</p>
+              </a>
+            </div>
+            <div class="micro-head_btn flex">
+              <a href="tel:13112224413"><i class="icon-tel-a2"></i><span>联系我</span></a>
+              <a href="javascript:;" class="open-modal"><i class="icon-wx-a2"></i><span>加好友</span> </a>
+            </div>
+          </div>
+          <!-- 微链接 -->
+          <div class="folder-link flex">
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+          </div>
+        </div>
+        <div class="micro-center article-details">
           <div class="article-add_head">
             <h1>世界杯，克罗地亚球员因世界杯喝红牛被FIFA开罚47万元</h1>
             <div class="article-user">
@@ -39,9 +112,18 @@
             </div>
           </div> 
           <!-- 文章内容 -->
-          <div id="article-body" class="article-content" style=" font-size: 1.1rem;line-height: 1.6rem;">
+          <div id="article-body" class="article-content" style="line-height: 1.5rem;">
+            <h4 class="micro-tit">公司简介</h4>
             <p>2018世界杯1/4决赛，克罗地亚在点球大战中击败东道主俄罗斯，闯进四强。不过，克罗地亚却因为在之前的1/8决赛中，有球员疑似误喝非官方赞助的能量饮料，被FIFA罚款7万瑞士法郎（约46.9609万元人民币）</p>
-            <img src="images/wzxq.jpg">
+            <h4 class="micro-tit">公司相册</h4>
+            <img src="images/g4.jpg">
+            <h4 class="micro-tit">公司视频简介</h4>
+            <div class="tvp_ads_content" style="
+    text-align:  center;
+    padding: 1rem 0;
+">
+                <iframe height=240 width=320 src='http://player.youku.com/embed/XMzczMzk3Nzk5Mg==' frameborder=0 'allowfullscreen'></iframe>
+            </div>
             <p>据克罗地亚媒体《nogometplus》报道，主力中卫洛夫伦在与丹麦的比赛中饮用了红牛饮料，而世界杯官方赞助的能量饮料是可口可乐，因此FIFA开出了重磅罚单，洛夫伦被罚了7万瑞士法郎。</p>
             <p style="text-indent: 2rem;">这不是第一次有球员因为误饮非赞助商的饮料而受罚，去年在韩国举行的U-20世界杯中，一名英格兰球员因为喝了红牛饮料，被</p>
             <img src="images/wzxq.jpg">
@@ -89,9 +171,9 @@
                 </a>
               </div>
               <div class="visiting-card_btn flex">
-                <a href="microStation.html"><i class="icon-ms"></i></a>
+                <a href="javascript:;"><i class="icon-ms"></i></a>
                 <a href="javascript:;"><i class="icon-tel-me"></i></a>
-                <a href="javascript:;" class="open-modal"><i class="icon-add-friends"></i></a>
+                <a href="javascript:;"><i class="icon-add-friends"></i></a>
               </div>
             </div>
             <!-- 广告板块 -->
@@ -108,25 +190,6 @@
           </div>
         </div>
       </section> 
-      <!-- 底部悬浮 -->
-      <div class="article-footer_user">
-        <div class="article-user">
-          <div class="user-box">
-            <a href="javascript:;">
-              <div class="user user_m">
-                <img src="images/user2.png" alt="李大伟">
-              </div>
-              <div class="user-text">
-                <p class="user-name">一个小灰猫</p>
-                <p class="user-tit">来自：圈子的名字</p>
-              </div>
-              <div class="user-info">
-                <div class="mp-btn mp-btn-blue">修改成我的</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- 弹窗 -->
     <div class="mp-modal">
@@ -140,8 +203,6 @@
     </div>
     <script>
       $(function(){
-        articleFixe();
-        articleAuto();
         $(".open-modal").click(function(){
           $(".mp-modal").fadeIn();
         });
@@ -149,27 +210,6 @@
           $(".mp-modal").fadeOut();
         });
       });
-
-      // 控制加载全部内容
-      function articleFixe() {
-        // 设置默认显示高度
-        var auto_H = 700; 
-        var article_H = $("#article-body").height();
-        if(article_H > auto_H){
-          $("#article-body").css({"height":"700px","overflow":"hidden"});
-          $(".article-footer_more").show();
-        }else{
-          $(".article-footer_more").hide();
-        }
-      }
-
-      // 点击加载全文
-      function articleAuto(){
-        $(".article-footer_more").on('click',function(){
-          $("#article-body").css({"height":"auto","overflow":"inherit"});
-          $(".article-footer_more").hide();
-        });
-      }
     </script>
   </body>
 </html>

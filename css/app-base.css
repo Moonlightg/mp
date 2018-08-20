@@ -2731,7 +2731,7 @@ h3.circle-name {
   margin-left: .5rem;
 }
 .circle-hotspot-bar {
-  padding: 0 1rem;
+  padding: .5rem 1rem;
   margin-bottom: -1rem;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;

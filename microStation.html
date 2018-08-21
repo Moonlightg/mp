@@ -106,13 +106,8 @@
             <h4 class="micro-tit">公司相册</h4>
             <img src="images/g4.jpg">
             <h4 class="micro-tit">公司视频简介</h4>
-            <div class="tvp_ads_content" style="
-    text-align:  center;
-    padding: 1rem 0;
-">
-                <div style="text-align: center;">
-                <embed id="movie" src='http://player.youku.com/player.php/sid/XMzcyNTUyNDU4OA==/v.swf' allowFullScreen='true' quality='high' width='90%' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
-                </div>
+            <div class="tvp_ads_content" style="text-align:  center;padding: 1rem 0;">
+                <iframe width="100%" height="auto" frameborder=0 src="http://v.qq.com/iframe/player.html?vid=d0015bg8v6k&tiny=0&auto=0" allowfullscreen=""></iframe>
             </div>
             <p>据克罗地亚媒体《nogometplus》报道，主力中卫洛夫伦在与丹麦的比赛中饮用了红牛饮料，而世界杯官方赞助的能量饮料是可口可乐，因此FIFA开出了重磅罚单，洛夫伦被罚了7万瑞士法郎。</p>
             <p style="text-indent: 2rem;">这不是第一次有球员因为误饮非赞助商的饮料而受罚，去年在韩国举行的U-20世界杯中，一名英格兰球员因为喝了红牛饮料，被</p>
@@ -162,7 +157,15 @@
     </div>
     <script>
       $(function(){
-        document.getElementById("movie").style.height=document.getElementById("movie").scrollWidth*0.8+"px"
+        window.onload = window.onresize = function () {
+          resizeIframe();
+        }
+        var resizeIframe=function(){
+          var bodyw=document.body.clientWidth;
+          for(var ilength=0;ilength<=document.getElementsByTagName("iframe").length;ilength++){
+            document.getElementsByTagName("iframe")[ilength].height = bodyw*9/16;//设定高度
+          }
+        }
       });
     </script>
   </body>

@@ -56,7 +56,7 @@
                     <a href="javascript:;"><input type="hidden" name="bank_id" id="bankId" value=""> <span id="showBank">选择行业</span> </a>
                     <a href="javascript:;"><span id="sel_city">选择地区</span></a>
                   </div>
-                  <ul class="user-list">
+                  <ul class="user-list all-user-list">
                     <li>
                       <div class="user-box">
                         <a href="javascript:;">
@@ -290,29 +290,35 @@
               </div>
               <div class="swiper-slide">
                 <div class="content-slide">
-                  <ul class="user-list user-vein-list">
-                    <li>
+                  <ul class="user-list user-vein-list" id="my_follow">
+                    <li class="follow-item">
                       <div class="user-box">
                         <a href="javascript:;">
                           <div class="user user_m">
-                            <img src="images/user4.png" alt="梁伟祥">
+                            <img src="images/user2.png" alt="李大伟">
                           </div>
                           <div class="user-text">
-                            <p class="user-name"><i class="icon-vip"></i>梁伟祥 <span> 运营主管</span></p>
+                            <p class="user-name"><i class="icon-vip"></i>李大伟 <span>执行董事</span></p>
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                          <div class="user-info">
+                            <i class="icon-collection mp-color3 follow is_follow"></i>
                           </div>
                         </a>
                       </div>
                     </li>
-                    <li>
+                    <li class="follow-item">
                       <div class="user-box">
                         <a href="javascript:;">
                           <div class="user user_m">
-                            <img src="images/user5.png" alt="吴杨慧">
+                            <img src="images/user.jpg" alt="郭嘉宝">
                           </div>
                           <div class="user-text">
-                            <p class="user-name"><i class="icon-vip"></i>吴杨慧 <span> 平面设计师</span></p>
+                            <p class="user-name"><i class="icon-vip"></i>郭嘉宝 <span> 前端工程师</span></p>
                             <p class="user-tit">广州市保利天悦网络科技有限公司</p>
+                          </div>
+                          <div class="user-info">
+                            <i class="icon-collection mp-color3 follow is_follow"></i>
                           </div>
                         </a>
                       </div>
@@ -445,25 +451,39 @@
 
       // 点击收藏
       function follow() {
-        // 管理文件夹
         $('.user-list').on('click','.follow',function(){
             var obj = $(this);
-            if(!obj.hasClass('is_follow')){
+            // 当前点击的索引
+            var obj_num = obj.parents("li").index();
+            if(!obj.hasClass('is_follow') && !obj.hasClass('is_my_follow') ){
               obj.addClass('is_follow');
               //obj.removeClass('off_follow');
               noticeTis("收藏成功");
-            }else{
+              // 当前索引的dom
+              var obj_html = $(".all-user-list li").eq(obj_num).html();
+              var objItem_html = '<li class="follow-item">' + obj_html + '</li>';
+              $("#my_follow").last().append(objItem_html);
+            }else if(obj.parents("li").hasClass("follow-item")){
+              console.log(999);
+              longtimetips({cnt:'亲，确定取消收藏吗？',num:1,fun:confirmFollowNode2,data:obj});
+            } else{
+              console.log(444);
               longtimetips({cnt:'亲，确定取消收藏吗？',num:1,fun:confirmFollowNode,data:obj});
             }
         });
       } 
 
-      // 确认删除文件夹
+      // 确认取消收藏
       function confirmFollowNode(obj){
           console.log(obj);
           obj.removeClass('is_follow');
           noticeTis("取消收藏成功");
       }   
+      // 确认取消收藏并且移除dom
+      function confirmFollowNode2(obj){
+          obj.parents("li").remove();
+          noticeTis("取消收藏成功");
+      }  
     </script>
   </body>
 </html>

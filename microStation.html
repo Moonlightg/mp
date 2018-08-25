@@ -148,25 +148,97 @@
                 <p class="user-tit">来自:圈子的名字</p>
               </div>
               <div class="user-info">
-                <div class="mp-btn mp-btn-blue">制作微站</div>
+                <div class="mp-btn mp-btn-blue goMSS">制作微站</div>
               </div>
             </a>
           </div>
         </div>
       </div>
+      <div class="micro-card" style="display: none;">
+        <div class="micro-card_bg"></div>
+        <div class="micro-card_center">
+          <div class="micro-card_head">
+            <div class="visiting-card_user">
+              <a href="javascript:;">
+                <div class="visiting-card_user_img">
+                  <img src="images/user2.png" alt="一个小灰猫">
+                </div>
+                <p class="name">李大伟</p>
+                <p class="zw">圈子名称</p>
+              </a>
+            </div>
+          </div>
+          <div class="micro-card_list">
+            <p>广州市保利天悦网络科技有限公司</p>
+            <ul class="list-box">
+              <li>
+                <div class="list-start"><i class="icon-tel"></i></div>
+                <div class="list-info"><span>13692331919</span></div>
+                <div class="list-end"><a href="tel:13692331919">一键拨号</a></div>
+              </li>
+              <li>
+                <div class="list-start"><i class="icon-wx"></i></div>
+                <div class="list-info"><span>13692331919</span></div>
+                <div class="list-end"><a href="javascript:;">一键复制</a></div>
+              </li>
+              <li>
+                <div class="list-start"><i class="icon-url"></i></div>
+                <div class="list-info"><span>www.yunlian.com</span></div>
+              </li>
+              <li>
+                <div class="list-start"><i class="icon-mailbox"></i></div>
+                <div class="list-info"><span>www.yunlian.com</span></div>
+              </li>
+              <li>
+                <div class="list-start"><i class="icon-qq"></i></div>
+                <div class="list-info"><span>342955925</span></div>
+                <div class="list-end"><a href="javascript:;">一键复制</a></div>
+              </li>
+              <li>
+                <div class="list-start"><i class="icon-addres"></i></div>
+                <div class="list-info addres"><span>广州市海珠区琶洲街道石基村新屋二巷83号</span></div>
+                <div class="list-end"><a href="javascript:;">一键导航</a></div>
+              </li>
+            </ul>
+            <div class="qr-img">
+              <img src="images/qr.jpg">
+              <p>长按识别二维码加我好友</p>
+            </div>
+          </div>
+          <div class="micro-btn-colse">
+            <i class="icon-close2"></i>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
-      /*$(function(){
-        window.onload = window.onresize = function () {
-          resizeIframe();
-        }
-        var resizeIframe=function(){
-          var bodyw=document.body.clientWidth;
-          for(var ilength=0;ilength<=document.getElementsByTagName("iframe").length;ilength++){
-            document.getElementsByTagName("iframe")[ilength].height = bodyw*9/16;//设定高度
-          }
-        }
-      });*/
+      $(function(){
+        goMSS();
+        window.onload = function(){
+          cardInOut();
+        } 
+        // 点击关闭
+        $(".micro-btn-colse").click(function(){
+          $(".micro-card").fadeOut();
+        })      
+      });
+
+      // 卡片的淡入显示与10秒后淡出隐藏
+      function cardInOut() {
+        var obj = $(".micro-card");
+        obj.fadeIn();
+        // 定时关闭
+        setTimeout(function () {
+          obj.fadeOut();
+        }, 6000);
+      }
+
+      // 点击跳转到制作微站
+      function goMSS(){
+        $(".mp-main").on('click','.goMSS',function(){
+            window.location.href="microStationSet.html";
+        });
+      }
     </script>
   </body>
 </html>

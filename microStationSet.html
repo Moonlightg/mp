@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>制作微站</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container auto flex-box">
+        <div class="micro-head">
+          <!-- 浏览、收藏人数统计 -->
+          <div class="micro-statistics">
+            <p><i class="icon-fwsl"></i><span>24841</span></p>
+            <p><i class="icon-wzsc"></i><span>24841</span></p>
+          </div>
+          <!-- 背景音乐播放 微站编辑-->
+          <div class="micro-btn-box">
+            <div class="micro-btn-item mp-audio">
+              <img src="images/yy.png">
+            </div>
+            <div class="micro-btn-item">
+              <img src="images/bjwz.png">
+            </div>
+          </div>
+          <div class="visiting-card">
+            <div class="visiting-card_user">
+              <a href="javascript:;">
+                <div class="visiting-card_user_img">
+                  <img src="images/user2.png" alt="一个小灰猫">
+                </div>
+                <h3>一个小灰猫</h3>
+                <p>圈子名称</p>
+                <p>人生若只如初见，何事秋风悲画扇，等闲变却故人心</p>
+              </a>
+            </div>
+            <div class="micro-head_btn flex">
+              <a href="tel:13112224413"><i class="icon-tel-a2"></i><span>联系我</span></a>
+              <a href="javascript:;" class="open-modal"><i class="icon-wx-a2"></i><span>加好友</span> </a>
+            </div>
+          </div>
+          <!-- 微链接 -->
+          <div class="folder-link flex" style="display: none;">
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+            <div class="folder-item brick">
+              <div class="folder-icon link-icon">
+                <i class="icon-link"></i>
+                <i class="icon-close"></i>
+              </div>
+              <div class="folder-name">我的微链接</div>
+            </div>
+          </div>
+        </div>
+        <div class="micro-center article-details page-a" style="background: #fff;color: #333;">
+          <!-- 制作微站 开始 -->
+          <div class="ms-add-btn" data-action="empty-addColumn">
+            <i class="icon-add"></i>
+          </div>
+          <div id="miniDetail">
+          </div>
+        </div>
+      </section> 
+      <section class="minpage-popup-masks" id="popUp-insertType">
+        <div class="popitembox flexbox-container">
+          <div class="fixed">
+            <div class="closebtn">
+              <i class="icon-arrow-left"></i>
+            </div>
+            <div class="scrollbox">
+              <ul class="scrollbox-ul fixed">
+                <li data-action="1" class="">
+                  <i class="icon-wz-set mp-color1" title="文本"></i>
+                  <span>文字</span>
+                  <input type="checkbox">
+                </li>
+                <li data-action="2" class="">
+                  <i class="icon-wz-set mp-color2" title="图片"></i>
+                  <span>图片</span>
+                  <input type="checkbox">
+                </li>
+                <li data-action="4" class="">
+                  <i class="icon-wz-set mp-color3" title="链接"></i>
+                  <span>链接</span>
+                  <input type="checkbox">
+                </li>
+                <li data-action="3" class="">
+                  <i class="icon-wz-set mp-color4" title="视频"></i>
+                  <span>视频</span>
+                  <input type="checkbox">
+                </li>
+                <li data-action="6" class="">
+                  <i class="icon-wz-set mp-color5" title="地图"></i>
+                  <span>地图</span>
+                  <input type="checkbox">
+                </li>
+                <li data-action="music" class="">
+                  <i class="icon-wz-set mp-color6" title="音乐"></i>
+                  <span>音乐</span>
+                  <input type="checkbox">
+                </li>
+              </ul>
+            </div>
+            <div class="insert-item-btn mp-btn mp-btn-blue">插入内容</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function(){
+        /* 第一次添加组件的内容 */
+        $('.page-a').on('click','[data-action="empty-addColumn"]',function(){
+          console.log(222);
+          //$('#insertType').val('0');
+          initMethod.showPopChooseType();
+          return false;
+        });
+        /* 隐藏--添加组件弹出框 */
+        $('.mp-main').on('click','.minpage-popup-masks .closebtn',function(){
+          initMethod.hidePopChooseType();
+          return false;
+        });
+        /* 添加组件--选择类型 */
+        $('.scrollbox-ul li').on('click',function(){
+          if ($(this).hasClass('checked')) {
+            $(this).removeClass('checked');
+          } else {
+            $(this).addClass('checked');
+          }
+          return false;
+        });
+        /* 添加组件--插入内容 */
+        $('#popUp-insertType').on('click','.insert-item-btn',function(){
+          initMethod.comfirmInsertItem();
+        });
+      });
+
+      var compentInsertType = 0;//1:表示插入组件背后 -1:表示插入在组件之前
+      var initMethod={
+        //显示--选择插入类型
+        showPopChooseType:function(){ 
+          $('#popUp-insertType').addClass('active');
+        },
+        //隐藏--选择插入类型
+        hidePopChooseType:function(){ 
+          $('.minpage-popup-masks').removeClass('active');
+          $('.scrollbox-ul.fixed li').removeClass('checked');
+        },
+        comfirmInsertItem:function(){
+          var comps = $('#popUp-insertType .scrollbox-ul').find('.checked');
+          var pdid="";//各个控件的id
+          var music="";//标记，是否要添加music
+          //收集所有要提交 组件的ID
+          for(var c=0; c < $(comps).length;c++) {
+              if($(comps[c]).attr('data-action')=="music") {
+                  music = "music";
+                  continue;
+              }
+              pdid += $(comps[c]).attr('data-action')+",";
+          }
+          //删除最后一个无效的 逗号
+          pdid = pdid.substring(0, pdid.lastIndexOf(","));
+          var insertTypeVal = compentInsertType == 1? 1:-1;
+          var obj;
+          if($('.show-compent.cur').length == 0){
+            if($('#insertType').val() == 0 ){
+              obj =  $('#miniDetail');
+            }else if($('#insertType').val() == 2 ){
+              obj =  $('#miniDetail').find('.show-compent').last();
+            }
+          }else{
+            obj = $('.show-compent.cur');
+          }
+          var success = function (obj,result,ids) {
+            noticeTis(插入成功);
+            // var emptyFg = $('#miniDetail .show-compent').length == 0 ? 1:-1;
+            initMethod.addModule(pdid,music,ids);
+            initMethod.hidePopChooseType();
+            if(emptyFg == 1){
+              initMethod.judgeGuideOperate();
+            }
+            if($('#insertType').val() == 2 ){
+              var pageHg = $('.con').height()+200;
+              $('.page-a').scrollTop(pageHg);
+            }
+            var nextBtn = '<div class="addtool-btn nextAddbtn"><i class="icon-minpage icon-minpage-add"></i></div>';
+            $('.addtool-btn.nextAddbtn').remove();
+            $(nextBtn).insertAfter($('.show-compent.cur'));
+          };
+          operateRemoteData.ajaxInsertModule(obj, pdid,music,insertTypeVal,success, error);
+        },
+        //构建未编辑的情况
+        miniPageModuleBulid:function(text,id){
+            var html = "<div class='edit-show edit-show-border show-compent'" +
+                "data-url=\"/vip/toEditMcd.xhtml?id="+id+"\"" +
+                "id=\""+id+"\"" +
+                "data=\""+id+"\">";
+            html += "<div class=\"edit-addtool\"><div class=\"txt\"><a class=\"txt-href\">";
+            html += "点击编辑" + text;
+            if(text == '文字'){
+                html += '<i class="icon-wz-set mp-color1"></i>';
+            }else if(text == '图片'){
+                html += '<i class="icon-wz-set mp-color2"></i>';
+            }else if(text == '链接'){
+                html += '<i class="icon-wz-set mp-color3"></i>';
+            }else if(text == '视频'){
+                html += '<i class="icon-wz-set mp-color4"></i>';
+            }else if(text == '地图'){
+                html += '<i class="icon-wz-set mp-color5"></i>';
+            }
+            html += "</div></div></div>";
+            if($('#insertType').val() == 1 ){
+                if(compentInsertType == 1){
+                    $(html).insertBefore($('.addtool-btn.nextAddbtn'));
+                }else{
+                    $(html).insertBefore($('.addtool-btn.preAddbtn'));
+                }
+            }else{
+                $('#miniDetail').append(html);
+                $('.minpage-empty-box').hide();
+            }
+        },
+        addModule: function (pdid, music,ids) { //添加组件
+            var str = pdid.split(",");
+            if (pdid.length != 0) {
+                for (var i = 0; i < str.length; i++) {
+                    pdid = str[i];
+                    if (pdid == 1) {
+                        initMethod.miniPageModuleBulid('文字',ids[i]);
+                    } else if (pdid == 2) {
+                        initMethod.miniPageModuleBulid('图片',ids[i]);
+                    } else if (pdid == 3) {
+                        initMethod.miniPageModuleBulid('视频',ids[i]);
+                    } else if (pdid == 4) {
+                        initMethod.miniPageModuleBulid('链接',ids[i]);
+                    } else if (pdid == 6) {
+                        initMethod.miniPageModuleBulid( '地图',ids[i]);
+                    }
+                }
+            }
+            //关闭界面后才显示
+            if (music == "music") {
+                operateRemoteData.addMusic();
+            }
+
+        }
+      }
+    </script>
+  </body>
+</html>

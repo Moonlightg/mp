@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>微页模版</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <script src="lib/swiper/js/swiperTab.js"></script>
+    <script src="lib/waves/js/waves.min.js"></script>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="lib/waves/css/waves.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <section class="mp-container mp-tab-wrap">  
+        <div class="user-vein-wrap">   
+          <div class="mp-menu mp-menu_two mp-tab mp-tab-bg">
+            <a href="myArticle.html" class="waves active">
+              <span>微站模版</span>
+            </a>
+            <a href="javascript:;" class="waves">
+              <span>文章名片</span>
+            </a>
+          </div>
+          <div class="mp-bar"></div>
+          <div class="swiper-container template">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+                <div class="content-slide">
+                  <div class="template-item">
+                    <div class="template-item_img">
+                      <img src="images/tem.jpg">
+                    </div>
+                    <div class="template-item_btn">
+                      <label class="bui-checkbox-label bui-checkbox-anim">
+                        <input type="checkbox" checked="" name="xy"><i class="bui-checkbox"></i><span>选择该模版</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content-slide">
+                  <div class="template-item">
+                    <div class="template-item_img">
+                      <img src="images/tem2.jpg">
+                    </div>
+                    <div class="template-item_btn">
+                      <label class="bui-checkbox-label bui-checkbox-anim">
+                        <input type="checkbox" checked="" name="xy2"><i class="bui-checkbox"></i><span>选择该模版</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 公共底部 -->
+      <footer>
+        <ul class="mp-nav">
+          <li>
+            <a href="microStation.html" class="waves">
+              <i class="icon-edit"></i>
+              <span>我的微页</span>
+            </a>
+          </li>
+          <li>
+            <a href="circleHotspot.html" class="waves">
+              <i class="icon-circle"></i>
+              <span>圈子热点</span>
+            </a>
+          </li>
+          <li>
+            <a href="humanVein.html" class="waves">
+              <i class="icon-connection"></i>
+              <span>发现人脉</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="waves">
+              <i class="icon-user"></i>
+              <span>工作台</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script>
+      $(function () {
+        /*swiper选项卡切换*/
+        $('.mp-tab a').eq(0).addClass('active');
+        tabs('.mp-tab a','.swiper-container','active');
+        // 波浪涟漪效果
+        Waves.init();
+        Waves.attach('.waves', ['waves-button', 'waves-float']);
+        Waves.attach('.waves-light', ['waves-button', 'waves-float','waves-light']);
+      });
+    </script>
+  </body>
+</html>

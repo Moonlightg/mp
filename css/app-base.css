@@ -1808,7 +1808,7 @@ footer .mp-popup.active {
 .article-list-info .article-btn a {
   line-height: 1.6rem;
   padding: 0 .6rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 .6rem;
   border-radius: 3px;
   float: right;
 }

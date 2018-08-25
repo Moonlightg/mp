@@ -9,6 +9,7 @@
     <script src="lib/swiper/js/swiper.min.js"></script>
     <script src="lib/swiper/js/swiperTab.js"></script>
     <script src="lib/waves/js/waves.min.js"></script>
+    <script src="js/common.js"></script>
     <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="lib/waves/css/waves.min.css">
     <link rel="stylesheet" href="css/app-base.css">
@@ -171,6 +172,7 @@
     <script>
       $(function () {
         articleCheck();
+        articleDel();
         /*swiper选项卡切换*/
         $('.mp-tab a').eq(0).addClass('active');
         tabs('.mp-tab a','.swiper-container','active');
@@ -187,6 +189,22 @@
         $(".article-list").on('click','li',function(){
             window.location.href="articleDetails.html";
         });
+      }
+      // 删除文章
+      function articleDel(){
+        $('.article-list').on('click','.del',function(event){
+          event.stopPropagation();// 阻止冒泡
+          var obj = $(this).parents('li');
+          longtimetips({cnt:'文章删除后无法恢复,确定要删除吗？',num:2,fun:articleDelNode,data:obj});
+        });
+      }
+
+      // 确认删除文章
+      function articleDelNode(obj){
+        obj.remove();
+        noticeTis("删除成功");
+        var num = parseInt($('.folder-num span').html()) -1;
+        $('.folder-num span').html(num);
       }
     </script>
   </body>

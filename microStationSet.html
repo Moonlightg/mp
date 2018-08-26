@@ -387,26 +387,27 @@
         },
         // 添加组件
         addModule: function (pdid, music) {
+            var idsId = parseInt(Math.random() * 1000);
             var str = pdid.split(",");
             if (pdid.length != 0) {
                 for (var i = 0; i < str.length; i++) {
                     pdid = str[i];
                     if (pdid == 1) {
-                        initMethod.miniPageModuleBulid('文字',1);
+                        initMethod.miniPageModuleBulid('文字','text'+idsId);
                     } else if (pdid == 2) {
-                        initMethod.miniPageModuleBulid('图片',2);
+                        initMethod.miniPageModuleBulid('图片','img'+idsId);
                     } else if (pdid == 3) {
-                        initMethod.miniPageModuleBulid('视频',3);
+                        initMethod.miniPageModuleBulid('视频','video'+idsId);
                     } else if (pdid == 4) {
-                        initMethod.miniPageModuleBulid('链接',4);
+                        initMethod.miniPageModuleBulid('链接','link'+idsId);
                     } else if (pdid == 6) {
-                        initMethod.miniPageModuleBulid( '地图',6);
+                        initMethod.miniPageModuleBulid( '地图','dt'+idsId);
                     }
                 }
             }
             //关闭界面后才显示
             if (music == "music") {
-                operateRemoteData.addMusic();
+                initMethod.addMusic();
             }
 
         },
@@ -422,6 +423,9 @@
             if($("#miniDetail>div").length==0){
               $('.ms-add-btn').show();
             }
+        },
+        addMusic: function () {
+            location.href = 'Music.html';
         },
         // 组件上移
         assemblyMoveup:function(obj){ 

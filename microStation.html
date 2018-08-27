@@ -39,8 +39,8 @@
                 <div class="visiting-card_user_img">
                   <img src="images/user2.png" alt="一个小灰猫">
                 </div>
-                <h3>一个小灰猫</h3>
-                <p>圈子名称</p>
+                <h3>李大伟</h3>
+                <p>执行董事长</p>
                 <p>人生若只如初见，何事秋风悲画扇，等闲变却故人心</p>
               </a>
             </div>
@@ -144,7 +144,7 @@
                 <img src="images/user2.png" alt="李大伟">
               </div>
               <div class="user-text">
-                <p class="user-name">一个小灰猫</p>
+                <p class="user-name">李大伟</p>
                 <p class="user-tit">来自:圈子的名字</p>
               </div>
               <div class="user-info">
@@ -164,7 +164,7 @@
                   <img src="images/user2.png" alt="一个小灰猫">
                 </div>
                 <p class="name">李大伟</p>
-                <p class="zw">圈子名称</p>
+                <p class="zw">执行董事长</p>
               </a>
             </div>
           </div>
@@ -211,9 +211,25 @@
         </div>
       </div>
     </div>
+    <!-- 弹窗 -->
+    <div class="mp-modal">
+      <div class="mp-modal-bg close-modal"></div>
+      <div class="mp-modal-main">
+        <div class="qr-img">
+          <img src="images/qr.jpg">
+          <p>扫码加我微信哦</p>
+        </div>
+      </div>
+    </div>
     <script>
       $(function(){
         goMSS();
+        $(".open-modal").click(function(){
+          $(".mp-modal").fadeIn();
+        });
+        $(".close-modal").click(function(){
+          $(".mp-modal").fadeOut();
+        });
         window.onload = function(){
           cardInOut();
         } 

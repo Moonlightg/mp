@@ -17,9 +17,15 @@
   </head>
   <body>
     <div id="app" class="mp-main">
-      <ul class="mp-list">
+      <header>
+        <a href="javascript:;" onclick="goBack(-1)" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">设置背景音乐</p>
+      </header>
+      <ul class="mp-list" style="border-top: .5rem solid #eee;">
         <li>
-          <a href="javascript:;" class="mp-list-item" style="min-height: 3rem;border-bottom: none;">
+          <a href="javascript:;" class="mp-list-item" style=" min-height: 3rem;">
             <div class="mp-list_start">当前背景音乐</div>
             <div class="mp-list_info text-right">
               <span class="switch-tit">自动播放</span>
@@ -31,12 +37,11 @@
           </a>
         </li>
       </ul>
-      <div class="defaultMusic">
+      <div class="defaultMusic" style=" position: relative;">
         <div class="nowMusic">
             <dl>
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/如诗般宁静(钢琴长版).jpg-img60" alt="">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin" style="">
+                <img src="images/wz_music.png" alt="" class="musicBegin" style="">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop" style="display: none;">
                 <canvas class="music-canvas" width="60" height="60" style="display: block;"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/如诗般宁静(钢琴长版).mp3" class="media" src="http://soqimusic.qiniu.soqi.cn/如诗般宁静(钢琴长版).mp3"></audio>
@@ -49,17 +54,18 @@
             </dl>
           </div>
           <div class="nowBtn" id="nowBtn">上传音乐</div>
+          <p class="music-title">注：上传音乐的文件大小不能超过2M</p>
       </div>
       <!-- 标签 -->
       <div class="navBox">
         <div>
           <span data-type="1">纯音乐</span>
-          <span data-type="5">流行</span>
-          <span data-type="4">励志</span>
-          <span data-type="2">激情</span>
-          <span data-type="3">咖啡</span>
-          <span data-type="6">企业</span>
-          <span data-type="7">节日</span>
+          <span data-type="5" style="color: #28de64;">流行</span>
+          <span data-type="4" style="color: #f7b24a;">励志</span>
+          <span data-type="2" style="color: #f563f3;">激情</span>
+          <span data-type="6" style="color: #8e654a;">怀旧</span>
+          <span data-type="7" style="color: #77b2f5;">节日</span>
+          <span data-type="3" style="color: #716964;">咖啡</span>
         </div>
       </div>
       <!-- 内容区域 -->
@@ -68,8 +74,7 @@
           <div class="lineWrap" data-musicId="1">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Bleeding Wolves.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Bleeding Wolves.mp3" src="" preload="preload" class="media"></audio> 
@@ -82,7 +87,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">1:20</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -90,8 +95,7 @@
           <div class="lineWrap" data-musicId="2">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/青花瓷.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/青花瓷.mp3" src="" preload="preload" class="media"></audio> 
@@ -104,7 +108,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:00</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -112,8 +116,7 @@
           <div class="lineWrap" data-musicId="3">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/欢沁(琵琶相).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                 <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/欢沁(琵琶相).mp3" src="" preload="preload" class="media"></audio> 
@@ -126,95 +129,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:14</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="5">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/如诗般宁静(钢琴长版).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/如诗般宁静(钢琴长版).mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>如诗般宁静(钢琴长版)</h3>
-                <p>黄永灿</p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">5:21</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="6">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/我等候你(钢琴独奏).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/我等候你(钢琴独奏).mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>我等候你(钢琴独奏)</h3>
-                <p>电视原声</p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">3:28</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="7">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/萤火虫之舞.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/萤火虫之舞.mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>萤火虫之舞</h3>
-                <p>萤火虫</p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">3:15</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="8">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/月光の云海.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/月光の云海.mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>月光の云海</h3>
-                <p>天空の城</p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">2:33</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -222,8 +137,7 @@
           <div class="lineWrap" data-musicId="34">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/闲云野鹤.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/闲云野鹤.mp3" src="" preload="preload" class="media"></audio> 
@@ -236,7 +150,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:10</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -244,8 +158,7 @@
           <div class="lineWrap" data-musicId="35">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/出水莲.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/出水莲.mp3" src="" preload="preload" class="media"></audio> 
@@ -258,7 +171,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:31</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -266,8 +179,7 @@
           <div class="lineWrap" data-musicId="36">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/寒江残雪.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/寒江残雪.mp3" src="" preload="preload" class="media"></audio> 
@@ -280,7 +192,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:15</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -288,8 +200,7 @@
           <div class="lineWrap" data-musicId="37">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/月光下的凤尾竹.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/月光下的凤尾竹.mp3" src="" preload="preload" class="media"></audio> 
@@ -302,7 +213,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:28</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -310,8 +221,7 @@
           <div class="lineWrap" data-musicId="72">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/琵琶语.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/琵琶语.mp3" src="" preload="preload" class="media"></audio> 
@@ -324,7 +234,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">1:54</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -332,8 +242,7 @@
           <div class="lineWrap" data-musicId="99">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/V.A. - 天空之城(吉他版).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/V.A. - 天空之城(吉他版).mp3" src="" preload="preload" class="media"></audio> 
@@ -346,7 +255,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:28</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -354,8 +263,7 @@
           <div class="lineWrap" data-musicId="100">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/V.A. - 天空之城(小提琴版).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/V.A. - 天空之城(小提琴版).mp3" src="" preload="preload" class="media"></audio> 
@@ -368,7 +276,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">2:36</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -376,8 +284,7 @@
           <div class="lineWrap" data-musicId="101">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/V.A. - 天空之城.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/V.A. - 天空之城.mp3" src="" preload="preload" class="media"></audio> 
@@ -390,7 +297,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:44</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -398,8 +305,7 @@
           <div class="lineWrap" data-musicId="109">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/a_hisa - 桜廻廊.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/a_hisa - 桜廻廊.mp3" src="" preload="preload" class="media"></audio> 
@@ -412,7 +318,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">2:24</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -420,8 +326,7 @@
           <div class="lineWrap" data-musicId="112">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Epitone Project - 봄날, 벚꽃 그리고 너.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Epitone Project - 봄날, 벚꽃 그리고 너.mp3" src="" preload="preload" class="media"></audio> 
@@ -434,7 +339,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:49</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -442,8 +347,7 @@
           <div class="lineWrap" data-musicId="113">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Flica - awake.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Flica - awake.mp3" src="" preload="preload" class="media"></audio> 
@@ -456,7 +360,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:28</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -464,8 +368,7 @@
           <div class="lineWrap" data-musicId="122">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Nunu - wa1c oo.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Nunu - wa1c oo.mp3" src="" preload="preload" class="media"></audio> 
@@ -478,7 +381,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">1:49</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -486,8 +389,7 @@
           <div class="lineWrap" data-musicId="146">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/马常胜-清-玉树临风.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/马常胜-清-玉树临风.mp3" src="" preload="preload" class="media"></audio> 
@@ -500,7 +402,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:48</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -508,8 +410,7 @@
           <div class="lineWrap" data-musicId="148">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/时间都去哪儿了.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/时间都去哪儿了.mp3" src="" preload="preload" class="media"></audio> 
@@ -522,7 +423,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:40</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -530,8 +431,7 @@
           <div class="lineWrap" data-musicId="150">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Epic Sax Guy.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Epic Sax Guy.mp3" src="" preload="preload" class="media"></audio> 
@@ -544,7 +444,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">5:10</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -552,8 +452,7 @@
           <div class="lineWrap" data-musicId="152">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Intro The Dawn.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Intro The Dawn.mp3" src="" preload="preload" class="media"></audio> 
@@ -566,7 +465,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:06</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -574,8 +473,7 @@
           <div class="lineWrap" data-musicId="161">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Faded.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Faded.mp3" src="" preload="preload" class="media"></audio> 
@@ -588,7 +486,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:33</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -596,8 +494,7 @@
           <div class="lineWrap" data-musicId="174">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/闲云孤鹤.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/闲云孤鹤.mp3" src="" preload="preload" class="media"></audio> 
@@ -610,7 +507,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">5:18</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -618,8 +515,7 @@
           <div class="lineWrap" data-musicId="228">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Victory.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Victory.mp3" src="" preload="preload" class="media"></audio> 
@@ -632,7 +528,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">5:20</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -640,8 +536,7 @@
           <div class="lineWrap" data-musicId="229">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Two Steps From Hell - Victory.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Two Steps From Hell - Victory.mp3" src="" preload="preload" class="media"></audio> 
@@ -654,7 +549,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">5:20</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -662,8 +557,7 @@
           <div class="lineWrap" data-musicId="238">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/New Chapter (Jacoo Remix).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/New Chapter (Jacoo Remix).mp3" src="" preload="preload" class="media"></audio> 
@@ -676,7 +570,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">5:02</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -684,8 +578,7 @@
           <div class="lineWrap" data-musicId="240">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/绿野仙踪.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/绿野仙踪.mp3" src="" preload="preload" class="media"></audio> 
@@ -698,7 +591,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:51</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -706,8 +599,7 @@
           <div class="lineWrap" data-musicId="243">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/花咲く日まで - インストゥルメンタル.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/花咲く日まで - インストゥルメンタル.mp3" src="" preload="preload" class="media"></audio> 
@@ -720,7 +612,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:59</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -728,8 +620,7 @@
           <div class="lineWrap" data-musicId="244">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/Josh Vietti - Because of You.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/Josh Vietti - Because of You.mp3" src="" preload="preload" class="media"></audio> 
@@ -742,7 +633,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:46</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -750,8 +641,7 @@
           <div class="lineWrap" data-musicId="256">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/纯音乐 - 爱丽丝.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/纯音乐 - 爱丽丝.mp3" src="" preload="preload" class="media"></audio> 
@@ -764,7 +654,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">1:27</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -772,8 +662,7 @@
           <div class="lineWrap" data-musicId="265">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/纯音乐 - 茶艺茶道背景音乐~1.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/纯音乐 - 茶艺茶道背景音乐~1.mp3" src="" preload="preload" class="media"></audio> 
@@ -786,7 +675,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">1:03</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -794,8 +683,7 @@
           <div class="lineWrap" data-musicId="270">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/汉宫秋月.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/汉宫秋月.mp3" src="" preload="preload" class="media"></audio> 
@@ -808,7 +696,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:43</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -816,8 +704,7 @@
           <div class="lineWrap" data-musicId="271">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/渔舟唱晚（古筝）.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/渔舟唱晚（古筝）.mp3" src="" preload="preload" class="media"></audio> 
@@ -830,7 +717,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:08</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -838,8 +725,7 @@
           <div class="lineWrap" data-musicId="272">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/西厢词（古筝）.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/西厢词（古筝）.mp3" src="" preload="preload" class="media"></audio> 
@@ -852,7 +738,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">1:52</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -860,8 +746,7 @@
           <div class="lineWrap" data-musicId="273">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/漫步人生路 (古筝).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/漫步人生路 (古筝).mp3" src="" preload="preload" class="media"></audio> 
@@ -874,7 +759,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">2:39</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -882,8 +767,7 @@
           <div class="lineWrap" data-musicId="277">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/半壶纱 (伴奏).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/半壶纱 (伴奏).mp3" src="" preload="preload" class="media"></audio> 
@@ -896,7 +780,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">3:42</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>
@@ -904,8 +788,7 @@
           <div class="lineWrap" data-musicId="290">
             <dl class="musicMess">
               <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/回家(萨克斯).jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
+                <img src="images/wz_music.png" alt="" class="musicBegin">
                 <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
                 <canvas class="music-canvas" width="60" height="60"></canvas>
                 <audio data-src="http://soqimusic.qiniu.soqi.cn/回家(萨克斯).mp3" src="" preload="preload" class="media"></audio> 
@@ -918,73 +801,7 @@
             </dl>
             <div class="right">
               <span class="musicTime show"">4:45</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="330">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/大气感恩环节背景音乐.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/大气感恩环节背景音乐.mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>大气感恩环节背景音乐</h3>
-                <p></p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">4:32</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="372">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/龚一  潇湘水云.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/龚一  潇湘水云.mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>龚一  潇湘水云</h3>
-                <p></p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">0:35</span>
-              <i class="icon-radio-fill chooseIcon "></i>
-              <span class="musicLoading"></span>
-            </div>
-          </div>
-        
-          <div class="lineWrap" data-musicId="420">
-            <dl class="musicMess">
-              <dt>
-                <img src="http://soqimusic.qiniu.soqi.cn/小河淌水-蔡崇力.jpg-img60" alt="">
-                 <img src="http://xmsoqistatic.qiniu.soqi.cn/begin.png" alt="" class="musicBegin">
-                <img src="http://xmsoqistatic.qiniu.soqi.cn/stop.png" alt="" class="musicStop">
-                <canvas class="music-canvas" width="60" height="60"></canvas>
-                <audio data-src="http://soqimusic.qiniu.soqi.cn/小河淌水-蔡崇力.mp3" src="" preload="preload" class="media"></audio> 
-                <span class="shadow"></span>
-              </dt>
-              <dd>
-                <h3>小河淌水-蔡崇力</h3>
-                <p></p>
-              </dd>
-            </dl>
-            <div class="right">
-              <span class="musicTime show"">0:56</span>
-              <i class="icon-radio-fill chooseIcon "></i>
+              <i class="chooseIcon mp-btn mp-btn-info">选择</i>
               <span class="musicLoading"></span>
             </div>
           </div>

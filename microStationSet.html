@@ -108,44 +108,39 @@
       <section class="minpage-popup-masks" id="popUp-insertType">
         <div class="popitembox flexbox-container">
           <div class="fixed">
-            <div class="closebtn">
-              <i class="icon-arrow-left"></i>
-            </div>
             <div class="scrollbox">
               <ul class="scrollbox-ul fixed">
                 <li data-action="1" class="">
-                  <i class="icon-wz-set mp-color1" title="文本"></i>
+                  <i class="icon-wz_text mp-color5" title="文本"></i>
                   <span>文字</span>
-                  <input type="checkbox">
                 </li>
                 <li data-action="2" class="">
-                  <i class="icon-wz-set mp-color2" title="图片"></i>
+                  <i class="icon-wz_img mp-color2" title="图片"></i>
                   <span>图片</span>
-                  <input type="checkbox">
                 </li>
                 <li data-action="4" class="">
-                  <i class="icon-wz-set mp-color3" title="链接"></i>
+                  <i class="icon-wz_link mp-color6" title="链接"></i>
                   <span>链接</span>
-                  <input type="checkbox">
                 </li>
                 <li data-action="3" class="">
-                  <i class="icon-wz-set mp-color4" title="视频"></i>
+                  <i class="icon-wz_v mp-color1" title="视频"></i>
                   <span>视频</span>
-                  <input type="checkbox">
                 </li>
                 <li data-action="6" class="">
-                  <i class="icon-wz-set mp-color5" title="地图"></i>
+                  <i class="icon-wz_map mp-color2" title="地图"></i>
                   <span>地图</span>
-                  <input type="checkbox">
                 </li>
                 <li data-action="music" class="">
-                  <i class="icon-wz-set mp-color6" title="音乐"></i>
+                  <i class="icon-wz_music mp-color5" title="音乐"></i>
                   <span>音乐</span>
-                  <input type="checkbox">
+                </li>
+                <li data-action="5" class="">
+                  <i class="icon-wz_wz mp-color2" title="文章"></i>
+                  <span>文章</span>
                 </li>
               </ul>
             </div>
-            <div class="insert-item-btn mp-btn mp-btn-blue">插入内容</div>
+            <div class="insert-item-btn closebtn mp-btn mp-btn-blue">取消</div>
           </div>
         </div>
       </section>
@@ -160,23 +155,25 @@
           return false;
         });
         // 隐藏--添加组件弹出框 
-        $('.mp-main').on('click','.minpage-popup-masks .closebtn',function(){
+        $('.mp-main').on('click','.closebtn',function(){
           initMethod.hidePopChooseType();
           return false;
         });
         // 添加组件--选择类型
         $('.scrollbox-ul li').on('click',function(){
-          if ($(this).hasClass('checked')) {
+/*          if ($(this).hasClass('checked')) {
             $(this).removeClass('checked');
           } else {
             $(this).addClass('checked');
           }
-          return false;
+          return false;*/
+          var item = $(this);
+          initMethod.comfirmInsertItem(item);
         });
         // 添加组件--插入内容 
-        $('#popUp-insertType').on('click','.insert-item-btn',function(){
+        /*$('#popUp-insertType').on('click','.insert-item-btn',function(){
           initMethod.comfirmInsertItem();
-        });
+        });*/
          // 插入组件内容 
         $('.page-a').on('click','.addtool-btn',function(){
             // 设置标识为1，表示不是首次添加组件
@@ -212,10 +209,12 @@
         // 点击跳转编辑
         $('.page-a').on('click','#miniDetail .popReplacebox',function(){
             var obj = $(this).parent();
-            var editFg =  obj.find('.statafg').attr('data-edit');
+            var goUrl =  obj.attr('data-edit');
+            console.log(goUrl);
             //var url = obj.attr('data-url');
             //operateRemoteData.jumpTopage(url,editFg);
-            noticeTis("老板，编辑还没搞明白怎么做");
+            //noticeTis("老板，编辑还没搞明白怎么做");
+            initMethod.goHtml(goUrl);
         });
         // 滚动条滚动消失组件编辑栏
         $('.page-a').on('scroll',function(){
@@ -263,11 +262,11 @@
             var operateHtml ='';
             operateHtml +='<div class="btfix-Pop-operate">';
             if(deleteFg != 1){
-                operateHtml += '<span class="closeboxbtn fl"><i class="icon-minpage icon-close"></i></span>';
+                operateHtml += '<span class="closeboxbtn fr"><i class="icon-wz_close"></i></span>';
             }
-            operateHtml += '<span class="fr">';
-            operateHtml += '<em class="moveUp">上移</em>';
-            operateHtml += '<em class="moveDown">下移</em>';
+            operateHtml += '<span class="fl">';
+            operateHtml += '<em class="moveUp"><i class="icon-wz_up"></i>上移</em>';
+            operateHtml += '<em class="moveDown"><i class="icon-wz_down"></i>下移</em>';
             operateHtml += '</span>';
             operateHtml += '</div>';
             if(deleteFg == 1){
@@ -313,20 +312,10 @@
           $('.minpage-popup-masks').removeClass('active');
           $('.scrollbox-ul.fixed li').removeClass('checked');
         },
-        comfirmInsertItem:function(){
-          var comps = $('#popUp-insertType .scrollbox-ul').find('.checked');
-          var pdid="";//各个控件的id
-          var music="";//标记，是否要添加music
-          //收集所有要提交 组件的ID
-          for(var c=0; c < $(comps).length;c++) {
-              if($(comps[c]).attr('data-action')=="music") {
-                  music = "music";
-                  continue;
-              }
-              pdid += $(comps[c]).attr('data-action')+",";
-          }
-          //删除最后一个无效的 逗号
-          pdid = pdid.substring(0, pdid.lastIndexOf(","));
+        comfirmInsertItem:function(item){
+          // 拿到标识
+          var pdid = item.attr('data-action');
+          console.log(pdid);
           var insertTypeVal = compentInsertType == 1? 1:-1;
           var obj;
           if($('.show-compent.cur').length == 0){
@@ -338,9 +327,9 @@
           }else{
             obj = $('.show-compent.cur');
           }
-          noticeTis("插入成功");
+          noticeTis("添加成功");
           var emptyFg = $('#miniDetail .show-compent').length == 0 ? 1:-1;
-          initMethod.addModule(pdid,music);
+          initMethod.addModule(pdid);
           initMethod.hidePopChooseType();
           if(emptyFg == 1){
             initMethod.judgeGuideOperate();
@@ -355,22 +344,26 @@
           //operateRemoteData.ajaxInsertModule(obj, pdid,music,insertTypeVal,success, error);
         },
         //构建未编辑的情况
-        miniPageModuleBulid:function(text,id){
+        miniPageModuleBulid:function(text,id,url){
             var html = "<div class='edit-show edit-show-border show-compent'" +
                 "id=\""+id+"\"" +
-                "data=\""+id+"\">";
-            html += "<div class=\"edit-addtool\"><div class=\"txt\"><a class=\"txt-href\">";
+                "data=\""+id+"\"" + "data-edit=\""+url+"\">";
+            html += "<div class=\"edit-addtool\"><div class=\"txt\"><a href=\"javascript:;\" class=\"txt-href\">";
             html += "点击编辑" + text;
             if(text == '文字'){
-                html += '<i class="icon-wz-set mp-color1"></i>';
+                html += '<i class="icon-wz_text mp-color5"></i>';
             }else if(text == '图片'){
-                html += '<i class="icon-wz-set mp-color2"></i>';
+                html += '<i class="icon-wz_img mp-color2"></i>';
             }else if(text == '链接'){
-                html += '<i class="icon-wz-set mp-color3"></i>';
+                html += '<i class="icon-wz_link mp-color6"></i>';
             }else if(text == '视频'){
-                html += '<i class="icon-wz-set mp-color4"></i>';
+                html += '<i class="icon-wz_v mp-color1"></i>';
             }else if(text == '地图'){
-                html += '<i class="icon-wz-set mp-color5"></i>';
+                html += '<i class="icon-wz_map mp-color2"></i>';
+            } else if(text == '音乐'){
+                html += '<i class="icon-wz_music mp-color5"></i>';
+            } else if(text == '文章'){
+                html += '<i class="icon-wz_wz mp-color2"></i>';
             }
             html += "</div></div></div>";
             // 判断是否是第一次添加，第一次添加成功后隐藏大按钮
@@ -388,28 +381,22 @@
         // 添加组件
         addModule: function (pdid, music) {
             var idsId = parseInt(Math.random() * 1000);
-            var str = pdid.split(",");
-            if (pdid.length != 0) {
-                for (var i = 0; i < str.length; i++) {
-                    pdid = str[i];
-                    if (pdid == 1) {
-                        initMethod.miniPageModuleBulid('文字','text'+idsId);
-                    } else if (pdid == 2) {
-                        initMethod.miniPageModuleBulid('图片','img'+idsId);
-                    } else if (pdid == 3) {
-                        initMethod.miniPageModuleBulid('视频','video'+idsId);
-                    } else if (pdid == 4) {
-                        initMethod.miniPageModuleBulid('链接','link'+idsId);
-                    } else if (pdid == 6) {
-                        initMethod.miniPageModuleBulid( '地图','dt'+idsId);
-                    }
-                }
-            }
-            //关闭界面后才显示
-            if (music == "music") {
+            if (pdid == 1) {
+                initMethod.miniPageModuleBulid('文字','text'+idsId,'go-text');
+            } else if (pdid == 2) {
+                initMethod.miniPageModuleBulid('图片','img'+idsId,'go-img');
+            } else if (pdid == 4) {
+                initMethod.miniPageModuleBulid('链接','link'+idsId,'go-link');
+            } else if (pdid == 3) {
+                initMethod.miniPageModuleBulid('视频','video'+idsId,'go-video');
+            } else if (pdid == 6) {
+                initMethod.miniPageModuleBulid( '地图','dt'+idsId,'go-dt');
+            } else if (pdid == "music") {
+                initMethod.miniPageModuleBulid( '音乐','music'+idsId,'go-music');
                 initMethod.addMusic();
+            } else if (pdid == 5) {
+                initMethod.miniPageModuleBulid( '文章','wz'+idsId,'go-wz');
             }
-
         },
         // 点击组件显示操作按钮
         judgeGuideOperate:function () { 
@@ -424,8 +411,25 @@
               $('.ms-add-btn').show();
             }
         },
+        // 跳转到音乐
         addMusic: function () {
             location.href = 'Music.html';
+        },
+        // 编辑跳转
+        goHtml: function (gourl) {
+          if (gourl == "go-text") {
+                location.href = 'wz_text.html';
+            } else if (gourl == "go-img") {
+                location.href = 'wz_img.html';
+            } else if (gourl == "go-link") {
+                location.href = 'wz_link.html';
+            } else if (gourl == "go-video") {
+                location.href = 'wz_video.html';
+            } else if (gourl == "go-dt") {
+                location.href = 'wz_dt.html';
+            } else if (gourl == "go-wz") {
+                location.href = 'wz_wz.html';
+            }
         },
         // 组件上移
         assemblyMoveup:function(obj){ 

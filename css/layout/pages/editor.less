@@ -1,0 +1,50 @@
+/*
+ * editor.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.30 Moonlight
+ *
+*/
+@barW: 3.5rem;
+.editor-bar{
+     position: relative;
+     width: 100%;
+     height: @barW;
+     background-color: #f7f7f8;
+     &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: auto;
+          right: auto;
+          height: 1px;
+          width: 100%;
+          background-color: #e7e7e7;
+          display: block;
+          z-index: 15;
+          -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+     }
+}
+.bar-item{
+     position: relative;
+     display: table-cell;
+     width: 1%;
+     height: @barW;
+     color: #929292;
+     text-align: center;
+     vertical-align: middle;
+     i{
+          display: block;
+          margin-bottom: .25rem;
+     }
+     span{
+          font-size: @fs7;
+     }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+     .editor-bar:before {
+          -webkit-transform: scaleY(.5);
+          transform: scaleY(.5);
+     }
+}

@@ -1,0 +1,43 @@
+/*
+ * mp-btn.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.10 Moonlight
+ *
+*/
+.mp-btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .8rem;
+  padding-right: .8rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  line-height: 2.25;
+  border-radius: .3rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+.mp-btn a {
+  color: #ffffff;
+}
+.mp-btn-info {
+  background: #fe9214;
+}
+.mp-btn-info:active {
+  color: #ffffff;
+  background-color: #ef860c;
+}
+.mp-btn-link {
+  color: #ff8a00;
+  border: 1px solid #ff8a00;
+  line-height: 1.8rem;
+  font-size: .85rem;
+}
+.mp-btn-disable{
+  color: #ffffff;
+  background-color: #d9d9d9;
+}

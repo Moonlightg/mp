@@ -1,0 +1,31 @@
+/*
+ * arrow.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.18 Moonlight
+ *
+*/
+/*箭头向上*/
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid #666;
+}
+/*箭头向下*/
+/*箭头向左*/
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-right: 1rem solid #666;
+}
+/*箭头向右*/
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 1rem solid #666;
+}

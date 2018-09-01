@@ -4,7 +4,168 @@
  * Copyright (c) 2018.8.18 Moonlight
  *
 */
+.wz_wz_head{
+     .header-return{
+          font-size: 1.2rem;
+          padding: 0 .5rem;
+     }
+     .header-tit{
+          margin-right: -3rem;
+     }
+}
+.wz_img_list{
+     .display;
+     flex-wrap: wrap;
+     margin: -.5%;
+     li{
+          width: 32.2%;
+          margin: .5%;
+          position: relative;
+          img{
+               display: block;
+               width: 100%;
+          }
+          &.more{
+               background: #8e8e8e;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               color: #fff;
+               i{
+                    font-size: 3.8rem;
+               }
+               input{
+                    opacity: 0;
+               }
+          }
+          &.active:before{
+               position: absolute;
+               top: 0;
+               content: "";
+               width: 100%;
+               height: 100%;
+               background: rgba(0, 0, 0, 0.5);
+          }
+          &.more input,
+          label{
+               position: absolute;
+               right: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+          }
+          label.bui-checkbox-label .bui-checkbox {
+              display: inline-block;
+              position: absolute;
+              right: .5rem;
+              top: .5rem;
+              width: 20px;
+              height: 20px;
+              background: #717171a1;
+              border: 1px solid #ffffff;
+              border-radius: 15px;
+              vertical-align: -4px;
+              &:after {
+                    color: #FFFFFF;
+                    font-family: icomoon;
+                    content: "\e92c";
+                    width: 15px;
+                    height: 15px;
+                    font-size: 15px;
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0px;
+                    left: 1px;
+               }
+          }
+          label.bui-checkbox-label input:checked + .bui-checkbox:after {
+                 display: none;
+          }
+          label.bui-checkbox-label input:checked + .bui-checkbox {
+            background: #068bfe;
+          }
+     }
+}
+.wz_video_head{
+     border-top: .5rem solid #eee;
+     border-bottom: .5rem solid #eee;
+     padding: 1rem;
+     &>p{
+          font-size: 1rem;
+          color: #333;
+          margin-bottom: 1rem;
+     }
+     input{
+          line-height: 2.5rem;
+          border-top: 1px solid #cce5ff;
+          border-bottom: 1px solid #cce5ff;
+          margin-bottom: 1rem;
+     }
+     .mp-btn{
+          line-height: 2.8;
+          border-radius: 0;
+     }
+}
+.wz_video_content{
+     padding: 1rem;
+     &>p{
+          font-size: 1rem;
+          color: #333;
+          margin-bottom: 1rem;
+     }
+     .wz_video_item{
+          height: 9rem;
+          background: #027efe;
+          width: 100%;
+          position: relative;
+          span{
+               padding: 0 .5rem;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              line-height: 1.6rem;
+              background: rgba(0, 0, 0, 0.8);
+              font-size: .875rem;
+              color: #fff;
+          }
+     }
+     .wz_video_btn{
+         background: #eee;
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         width: 5rem;
+          span{
+               display: block;    
+               margin-top: 4rem;
+               font-size: 1rem;
+               color: #027efe;
+               text-align: center;
+               &.time{    
+                    margin-top: 2.9rem;
+                    font-size: .75rem;
+                    color: #444;
+               }
+          }
+     }
+     .icon-wz_close{
+          position: absolute;
+          right: 0;
+          font-size: .75rem;
+          background: #ff211a;
+          color: #fff;
+          padding: .25rem .5rem;
+     }
+     li{
+          padding-right: 5rem;
+          margin-bottom: 1rem;
+          position: relative;
 
+     }
+}
 .micro-head{
      position: relative;
      background: #000;
@@ -110,4 +271,283 @@
 　　  0%{-webkit-transform:rotate(0deg);}
 　　  50%{-webkit-transform:rotate(180deg);}
 　　  100%{-webkit-transform:rotate(360deg);}
+}
+
+// 弹出卡片
+.micro-card{
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     overflow: hidden;
+     z-index: 9999;
+}
+.micro-card_bg{
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.5);
+}
+.micro-card_center{
+     .display;
+     .flex_direction(column);
+     width: 90%;
+     max-height: 92%;
+     background: #fff;
+     position: absolute;
+     top: 4%;
+     left: 5%;
+     border-radius: 1rem;
+     overflow: hidden;
+     z-index: 10000;
+     overflow: auto;
+}
+.micro-card_head{
+     .flex(0);
+     padding: 1rem 0 .5rem;
+     background: #eeb763;
+     .visiting-card_user_img{
+          margin-top: 0;
+          width: 4.5rem;
+          height: 4.5rem;
+          border-radius: 4.5rem;
+          border: 2px solid #fff;
+     }
+     .name{
+          font-size: 1.1rem;
+     }
+     .zw{
+          line-height: 1rem;
+          font-size: @fs7;
+          color: #666;
+     }
+}
+.micro-card_list{
+     .flex_initial(1);
+     padding: 1rem 1.5rem;
+     color: #333;
+     overflow: auto;
+     .list-start{
+          i{
+               color: #f08f35;
+               font-size: 1.4rem;
+               vertical-align: middle;
+               margin-bottom: 2px;
+               display: inline-block;
+               margin-right: 1rem;
+          }
+     }
+     .list-end{
+          text-align: right;
+          a{
+               color: #f08f35;
+          }
+     }
+     .addres{
+          line-height: 1.25;
+     }
+     .qr-img{
+          text-align: center;
+          img{
+               width: 8rem;
+          }
+     }
+}
+.micro-btn-colse{
+     position: absolute;
+     right: 0;
+     font-size: 2rem;
+     color: #000;
+}
+// 微站制作
+.ms-add-btn{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 5rem;
+     height: 5rem;
+     margin: 2rem auto;
+     border-radius: 5rem;
+     background: #000;
+     color: #fff;
+     text-align: center;
+     font-size: 3rem;
+}
+// 添加组件
+.fixed {
+     display: block;
+     min-height: 1%;
+}
+.minpage-popup-masks {
+     display: none;
+     position: fixed;
+     width: 100%;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     z-index: 10001;
+     background: rgba(50, 50, 50, 0.8);
+     overflow: auto;
+}
+.minpage-popup-masks.active {
+    display: block;
+}
+.popitembox {
+     position: relative;
+     width: 100%;
+     padding: 20px 35px;
+     &>.fixed {
+          width: 100%;
+          display: block;
+          min-height: 1%;
+     }
+}
+.flexbox-container {
+     .display;
+     .align_items_center;
+}
+.scrollbox>ul{
+     margin-top: 2rem;
+     margin-bottom: 1rem;
+     overflow: hidden;
+}
+.scrollbox>ul li {
+     position: relative;
+     float: left;
+     width: 48%;
+     height: 60px;
+     margin: 0 0 5%;
+     background: #fff;
+     border-radius: 3px;
+     line-height: 60px;
+     text-align: center;
+     &:nth-child(odd) {
+          margin-right: 4%;
+     }
+     i {
+          font-size: 1.8rem;
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 .875rem .1rem 0;
+          &.icon-wz_text{
+               font-size: 1.3rem;
+               margin-bottom: .18rem;
+          }
+          &.icon-wz_img{
+               font-size: 1.4rem;
+               margin-bottom: .15rem;
+          }
+     }
+}
+.addtool-btn {
+     width: 44px;
+     height: 44px;
+     border-radius: 50%;
+     text-align: center;
+     cursor: pointer;
+     background: #000000;
+     margin: 10px auto;
+     color: #fff;
+     font-size: 1.6rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.edit-show{
+     position: relative;
+     padding: 15px 10px!important;
+     background: transparent;
+}
+.edit-show.cur {
+     border: 1px dashed #a93e1c;
+}
+.edit-show.cur,
+.show-compent.cur {
+     overflow-y: hidden;
+     max-height: 200px;
+}
+.edit-addtool {
+     position: relative;
+     .txt {
+          position: relative;
+          height: 65px;
+          padding: 15px 0 10px 0;
+          font-size: 1.2rem;
+          text-align: center;
+          .txt-href {
+               display: block;
+               color: #999999;
+               margin-top: 23px;
+          }
+     }
+     i {
+          font-size: 1.6rem;
+          position: absolute;
+          top: 2px;
+          left: 50%;
+          margin-left: -15px;
+          overflow: hidden;
+     }
+}
+.btfix-Pop-operate {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 2;
+     .closeboxbtn {
+          display: inline-block;
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          top: 0px;
+          right: 0;
+          i {
+               display: inline-block;
+               font-size: @fs8;
+               background-color: #ff3333;
+               vertical-align: middle;
+               padding: 5px 10px;
+          }
+     }
+}
+.btfix-Pop-operate .moveUp, 
+.btfix-Pop-operate .moveDown {
+     position: relative;
+     display: inline-block;
+     width: 48px;
+     height: 24px;
+     line-height: 24px;
+     text-align: center;
+     background-color: #333;
+     font-size: @fs8;
+     color: #fff;
+     margin-right: 3px;
+     padding: 0 4px;
+}
+.popReplacebox {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background: rgba(0,0,0,0.4);
+     z-index: 99;
+     color: #f5f5f5;
+     font-size: 1.4rem;
+     text-align: center;
+     transform: translate(-50%,-50%);
+     margin: 0!important;
+     i {
+          font-size: 2.4rem;
+     }
+     p {
+         margin-top: 3px;
+         font-size: 1.2rem;
+     }
 }

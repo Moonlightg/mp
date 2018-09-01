@@ -1,0 +1,10 @@
+/*
+ * mp-nav.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.9 Moonlight
+ *
+*/
+.mp-nav li {
+  width: 25%;
+  display: inline-block;
+}

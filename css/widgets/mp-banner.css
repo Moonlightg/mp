@@ -1,0 +1,13 @@
+/*
+ * mp-banner.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.10 Moonlight
+ *
+*/
+.mp-banner {
+  width: 100%;
+}
+.mp-banner img {
+  width: 100%;
+  display: block;
+}

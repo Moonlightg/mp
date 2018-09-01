@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>我的文章</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <script src="lib/swiper/js/swiperTab.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header class="wz_wz_head">
+        <a href="javascript:;" onclick="goBack(-1)" class="header-return">
+          取消
+        </a>
+        <p class="header-tit">添加图片</p>
+        <a href="javascript:;" onclick="goBack(-1)" class="header-return" style="color: #068bfe;">
+          确定
+        </a>
+      </header>
+      <section class="mp-container mp-tab-wrap">     
+        <ul class="wz_img_list">
+          <li class="more">
+            <i class="icon-add"></i>
+            <span>上传图片</span>
+            <input type="file" id="file" name="file" value="" accept="images/*">
+          </li>
+          <li class="active">
+            <img src="images/wz3.jpg">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" checked="" name="img1"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/wz3.jpg">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img2"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/user.jpg">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img3"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/wz3.jpg">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img4"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/wz3.jpg">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img5"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/user4.png">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img2"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/user3.png">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img3"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/user.jpg">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img4"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+          <li>
+            <img src="images/user3.png">
+            <label class="bui-checkbox-label bui-checkbox-anim">
+                <input type="checkbox" name="img5"><i class="bui-checkbox"></i>
+            </label>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script>
+      $(function () {
+        /*swiper选项卡切换*/
+        $('.mp-tab a').eq(0).addClass('active');
+        tabs('.mp-tab a','.swiper-container','active');
+
+        // 点击选择文章
+        $('.wz_img_list').on('click','input',function(){
+            $(this).parents("li:not(.more)").toggleClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>

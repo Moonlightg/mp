@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>编辑文章</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="lib/neweditor/function.js"></script>
+    <link rel="stylesheet" href="css/app-base.css">
+    <link rel="stylesheet" href="lib/neweditor/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      
+    </style>
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header class="isSearch">
+        <a href="javascript:;" onclick="goBack(-1)" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">编辑文章</p>
+      </header>
+      <section class="mp-container auto">
+
+      </section>
+      <div class="mask" style="display: none;"></div>
+      <!-- 编辑的工具 开始 -->
+      <!-- 文本编辑 -->
+      <div class="fixedDiv text_insert">            
+        <div class="tinsert_head">                
+          <div class="fl tinsert_hl">                    
+            <ul>                        
+              <li class="icon_bold" pid="1"></li>                        
+              <li class="icon_color" pid="2"><span class="nowcolor" style="background: rgb(51, 51, 51);"></span></li>                        
+              <li class="icon_bgcolor" pid="3"></li>                        
+              <li class="icon_font" pid="4"></li>                        
+              <li class="icon_align icon_left" pid="5"></li>                        
+              <li class="icon_align icon_center" pid="6"></li>                        
+              <li class="icon_align icon_right" pid="7"></li>                    
+            </ul>                
+          </div>                
+          <div class="fr tinsert_hr"><span class="text_reset">清空</span></div>            
+        </div>            
+        <div class="tinsert_body">                
+          <textarea class="text_word" style="line-height: 20px;" placeholder="请输入内容文字"></textarea>
+        </div>            
+        <div class="boxCheck2 tinsert_foot">                
+          <button type="button" class="boxYes" pid="1">提交</button>                
+          <button type="button" class="boxNo" pid="1">取消</button>            
+        </div>        
+      </div>
+
+      <!-- 编辑的工具 结束 -->
+      <nav class="editor-bar">            
+        <a class="bar-item external" href="javascript:void(0);" id="addword">
+          <i class="icon-edit"></i>              
+          <span>插入文字</span>            
+        </a>            
+        <a class="bar-item external" href="javascript:void(0);" id="addimg">
+          <i class="icon-edit"></i>                  
+          <span>插入图片</span>            
+        </a>            
+        <a class="bar-item external" href="javascript:void(0);" id="addvideo">  <i class="icon-edit"></i>                  
+          <span>插入视频</span>            
+        </a>            
+        <a class="bar-item external" href="javascript:void(0);" id="wxstyle">
+          <i class="icon-edit"></i>                 
+          <span>插入模板</span>            
+        </a>            
+        <a class="bar-item external" href="javascript:void(0);" id="wzadd">
+          <i class="icon-edit"></i>                 
+          <span>文章设置</span>            
+        </a>        
+      </nav>
+    </div>
+    <script>
+      $(function () {
+
+        // 页面加载进来设置编辑工具的位置
+        var winwidth=$(document).width();
+        $('.fixedDiv').css({width:winwidth+"px",marginLeft:-winwidth/2+"px"});
+
+        // 直接插入文字
+        $('#addword').click(function(){
+          word(1);
+        }) 
+
+        // 插入文字面板 
+        $(document).on('click','.tinsert_hl ul li',function(){
+          var pid=$(this).attr('pid');
+          textsub(parseInt(pid));
+        })
+
+        // 取消插入或者修改文字
+        $('.boxNo').click(function(){
+          var pid=$(this).attr('pid');
+          hidebox(pid);
+        })
+
+      });
+    </script>
+  </body>
+</html>

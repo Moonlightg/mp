@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>我的文章</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <script src="lib/swiper/js/swiperTab.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/app-base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="app" class="mp-main">
+      <header>
+        <a href="javascript:;" onclick="goBack(-1)" class="header-return">
+          <i class="icon-arrow-left"></i>
+        </a>
+        <p class="header-tit">添加视频</p>
+      </header>
+      <section class="mp-container mp-tab-wrap">     
+        <div class="wz_video_head">
+          <p>仅支持优酷，腾讯视频</p>
+          <input type="text" name="" placeholder="输入视频标题">
+          <input type="text" name="" placeholder="长按粘贴视频网页地址">
+          <a href="javascript:;" class="mp-btn mp-btn-blue">导入视频</a>
+        </div>
+        <div class="wz_video_content">
+          <p>历史视频</p>
+          <ul>
+            <li>
+              <div class="wz_video_item">
+                <span class="video_title">视频标题</span>
+              </div>
+              <div class="wz_video_btn">
+                <i class="icon-wz_close"></i>
+                <span>点击使用</span>
+                <span class="time">2018-09-01</span>
+              </div>
+            </li>
+            <li>
+              <div class="wz_video_item">
+                <span class="video_title">视频标题</span>
+              </div>
+              <div class="wz_video_btn">
+                <i class="icon-wz_close"></i>
+                <span>点击使用</span>
+                <span class="time">2018-09-01</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function () {
+      });
+    </script>
+  </body>
+</html>

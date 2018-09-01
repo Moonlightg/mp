@@ -1,0 +1,39 @@
+/*
+ * mp-color.less
+ * v1.0 MIT License
+ * Copyright (c) 2018.8.10 Moonlight
+ *
+*/
+.mp-color1 {
+  color: #ff007e;
+}
+.mp-color2 {
+  color: #00a0e9;
+}
+.mp-color3 {
+  color: #ffbe22;
+}
+.mp-color4 {
+  color: #f14b60;
+}
+.mp-color5 {
+  color: #f8b551;
+}
+.mp-color6 {
+  color: #43cb50;
+}
+.mp-color7 {
+  color: #eb6ea6;
+}
+.mp-color8 {
+  color: #8a8a8a;
+}
+.mp-color9 {
+  color: #038bfe;
+}
+.mp-color10 {
+  color: #fe8a03;
+}
+.mp-colorDDD {
+  color: #dddddd;
+}

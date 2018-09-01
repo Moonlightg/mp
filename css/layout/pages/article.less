@@ -12,6 +12,25 @@
           border-bottom: .25rem solid #eeeeee;
           overflow: hidden;
      }
+     &.wz_wz li{
+          position: relative;
+          padding-right: 7rem;
+          .wz_wz_btn{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6.8rem;
+            height: 6.8rem;
+            line-height: 6.8rem;
+            text-align: center;
+            color: #fff;
+            background: #038bfe;
+            display: none;
+          }
+          &.active .wz_wz_btn{
+            display: block;
+          }
+     }
 }
 .article-list-start{
      width: @listH;
@@ -53,7 +72,7 @@
           a{
               line-height: 1.6rem;
               padding: 0 .6rem;
-              margin: 0 0 0 1rem;
+              margin: 0 0 0 .6rem;
               border-radius: 3px;
               float: right;
           }
@@ -164,6 +183,7 @@
 // 文章详情
 .article-details{
      padding: 1rem;
+     text-align: justify;
      h1{
           line-height: 2rem;
           font-weight: 400;
@@ -172,6 +192,16 @@
           img{
                margin: 1rem 0;
           }
+     }
+     &-footer{
+      overflow: hidden;
+      padding: 1rem 0;
+      color: #888;
+      p{
+        font-size: .875rem;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+      }
      }
 }
 .article-user{

@@ -1087,6 +1087,13 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
   display: flex;
   flex-direction: column;
 }
+.tab-item {
+  width: 100%;
+  display: none;
+}
+.tab-item.active {
+  display: block;
+}
 /*
  * mp-list.less
  * v1.0 MIT License

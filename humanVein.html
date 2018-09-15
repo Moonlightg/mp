@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>我的推广</title>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="lib/swiper/js/swiper.min.js"></script>
-    <script src="lib/swiper/js/swiperTab.js"></script>
     <script src="lib/waves/js/waves.min.js"></script>
      <script src="js/common.js"></script>
     <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
@@ -27,19 +25,19 @@
       <ul class="mp-list">
         <li>
           <div class="mp-list-item mp-link human-sort mp-tab">
-            <a href="circleArticleRelease.html" hidefocus="true">
+            <a href="javascript:;" class="active">
               <span class="mp-link-icon"><i class="icon-add-user mp-color3"></i></span>
               <span class="mp-link-name">发现人脉</span>
             </a>
-            <a href="microLink.html" hidefocus="true">
+            <a href="javascript:;">
               <span class="mp-link-icon"><i class="icon-addres-fill mp-color3"></i></span>
               <span class="mp-link-name">同城人脉</span>
             </a>
-            <a href="javascript:;" hidefocus="true">
+            <a href="javascript:;">
               <span class="mp-link-icon"><i class="icon-collection-me mp-color3"></i></span>
               <span class="mp-link-name">我的收藏</span>
             </a>
-            <a href="circleMember.html" hidefocus="true">
+            <a href="javascript:;">
               <span class="mp-link-icon"><i class="icon-member-2 mp-color3"></i></span>
               <span class="mp-link-name">我的粉丝</span>
             </a>
@@ -48,9 +46,8 @@
       </ul>
       <section class="mp-container mp-tab-wrap">
         <div class="user-vein-wrap">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+          <div class="swiper-container tab-container">
+              <div class="swiper-slide tab-item active">
                 <div class="content-slide">
                   <div class="screening flex">
                     <a href="javascript:;"><input type="hidden" name="bank_id" id="bankId" value=""> <span id="showBank">选择行业</span> </a>
@@ -204,7 +201,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide tab-item">
                 <div class="content-slide">
                   <ul class="user-list user-vein-list">
                     <li>
@@ -288,7 +285,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide tab-item">
                 <div class="content-slide">
                   <ul class="user-list user-vein-list" id="my_follow">
                     <li class="follow-item">
@@ -326,7 +323,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide tab-item">
                 <div class="content-slide">
                   <ul class="user-list user-vein-list">
                     <li>
@@ -345,7 +342,6 @@
                   </ul>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -386,9 +382,13 @@
     <script>
       $(function () {
         follow();
-        /*swiper选项卡切换*/
-        $('.mp-tab a').eq(0).addClass('active');
-        tabs('.mp-tab a','.swiper-container','active');
+        /* tab点击切换 */
+        var $tab_li = $('.mp-tab a');
+        $tab_li.click(function(){
+          $(this).addClass('active').siblings().removeClass('active');
+          var tab_index = $tab_li.index(this);
+          $('.tab-container > div').eq(tab_index).addClass('active').siblings().removeClass('active');
+        });
 
         // 波浪涟漪效果
         Waves.init();

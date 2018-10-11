@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f0f0f0;
+}
+a {
+  text-decoration: none;
+}
+input {
+  border: 0;
+  border-radius: 6px;
+  width: 90%;
+  margin-bottom: 0.44444444rem;
+  margin-left: 5%;
+}
+.container .top {
+  box-shadow: 0px 2px 1px #ccc;
+  height: 1.48148148rem;
+  background: white;
+  width: 100%;
+}
+.container .top .div {
+  float: left;
+  width: 10.37037037rem;
+  height: 1.48148148rem;
+  line-height: 1.48148148rem;
+  font-size: 0.56296296rem;
+  text-indent: 2em;
+}
+.container .top button{
+  display: block;
+  float: right;
+  color: white;
+  background: #0090ff;
+  width: 4.2962963rem;
+  height: 1.48148148rem;
+  font-size: 0.68148148rem;
+  text-align: center;
+  line-height: 1.48148148rem;
+}
+.container .center {
+  height: 5.03703704rem;
+  width: 100%;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+.container .center .center-img {
+  width: 3.85185185rem;
+  height: 4.14814815rem;
+  margin: 0 auto;
+  margin-top: 0.44444444rem;
+}
+.container .center .center-img a {
+  height: 2.96296296rem;
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  background: white;
+  overflow: hidden;
+}
+.container .center .center-img a img {
+  margin: 0 auto;
+  width: 1.85185185rem;
+  height: 1.85185185rem;
+  display: block;
+  margin-top: 0.51851852rem;
+}
+.container .center .center-img p {
+  height: 1.18518519rem;
+  line-height: 1.18518519rem;
+  background: ;
+  font-size: 0.59259259rem;
+  text-align: center;
+  color: #b4b4b4;
+}
+.container .text {
+  height: 1.42222222rem;
+  text-indent: 2em;
+  background: white;
+  box-shadow: 0px 2px 1px #ccc;
+  font-size: 0.53333333rem;
+  color: #b4b4b4;
+  line-height: 1.42222222rem;
+}
+.container .bigimg {
+  width: 100%;
+}
+.container .bigimg div {
+  width: 14.07407407rem;
+  height: 8.07407407rem;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 0.53333333rem;
+}
+.container .bigimg div img {
+  width: 14.07407407rem;
+  height: 8.07407407rem;
+}
+.container .bigimg div div {
+  width: 0.91851852rem;
+  height: 0.91851852rem;
+  margin-top: 0;
+  position: absolute;
+  top: -0.45925926rem;
+  right: -0.45925926rem;
+}
+.container .bigimg div div img {
+  width: 0.91851852rem;
+  height: 0.91851852rem;
+}
+.container .bottom {
+  width: 3.85185185rem;
+  height: 4.14814815rem;
+  margin: 0 auto;
+  margin-top: 0.44444444rem;
+}
+.container .bottom a {
+  height: 2.96296296rem;
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  background: white;
+  overflow: hidden;
+}
+.container .bottom a img {
+  margin: 0 auto;
+  width: 1.85185185rem;
+  height: 1.85185185rem;
+  display: block;
+  margin-top: 0.51851852rem;
+}

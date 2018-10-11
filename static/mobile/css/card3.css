@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.card3 {
+  width: 100%;
+  height: auto;
+}
+.card3 .container {
+  width: 11.85185185rem;
+  height: 12rem;
+  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffa200;
+  position: relative;
+}
+.card3 .container .img {
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-top: 0.2962963rem;
+  margin-bottom: 0.2962963rem;
+}
+.card3 .container .img img {
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  border-radius: 100%;
+}
+.card3 .container p {
+  text-align: center;
+  font-size: 0.74074074rem;
+  height: 0.88888889rem;
+  margin:0;
+  line-height: 0.88888889rem;
+  font-weight: 700;
+}
+.card3 .container .content1 {
+  width: 100%;
+  height: 0.59259259rem;
+  font-size: 0.59259259rem;
+  margin-top: 0.2962963rem;
+}
+.card3 .container .content1 span {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  height: 0.59259259rem;
+  width: 50%;
+  line-height: 0.59259259rem;
+}
+.card3 .container .content1 span:nth-of-type(1) {
+  text-align: right;
+  padding-right: 0.2962963rem;
+  border-right: 1px solid black;
+}
+.card3 .container .content1 span:nth-of-type(2) {
+  text-align: left;
+  padding-left: 0.2962963rem;
+}
+.card3 .container .location {
+  width: 100%;
+  height: 0.47407407rem;
+  font-size: 0.41481481rem;
+  line-height: 0.47407407rem;
+  position: relative;
+  margin-top: 0.44444444rem;
+}
+.card3 .container .location span {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  font-size: 0.41481481rem;
+}
+.card3 .container .location span:nth-of-type(1) {
+  width: 50%;
+  height: 0.47407407rem;
+  line-height: 0.47407407rem;
+  padding-right: 0.2962963rem;
+  text-align: right;
+}
+.card3 .container .location span:nth-of-type(2) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  margin-left: -1px;
+  margin-right: -1px;
+  height: 2px;
+  background: black;
+}
+.card3 .container .location span:nth-of-type(3) {
+  width: 50%;
+  height: 0.44444444rem;
+  line-height: 0.44444444rem;
+  padding-left: 0.2962963rem;
+  text-align: left;
+}
+.card3 .container .bewm {
+  width: 4.74074074rem;
+  height: 4.74074074rem;
+  margin: 0 auto;
+  margin-top: 0.2962963rem;
+}
+.card3 .container .bewm img {
+  width: 4.74074074rem;
+  height: 4.74074074rem;
+}
+.card3 .container .bottom {
+  width: 100%;
+  text-align: center;
+  line-height: 50 67.5rem;
+  height: 0.74074074rem;
+  font-size: 0.35555556rem;
+  margin-top: 0.17777778rem;
+}
+.card3 .tip {
+  height: 0.59259259rem;
+  width: 100%;
+  line-height: 0.59259259rem;
+  font-size: 0.41481481rem;
+  color: #a1a1a1;
+  text-align: center;
+  margin-top: 0.2962963rem;
+}
+.card3 .rz {
+  width: 2.22222222rem;
+  height: 2.22222222rem;
+  border-radius: 100%;
+  position: absolute;
+  right: 2.66666667rem;
+  top: 0.2962963rem;
+}
+.card3 .rz img {
+  width: 2.22222222rem;
+  height: 2.07407407rem;
+  border-radius: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: block;
+}
+.cardcard {
+  width: 100%;
+  height: 8.14814815rem;
+  position: relative;
+}
+.cardcard .bottom {
+  width: 14.81481481rem;
+  height: 7.08148148rem;
+  position: absolute;
+  left: 0.59259259rem;
+  border: 1px solid #ccc;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  bottom: 0;
+}
+.cardcard .top {
+  color: white;
+  height: 7.03703704rem;
+  width: 13.92592593rem;
+  position: absolute;
+  top: 0;
+  left: 1.03703704rem;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.cardcard .top div {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+.cardcard .top .left {
+  font-size: 0.66666667rem;
+}
+.cardcard .top .left .img {
+  position: absolute;
+  left: 1.93333333rem;
+  top: 0.14814815rem;
+  width: 3.25925926rem;
+  height: 3.25925926rem;
+  border-radius: 100%;
+}
+.cardcard .top .left div {
+  height: 3.33333333rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.cardcard .top .left div span {
+  font-size: 0.59259259rem;
+}
+.cardcard .top .right .rt {
+  display: flex;
+  width: 100%;
+  height: 0.88888889rem;
+  margin-top: 0.44444444rem;
+  margin-bottom: 0.44444444rem;
+}
+.cardcard .top .right .rt span {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.74074074rem;
+  line-height: 0.74074074rem;
+}
+.cardcard .top .right .rb {
+  width: 4.14814815rem;
+  height: 4.14814815rem;
+  margin: 0 auto;
+  margin-left: 1.27407407rem;
+}
+.cardcard .top .right .rb img {
+  width: 100%;
+  height: 100%;
+}
+.cardcard .top .right p {
+  text-align: center;
+  font-size: 0.44444444rem;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  height: 1.18518519rem;
+  line-height: 1.18518519rem;
+}
+.cardcard .bb {
+  position: absolute;
+  bottom: 0px;
+  font-size: 0.44444444rem;
+  text-align: center;
+  height: 1.11111111rem;
+  line-height: 1.11111111rem;
+  width: 100%;
+}

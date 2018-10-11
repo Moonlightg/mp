@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1458365148_6313732.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1458365148_6313732.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1458365148_6313732.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1458365148_6313732.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1458365148_6313732.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+
+
+.ui-icon,[class^=ui-icon-] {
+	font-family:iconfont!important;
+
+	font-style:normal;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-stroke-width:.2px;
+	display:block;
+	color:rgba(0,0,0,.5)
+}
+.ui-icon-phone:before {
+	content:"\e601"
+}
+.ui-icon-pwd:before {
+	content:"\e603"
+}
+.ui-icon-yzm:before {
+	content:"\e600"
+}
+.ui-icon-gs:before {
+	content:"\e605"
+}
+
+
+.ui-icon-add:before {
+	content:"\e60b"
+}
+.ui-icon-true:before {
+  content:"\e60d";
+  font-size: 22px !important;
+  color:#4cd964
+}
+.ui-icon-false:before {
+  content:"\e60e";
+  font-size: 22px !important;
+  color:  #f6383a
+}
+.icon2 {
+    font-family: iconfont!important;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100% auto;
+    background-position: center;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-video:before {
+    content: "\e60c";
+}

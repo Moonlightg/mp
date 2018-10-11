@@ -8,8 +8,9 @@
     <script src="js/zepto.min.js"></script>
     <script src="js/sm.min.js"></script>
     <script src="js/sm-extend.min.js"></script>
-    <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" type="text/css" href="static/mobile/css/Common.css">    
+    <link rel="stylesheet" type="text/css" href="static/mobile/css/font.css">  
     <link rel="stylesheet" href="css/app-base.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,6 +18,7 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
   </head>
   <body>
     <div id="app" class="mp-main">
@@ -99,12 +101,12 @@
             </div>
           </div>
         </div>
-        <div class="micro-center article-details page-a" style="background: #fff;color: #333;">
+        <div id="wzcon" class="micro-center article-details page-a" style="background: #fff;color: #333;">
           <!-- 制作微站 开始 -->
+          <div id="miniDetail">
+          </div>
           <div class="ms-add-btn minpage-empty-box" data-action="empty-addColumn">
             <i class="icon-add"></i>
-          </div>
-          <div id="miniDetail">
           </div>
         </div>
       </section> 
@@ -147,8 +149,120 @@
           </div>
         </div>
       </section>
+      <!-- 背景层 -->
+      <div class="mask"></div>
+      <!-- 添加文本 -->
+      <div class="fixedDiv text_insert">            
+        <div class="tinsert_head">                
+          <div class="fl tinsert_hl">                    
+            <ul>                        
+              <li class="icon_bold" pid="1"></li>                        
+              <li class="icon_color" pid="2"><span class="nowcolor" style="background: rgb(51, 51, 51);"></span></li>
+              <li class="icon_bgcolor" pid="3"></li>                        
+              <li class="icon_font" pid="4"></li>                        
+              <li class="icon_align icon_left" pid="5"></li>                        
+              <li class="icon_align icon_center" pid="6"></li>                        
+              <li class="icon_align icon_right" pid="7"></li>                    
+            </ul>                
+          </div>                
+          <div class="fr tinsert_hr">                    
+            <span class="text_reset">清空</span>                
+          </div>            
+        </div>            
+        <div class="tinsert_body">                
+          <textarea class="text_word" style="line-height: 20px;" placeholder="请输入内容文字"></textarea>        
+        </div>            
+        <div class="boxCheck2 tinsert_foot">                
+          <button type="button" class="boxYes" pid="1">提交</button>                
+          <button type="button" class="boxNo" pid="1">取消</button>            
+        </div>        
+      </div>
+
+      <!--文本颜色-->        
+      <div class="fixedDiv text_color">            
+        <div class="text_tit">                
+          <span class="text_tit_l">文字颜色</span>                
+          <span class="text_tit_r" pid="1">清空</span>            
+        </div>            
+        <div class="check_color color">                
+          <ul pid="2">                    
+            <li><span style="background:#000000;"></span></li>                    
+            <li><span style="background:#0f3efe;"></span></li>                    
+            <li><span style="background:#a97a46;"></span></li>                    
+            <li><span style="background:#03fcfe;"></span></li>                    
+            <li><span style="background:#00f72c;"></span></li>                    
+            <li><span style="background:#ff4cfd;"></span></li>                    
+            <li><span style="background:#fc951e;"></span></li>                    
+            <li><span style="background:#932890;"></span></li>                    
+            <li><span style="background:#ff2a1a;"></span></li>                    
+            <li><span style="background:#fdf935;"></span></li>                    
+            <li><span style="background:#ffffff;border: 1px solid #ccc;"></span></li>                
+          </ul>            
+        </div>            
+        <div class="clear"></div>            
+        <div class="boxCheck2">                
+          <button type="button" class="boxNo text_foot_btn">标准颜色</button>            
+        </div>        
+      </div>
+
+      <!-- 文本背景颜色 -->        
+      <div class="fixedDiv text_bgcolor">            
+        <div class="text_tit">                
+          <span class="text_tit_l">文字背景颜色</span>                
+          <span class="text_tit_r" pid="2">清空</span>            
+        </div>            
+        <div class="check_color bgcolor">                
+          <ul pid="1">                    
+            <li><span style="background:#000000;"></span></li>                    
+            <li><span style="background:#0f3efe;"></span></li>                    
+            <li><span style="background:#a97a46;"></span></li>                    
+            <li><span style="background:#03fcfe;"></span></li>                    
+            <li><span style="background:#00f72c;"></span></li>                    
+            <li><span style="background:#ff4cfd;"></span></li>                    
+            <li><span style="background:#fc951e;"></span></li>                    
+            <li><span style="background:#932890;"></span></li>                    
+            <li><span style="background:#ff2a1a;"></span></li>                    
+            <li><span style="background:#fdf935;"></span></li>                    
+            <li><span style="background:#ffffff;border: 1px solid #ccc;"></span></li>                
+          </ul>            
+        </div>            
+        <div class="clear"></div>            
+        <div class="boxCheck2">                
+          <button type="button" class="boxNo text_foot_btn">标准颜色</button>            
+        </div>        
+      </div>        
+      <!-- 文本字体大小 -->        
+      <div class="fixedDiv text_size">            
+        <div class="text_tit">                
+          <span class="text_tit_l">字体大小</span>            
+        </div>            
+        <div class="check_size">                
+          <ul pid="3">                    
+            <li>15px</li>                    
+            <li>10px</li>                    
+            <li>12px</li>                    
+            <li>14px</li>                    
+            <li>16px</li>                    
+            <li>18px</li>                    
+            <li>28px</li>                
+          </ul>            
+        </div>        
+      </div>  
+
+      <!-- 视频 -->        
+      <div class="fixedDiv text_video">            
+        <div class="tinsert_head">请粘贴腾讯视频网址</div>            
+        <div class="tinsert_body list-block">                
+          <input type="text" name="video" placeholder="粘贴您复制的腾讯视频网址">        
+        </div>            
+        <div class="boxCheck2 tinsert_foot">                
+          <button type="button" class="boxYes" pid="2">提交</button>                
+          <button type="button" class="boxNo" pid="2">取消</button>            
+        </div>        
+      </div> 
+
       <!-- 添加图片 -->
-      <div class="popup popup-img">                      
+      <div class="popup popup-img">
         <div class="content">                
           <header class="wz_wz_head">
             <a href="javascript:;" class="header-return close-popup">
@@ -226,7 +340,7 @@
       </div>  
 
       <!-- 添加文章 -->
-      <div class="popup popup-wz">                      
+      <div class="popup popup-wz">
         <div class="content">                
           <header class="wz_wz_head">
             <a href="javascript:;" class="header-return close-popup">
@@ -240,7 +354,7 @@
           <section class="mp-container mp-tab-wrap">     
             <div class="user-vein-wrap">
               <div class="mp-menu mp-menu_two mp-tab">
-                <a href="myArticle.html" class="waves active">
+                <a href="javascript:;" class="waves active">
                   <i class="icon-article mp-color9"></i>
                   <span>我的文章</span>
                 </a>
@@ -323,358 +437,11 @@
             </div>
           </section>                         
         </div>        
-      </div>     
+      </div>
+
     </div>
-    <script>
-      $(function(){
-        /* 文章设置 */ 
-        // 点击选择文章
-        $('.wz_wz').on('click','li',function(){
-            $(this).toggleClass('active');
-        });
-        // 点击选择图片
-        $('.wz_img_list').on('click','input',function(){
-            $(this).parents("li:not(.more)").toggleClass('active');
-        });
-        // 第一次添加组件的内容 
-        $('.page-a').on('click','[data-action="empty-addColumn"]',function(){
-          console.log(222);
-          $('#insertType').val('0');
-          initMethod.showPopChooseType();
-          return false;
-        });
-        // 隐藏--添加组件弹出框 
-        $('.mp-main').on('click','.closebtn',function(){
-          initMethod.hidePopChooseType();
-          return false;
-        });
-        // 添加组件--选择类型
-        $('.scrollbox-ul li').on('click',function(){
-/*          if ($(this).hasClass('checked')) {
-            $(this).removeClass('checked');
-          } else {
-            $(this).addClass('checked');
-          }
-          return false;*/
-          var item = $(this);
-          initMethod.comfirmInsertItem(item);
-        });
-        // 添加组件--插入内容 
-        /*$('#popUp-insertType').on('click','.insert-item-btn',function(){
-          initMethod.comfirmInsertItem();
-        });*/
-         // 插入组件内容 
-        $('.page-a').on('click','.addtool-btn',function(){
-            // 设置标识为1，表示不是首次添加组件
-            $('#insertType').val('1');
-            // 判断点击的是组件上面按钮还是下面的按钮
-            if($(this).hasClass('nextAddbtn')){
-                compentInsertType = 1;
-            }else{
-                compentInsertType = -1;
-            }
-            initMethod.showPopChooseType();
-            return false;
-        });
-        // 点击组件显示上移／下移／移出 弹出框 
-        $('.page-a').on('click','.show-compent',function(){
-            compentClickFg = 1;
-            var obj = $(this);
-            var deleteFg = obj.find('.statafg').attr('data-delete');
-            if(!obj.hasClass('cur')){
-                initMethod.showBtOperatebox(obj,deleteFg);
-            }
-            setTimeout(function(){
-                var curAssemblyTop = $('.page-a').scrollTop();
-                if(obj.offset().top < 50 ){
-                    console.log('上滚顶条');
-                    var curScrollTop = curAssemblyTop+obj.offset().top > 280 ? curAssemblyTop+obj.offset().top-90 :curAssemblyTop+obj.offset().top-66;
-                    $('.page-a').scrollTop(curScrollTop); /*滚动条的位置上移超出头部的距离*/
-                }else if(obj.offset().top + obj.height() > $('.mp-container').height()-95){
-                    $('.page-a').scrollTop(curAssemblyTop+obj.offset().top-120); /*滚动条的位置上移超出头部的距离*/
-                }
-            },1)
-        });
-        // 点击跳转编辑
-        $('.page-a').on('click','#miniDetail .popReplacebox',function(){
-            var obj = $(this).parent();
-            var goUrl =  obj.attr('data-edit');
-            console.log(goUrl);
-            //var url = obj.attr('data-url');
-            //operateRemoteData.jumpTopage(url,editFg);
-            //noticeTis("老板，编辑还没搞明白怎么做");
-            initMethod.goHtml(goUrl);
-        });
-        // 滚动条滚动消失组件编辑栏
-        $('.page-a').on('scroll',function(){
-            if( curHandle != 1 && compentClickFg != 1){
-                initMethod.hideBtOperatebox();
-            }
-            curHandle = 0;
-            compentClickFg = 0;
-            compentInsertType = 0;
-            return false;
-        });
-        // 点击组件删除
-        $('#miniDetail').on('click','.show-compent.cur .btfix-Pop-operate .closeboxbtn ',function(){
-            var obj = $(this).parent().parent();
-            confirm("确定要删除该组件？",initMethod.deleteCompent,obj);
-            return false;
-        });
-        // 点击组件上移
-        $('#miniDetail').on('click','.show-compent.cur .btfix-Pop-operate .moveUp',function(){
-            var obj = $(this).parent().parent().parent();
-            initMethod.assemblyMoveup(obj);
-            curHandle = 1;
-            return false;
-        });
-        // 点击组件下移
-        $('#miniDetail').on('click','.show-compent.cur .btfix-Pop-operate .moveDown',function(){
-            var obj = $(this).parent().parent().parent();
-            initMethod.assemblyMoveDown(obj);
-            curHandle = 1;
-            return false;
-        });
-      });
 
-
-      // 此处开始初始化
-      var curHandle = 0; // 操作代码
-      var compentClickFg = 0; // 是否处于点击状态
-      var compentInsertType = 0; // 1:表示插入组件背后 -1:表示插入在组件之前
-      var initMethod={
-        // 展示组件底部编辑栏
-        showBtOperatebox:function(obj,deleteFg){ 
-            obj.siblings('.show-compent').find('.btfix-Pop-operate,.popReplacebox').remove();
-            $('.addtool-btn').remove();
-            obj.siblings('.show-compent').removeClass('cur');
-            var operateHtml ='';
-            operateHtml +='<div class="btfix-Pop-operate">';
-            if(deleteFg != 1){
-                operateHtml += '<span class="closeboxbtn fr"><i class="icon-wz_close"></i></span>';
-            }
-            operateHtml += '<span class="fl">';
-            operateHtml += '<em class="moveUp"><i class="icon-wz_up"></i>上移</em>';
-            operateHtml += '<em class="moveDown"><i class="icon-wz_down"></i>下移</em>';
-            operateHtml += '</span>';
-            operateHtml += '</div>';
-            if(deleteFg == 1){
-                operateHtml += '<div class="popReplacebox turnbox flex-center">';
-            }else{
-                operateHtml += '<div class="popReplacebox flex-center">';
-            }
-            operateHtml += '<div>';
-            if(obj.hasClass('reprint')){
-                operateHtml += '<p>转载内容无法编辑</p><p>(过长的组件内容已自动收缩)</p>';
-            }else{
-                operateHtml += '<p>编辑</p>';
-            }
-            operateHtml += '</div>';
-            operateHtml += '</div>';
-            var addToolPreBtn =''
-                +'<div class="addtool-btn preAddbtn">'
-                +   '<i class="icon-minpage icon-add"></i>'
-                +'</div>';
-            var addToolNextBtn = ''
-                +'<div class="addtool-btn nextAddbtn">'
-                +   '<i class="icon-minpage icon-add"></i>'
-                +'</div>';
-
-            if(obj.find('.btEditfixBox').length == 0){
-                if(deleteFg == 1){
-                    obj.addClass('turn cur');
-                }else{
-                    obj.addClass('cur');
-                }
-                obj.append(operateHtml);
-                $(addToolNextBtn).insertAfter(obj);
-                $(addToolPreBtn).insertBefore(obj);
-                curAssemblyScroll = $('.show-compent').offset().top;
-            }
-        },
-        //显示--选择插入类型
-        showPopChooseType:function(){ 
-          $('#popUp-insertType').addClass('active');
-        },
-        //隐藏--选择插入类型
-        hidePopChooseType:function(){ 
-          $('.minpage-popup-masks').removeClass('active');
-          $('.scrollbox-ul.fixed li').removeClass('checked');
-        },
-        comfirmInsertItem:function(item){
-          // 拿到标识
-          var pdid = item.attr('data-action');
-          console.log(pdid);
-          var insertTypeVal = compentInsertType == 1? 1:-1;
-          var obj;
-          if($('.show-compent.cur').length == 0){
-            if($('#insertType').val() == 0 ){
-              obj =  $('#miniDetail');
-            }else if($('#insertType').val() == 2 ){
-              obj =  $('#miniDetail').find('.show-compent').last();
-            }
-          }else{
-            obj = $('.show-compent.cur');
-          }
-          noticeTis("添加成功");
-          var emptyFg = $('#miniDetail .show-compent').length == 0 ? 1:-1;
-          initMethod.addModule(pdid);
-          initMethod.hidePopChooseType();
-          if(emptyFg == 1){
-            initMethod.judgeGuideOperate();
-          }
-          if($('#insertType').val() == 2 ){
-            var pageHg = $('.con').height()+200;
-            $('.page-a').scrollTop(pageHg);
-          }
-          var nextBtn = '<div class="addtool-btn nextAddbtn"><i class="icon-minpage icon-add"></i></div>';
-          $('.addtool-btn.nextAddbtn').remove();
-          $(nextBtn).insertAfter($('.show-compent.cur'));
-          //operateRemoteData.ajaxInsertModule(obj, pdid,music,insertTypeVal,success, error);
-        },
-        //构建未编辑的情况
-        miniPageModuleBulid:function(text,id,url){
-            var html = "<div class='edit-show edit-show-border show-compent'" +
-                "id=\""+id+"\"" +
-                "data=\""+id+"\"" + "data-edit=\""+url+"\">";
-            html += "<div class=\"edit-addtool\"><div class=\"txt\"><a href=\"javascript:;\" class=\"txt-href\">";
-            html += "点击编辑" + text;
-            if(text == '文字'){
-                html += '<i class="icon-wz_text mp-color5"></i>';
-            }else if(text == '图片'){
-                html += '<i class="icon-wz_img mp-color2"></i>';
-            }else if(text == '链接'){
-                html += '<i class="icon-wz_link mp-color6"></i>';
-            }else if(text == '视频'){
-                html += '<i class="icon-wz_v mp-color1"></i>';
-            }else if(text == '地图'){
-                html += '<i class="icon-wz_map mp-color2"></i>';
-            } else if(text == '音乐'){
-                html += '<i class="icon-wz_music mp-color5"></i>';
-            } else if(text == '文章'){
-                html += '<i class="icon-wz_wz mp-color2"></i>';
-            }
-            html += "</div></div></div>";
-            // 判断是否是第一次添加，第一次添加成功后隐藏大按钮
-            if($('#insertType').val() == 1 ){
-                if(compentInsertType == 1){
-                    $(html).insertBefore($('.addtool-btn.nextAddbtn'));
-                }else{
-                    $(html).insertBefore($('.addtool-btn.preAddbtn'));
-                }
-            }else{
-                $('#miniDetail').append(html);
-                $('.minpage-empty-box').hide();
-            }
-        },
-        // 添加组件
-        addModule: function (pdid, music) {
-            var idsId = parseInt(Math.random() * 1000);
-            if (pdid == 1) {
-                initMethod.miniPageModuleBulid('文字','text'+idsId,'go-text');
-            } else if (pdid == 2) {
-                initMethod.miniPageModuleBulid('图片','img'+idsId,'go-img');
-            } else if (pdid == 4) {
-                initMethod.miniPageModuleBulid('链接','link'+idsId,'go-link');
-            } else if (pdid == 3) {
-                initMethod.miniPageModuleBulid('视频','video'+idsId,'go-video');
-            } else if (pdid == 6) {
-                initMethod.miniPageModuleBulid( '地图','dt'+idsId,'go-dt');
-            } else if (pdid == "music") {
-                initMethod.miniPageModuleBulid( '音乐','music'+idsId,'go-music');
-                initMethod.addMusic();
-            } else if (pdid == 5) {
-                initMethod.miniPageModuleBulid( '文章','wz'+idsId,'go-wz');
-            }
-        },
-        // 点击组件显示操作按钮
-        judgeGuideOperate:function () { 
-            $('#miniDetail .show-compent').eq(0).trigger('click');
-        },
-        // 删除组件
-        deleteCompent:function(obj){
-            noticeTis("删除成功");
-            obj.remove();
-            $('.addtool-btn').remove();
-            if($("#miniDetail>div").length==0){
-              $('.ms-add-btn').show();
-            }
-        },
-        // 跳转到音乐
-        addMusic: function () {
-            noticeTis("选中要设置音乐");
-            //location.href = 'Music.html';
-        },
-        // 编辑跳转
-        goHtml: function (gourl) {
-          if (gourl == "go-text") {
-                noticeTis("选中要编辑文字");
-                //location.href = 'wz_text.html';
-            } else if (gourl == "go-img") {
-                noticeTis("选中要添加图片");
-                $.popup('.popup-img');
-                //location.href = 'wz_img.html';
-            } else if (gourl == "go-link") {
-                noticeTis("选中要添加链接");
-                //location.href = 'wz_link.html';
-            } else if (gourl == "go-video") {
-                noticeTis("选中要添加视频");
-                //location.href = 'wz_video.html';
-            } else if (gourl == "go-dt") {
-                noticeTis("选中要添加地图");
-                //location.href = 'wz_dt.html';
-            } else if (gourl == "go-wz") {
-                noticeTis("选中要选择文章");
-                $.popup('.popup-wz');
-                //location.href = 'wz_wz.html';
-            }
-        },
-        // 组件上移
-        assemblyMoveup:function(obj){ 
-            var curIndex = obj.index();
-            var type ="上移";
-            var data =[];
-            data.type= type;
-            data.obj = obj;
-            console.log("当前序号"+ curIndex);
-            if(curIndex == 1){
-                noticeTis("当前为第一个组件，不可上移哦！");
-                return;
-            }else{
-                var curAssemblyTop = $('.page-a').scrollTop();
-                var nextAssemblyHg = $('.show-compent.cur').prev().prev('.show-compent').height() +15;
-                var curNodeHtml = $('.addtool-btn.preAddbtn')[0].outerHTML+obj[0].outerHTML + $('.addtool-btn.nextAddbtn')[0].outerHTML; //当前节点
-                $('.addtool-btn').remove();
-                $(curNodeHtml).insertBefore(obj.prev('.show-compent'));
-                obj.remove();
-                $('.page-a').scrollTop(curAssemblyTop-nextAssemblyHg);
-            }
-        },
-        // 组件下移
-        assemblyMoveDown:function(obj){ 
-            var curIndex = obj.index();
-            var assembly = $('.show-compent').length;
-            var type ="下移";
-            var data =[];
-            data.type= type;
-            data.obj = obj;
-            if( curIndex == assembly){
-                noticeTis("当前为最后一个组件，不可下移哦！")
-            }else{
-                var curAssemblyTop = $('.page-a').scrollTop();
-                if( $('.show-compent.cur').next('.addtool-btn').length == 0){
-                    var prevAssemblyHg = $('.show-compent.cur').next('.show-compent').offset().height + 15;
-                }else{
-                    var prevAssemblyHg = $('.show-compent.cur').next().next('.show-compent').offset().height+15;
-                }
-                var curNodeHtml = $('.addtool-btn.preAddbtn')[0].outerHTML+obj[0].outerHTML + $('.addtool-btn.nextAddbtn')[0].outerHTML; //当前节点
-                $('.addtool-btn').remove();
-                $(curNodeHtml).insertAfter(obj.next('.show-compent'));
-                obj.remove();
-                $('.page-a').scrollTop(curAssemblyTop+prevAssemblyHg);
-            }
-        }
-      }
-    </script>
+    <script src="js/function.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

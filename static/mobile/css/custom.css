@@ -1,0 +1,20 @@
+/*.ucard{
+    height:216px;
+
+    background:#fff;
+    padding-top:6px;
+}
+.ucard .bt{ margin:6px 0 10px 0; height:4px; background:#2e9fb0}
+.uinfo{ position:relative}
+.uinfo .uf{ position:absolute; top:0; left:0; width:120px; height:140px;text-align:center }
+.uinfo .uf img{ width:80px; height:80px; border-radius: 100%;border:3px solid #eaeaea}
+.uinfo .uf div{ height:28px; line-height:28px;}
+.uinfo .uf .name{ font-size:18px; font-weight:600; color:#6ccc4a}
+.uinfo .uf .job{ font-weight:600; color:#ccc}*/
+ .uc{  padding:10px 0 10px 120px; background-size:40px;}
+
+.uc p{   margin:0;height:40px; line-height:40px; color:#333; padding-left:40px;}
+.uc .phone{ background:url(../img/phone.png) no-repeat 14px 0;background-size:30px;}
+.uc .qq{ background:url(../img/qq.png) no-repeat 14px 0;background-size:30px;}
+.uc .weixin{ background:url(../img/weixin.png) no-repeat 14px 0;background-size:30px;}
+/*.uc .weixin span{display:inline-block; width:40px; height:40px; float:right;background:url(../img/ewm.png) no-repeat left;background-size:30px;}*/

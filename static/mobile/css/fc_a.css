@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container .head {
+   width: 100%;
+  color: white;
+  height: 1.9rem;
+  text-align: center;
+  line-height: 1.9rem;
+  background: #2980f3;
+  font-size: 0.74074074rem;
+}
+.container .head-left {
+   width: 0.74074074rem;
+  float: left;
+  height: 0.74074074rem;
+  margin-left: 0.51851852rem;
+  margin-top: 0.11851852rem;
+}
+.container .head-left img {
+   width: 0.74074074rem;
+  height: 0.74074074rem;
+}
+.container .head-right {
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+  margin-top: 0.26666667rem;
+  float: right;
+  margin-right: 0.51851852rem;
+}
+
+.container .head-right img {
+  width: 1.03703704rem;
+  height: 1.03703704rem;
+}

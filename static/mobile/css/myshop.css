@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.head {
+  font-size: 0.74074074rem;
+  width: 100%;
+  height: 1.9rem;
+  background: #0090ff;
+  line-height: 1.9rem;
+  text-align: center;
+  font-size: 0.71111111rem;
+  color: white;
+}
+
+.head .head-left {
+  width: 0.74074074rem;
+  float: left;
+  height: 0.74074074rem;
+  margin-left: 0.51851852rem;
+  margin-top: 0.11851852rem;
+}
+.head .head-left img {
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+}
+
+.content {
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*flex-wrap: wrap;*/
+}
+.content div {
+  position:relative;
+  width: 4.59259259rem;
+  margin-top: 0.38518519rem;
+  float:left;
+  margin-left:0.4rem;
+}
+.content div img {
+  width: 4.59259259rem;
+  height: 4.59259259rem;
+}
+.content div p {
+  font-size: 0.59407407rem;
+  text-align: center;
+  color: #0090ff;
+}
+.content div div {
+  font-size: 0.45555556rem;
+  text-align: center;
+  margin-top: 0;
+}
+.content div div div {
+  height: 0.89925926rem;
+  line-height: 0.49962963rem;
+  overflow: hidden;
+}
+.content div .del {
+  width: 0.88888889rem;
+  height: 0.88888889rem;
+  background: #ff0012;
+  color: white;
+  top: -0.44444444rem;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 100;
+  right: -0.44444444rem;
+  font-size: 0.88888889rem;
+  line-height: 0.88888889rem;
+  display: none;
+}
+.add {
+  bottom: 0.2962963rem;
+  width: 1.0962963rem;
+  position: fixed;
+  left: 7.43703704rem;
+  height: 1.0962963rem;
+  border: 1px solid white;
+  border-radius: 100%;
+  background: #0090ff;
+  text-align: center;
+  overflow: hidden;
+}
+.add img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.14814815rem;
+  margin-top: 0.14814815rem;
+}
+.head-del {
+  width: 2rem;
+  height: 1.03703704rem;
+  line-height: 1.03703704rem;
+  background: #ef3240;
+  font-size: 0.4962963rem;
+  border-radius: 12px;
+  border: 1px solid #ef3240;
+  float: right;
+  position: absolute;
+  top: 0.44444444rem;
+  right: 0.44444444rem;
+  color: white;
+  text-align: center;
+}

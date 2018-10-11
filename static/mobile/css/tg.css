@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+.container .top {
+  height: 2.45925926rem;
+  width: 100%;
+  background: black;
+  color: white;
+  line-height: 2.45925926rem;
+}
+.container .top img {
+  width: 1.92592593rem;
+  height: 1.92592593rem;
+  border-radius: 100%;
+  margin-top: 0.2962963rem;
+  margin-left: 0.59259259rem;
+  float: left;
+}
+.container .top .content {
+  height: 2.45925926rem;
+  width: 9.08148148rem;
+  float: left;
+  text-align: center;
+  font-size: 0.59259259rem;
+}
+.container .top .right {
+  width: 3.55555556rem;
+  height: 100%;
+  float: right;
+  font-size: 0.59259259rem;
+  text-align: right;
+  color: white;
+  margin-right: 0.44444444rem;
+}
+.container .top .right .tct {
+  width: 100%;
+  height: 0.82962963rem;
+  margin-top: 0.20740741rem;
+  background: #d5b345;
+  border-radius: 20px;
+  line-height: 0.82962963rem;
+  float: left;
+}
+.container .top .right .tct div {
+  float: right;
+}
+.container .top .right .tct img {
+  width: 0.59259259rem;
+  height: 0.59259259rem;
+  float: left;
+  display: inline-block;
+  margin: 0;
+  border-radius: 0px;
+  margin-top: 0.14814815rem;
+  margin-left: 0.20740741rem;
+}
+.container .top .right .tcb {
+  float: left;
+  width: 100%;
+  height: 0.82962963rem;
+  line-height: 0.82962963rem;
+  margin-top: 0.20740741rem;
+  background: #d5b345;
+  border-radius: 20px;
+}
+.container .top .right .tcb img {
+  width: 0.59259259rem;
+  height: 0.59259259rem;
+  display: inline-block;
+  margin: 0;
+  border-radius: 0px;
+  float: left;
+  margin-top: 0.14814815rem;
+  margin-left: 0.20740741rem;
+}
+.container .banner {
+  width: 100%;
+  height: 1.77777778rem;
+  display: flex;
+}
+.container .banner div {
+  width: 25%;
+  text-align: center;
+  font-size: 0.66666667rem;
+  line-height: 1.77777778rem;
+  background: #252525;
+  color: #d5b345;
+  box-sizing: border-box;
+}
+.container .banner .active1 {
+  color: white;
+  background: #d5b345;
+}
+.container .content {
+  width: 100%;
+}
+.container .content .item {
+  width: 14.78518519rem;
+  margin: 0 auto;
+  border-bottom: solid #e6e6e6 1px;
+  height: 2.51851852rem;
+}
+.container .content .item .img {
+  float: left;
+  width: 3.4962963rem;
+  height: 2.51851852rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content .item .img div img {
+  width: 3.11111111rem;
+  height: 1.98518519rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.23703704rem;
+}
+.container .content .item .text {
+  margin-left: 0.53333333rem;
+  float: left;
+  width: 10.6962963rem;
+  height: 100%;
+  overflow: hidden;
+}
+.container .content .item .text .title {
+  margin-top: 0.2962963rem;
+  font-size: 0.74074074rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .content .item .text .details {
+  color: #999999;
+  font-size: 0.44444444rem;
+}
+.container .content .item .text .details .d-left {
+  height: 0.85925926rem;
+  float: left;
+  width: 7.40740741rem;
+  margin-top: 0.2962963rem;
+}
+.container .content .item .text .details .d-left span {
+  margin-left: 0.14814815rem;
+}
+.container .content .item .text .details .section {
+  float: right;
+  width: 2.54814815rem;
+  height: 0.85925926rem;
+  border: 1px solid;
+  line-height: 0.85925926rem;
+  margin-top: 0.14814815rem;
+  text-align: center;
+  border-radius: 6px;
+}
+.container .myshop {
+  width: 100%;
+  height: 1.98518519rem;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid #ccc;
+  font-size: 0.65185185rem;
+}
+.container .myshop .myshop-left {
+  float: left;
+  overflow: hidden;
+  margin-left: 0.47407407rem;
+}
+.container .myshop .myshop-left img {
+  width: 1.24444444rem;
+  height: 1.24444444rem;
+  margin-top: 0.37037037rem;
+  display: inline-block;
+  float: left;
+}
+.container .myshop .myshop-left span {
+  display: inline-block;
+  height: 1.98518519rem;
+  line-height: 1.98518519rem;
+  float: left;
+  margin-left: 0.2962963rem;
+}
+.container .myshop .myshop-right {
+  float: right;
+  line-height: 1.27407407rem;
+  margin-right: 0.47407407rem;
+  background: #3776f2;
+  color: white;
+  width: 4.02962963rem;
+  font-size: 0.47407407rem;
+  height: 1.27407407rem;
+  text-align: center;
+  margin-top: 0.35555556rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.container .myshop .myshop-right a {
+  text-decoration: none;
+  color: white;
+}
+.container .ms {
+  display: flex;
+  margin-top: 0.35555556rem;
+  justify-content: space-around;
+}
+.container .ms div {
+  width: 4.59259259rem;
+  height: 7.85185185rem;
+}
+.container .ms div img {
+  width: 4.59259259rem;
+  height: 4.59259259rem;
+}
+.container .ms div p {
+  color: #5ba4d2;
+  font-size: 0.59259259rem;
+  text-align: center;
+}
+.container .ms div span {
+  color: 5ba4d2;
+}
+.container .ms div div {
+  font-size: 0.62222222rem;
+  text-align: center;
+  height: 1.77777778rem;
+  line-height: 0.88888889rem;
+  margin-top: 0.2962963rem;
+}
+.container .content-wem {
+  width: 100%;
+  height: 11.11111111rem;
+  margin-bottom: 4.14814815rem;
+}
+.container .content-wem img {
+  height: 7.82222222rem;
+  width: 7.97037037rem;
+  margin: 0 auto;
+  display: block;
+}
+.container .content-wem div {
+  text-align: center;
+}
+.container .content-wem div:nth-of-type(1) {
+  height: 1.3037037rem;
+  line-height: 1.3037037rem;
+  font-size: 0.85925926rem;
+  font-weight: 800;
+}
+.container .content-wem div:nth-of-type(2) {
+  height: 0.88888889rem;
+  line-height: 0.88888889rem;
+  font-size: 0.62222222rem;
+}
+.container .content-wem div:nth-of-type(3) {
+  margin-top: 1.03703704rem;
+  height: 0.88888889rem;
+  line-height: 0.88888889rem;
+  font-size: 0.47407407rem;
+  color: #8f8f8f;
+}
+.container .bottom {
+  display: flex;
+  height: 2.25185185rem;
+  padding-right: 0.23703704rem;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+.container .bottom a {
+  display: block;
+  width: 20%;
+  box-sizing: border-box;
+  color: #d5b345;
+}
+.container .bottom a img {
+  width: 1.18518519rem;
+  height: 1.18518519rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.23703704rem;
+}
+.container .bottom a p {
+  font-size: 0.44444444rem;
+  text-align: center;
+}
+.container .bottom a .img-center {
+  width: 2.22222222rem;
+  height: 2.22222222rem;
+  position: relative;
+  top: -1.03703704rem;
+}
+.container .bottom a .text-center {
+  position: relative;
+  top: -1.03703704rem;
+}

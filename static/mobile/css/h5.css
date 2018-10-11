@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+.content {
+  width: 100%;
+}
+.content a {
+  display: block;
+  width: 6.69896194rem;
+  height: 6.69896194rem;
+  float: left;
+  margin-left: 0.94117647rem;
+  margin-top: 0.77508651rem;
+  position: relative;
+}
+.content a p {
+  height: 0.77508651rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.44290657rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 0.77508651rem;
+}

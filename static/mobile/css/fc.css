@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container .head {
+  width: 100%;
+  color: white;
+  height: 2.07407407rem;
+  text-align: center;
+  line-height: 2.07407407rem;
+  background: #2980f3;
+  font-size: 0.74074074rem;
+}
+.container .head-left {
+  width: 0.74074074rem;
+  float: left;
+  height: 0.74074074rem;
+  margin-left: 0.51851852rem;
+  margin-top: 0.11851852rem;
+}
+.container .head-left img {
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+}
+.container .head-right {
+  width: 0.74074074rem;
+  height: 0.74074074rem;
+  margin-top: 0.26666667rem;
+  float: right;
+  margin-right: 0.51851852rem;
+}
+.container .head-right {
+  width: 1.03703704rem;
+  height: 1.03703704rem;
+  margin-top: 0.23703704rem;
+  float: right;
+  margin-right: 0.51851852rem;
+}
+.container .head-right img {
+  width: 1.03703704rem;
+  height: 1.03703704rem;
+}
+.container .content {
+  width: 100%;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+.container .content .item {
+  border-radius: 6px;
+  width: 15.55555556rem;
+  height: 8.74074074rem;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 0.8rem;
+  box-shadow: 0 2px 2px #ccc;
+  background: #ffffff;
+}
+.container .content .item .item-top {
+  height: 1.62962963rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 0.74074074rem;
+  line-height: 1.62962963rem;
+  color: #000000;
+  font-weight: 600;
+}
+.container .content .item .item-img {
+  width: 14.34074074rem;
+  margin: 0 auto;
+}
+.container .content .item .item-img div {
+  margin-right: 0.32592593rem;
+  margin-top: 0.2962963rem;
+  float: left;
+  height: 4.44444444rem;
+  width: 4.44444444rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.container .content .item .item-img div img {
+  width: 4.44444444rem;
+  height: 4.44444444rem;
+}
+.container .content .item .item-img .item-bottom {
+  height: 1.92592593rem;
+  line-height: 1.92592593rem;
+  font-size: 0.51851852rem;
+  width: 96%;
+  color: #656565;
+  line-height: 1.92592593rem;
+}
+.container .content .item .item-img .item-bottom button {
+  width: 60px;
+  height: 30px;
+  background: #2980f3;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: white;
+  float: right;
+  border-radius: 4px;
+  margin-top: 0.17777778rem;
+}
+.add {
+  bottom: 0.2962963rem;
+  width: 1.0962963rem;
+  position: fixed;
+  left: 7.43703704rem;
+  height: 1.0962963rem;
+  border: 1px solid white;
+  border-radius: 100%;
+  background: #0090ff;
+  text-align: center;
+  overflow: hidden;
+}
+.add img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.14814815rem;
+  margin-top: 0.14814815rem;
+}

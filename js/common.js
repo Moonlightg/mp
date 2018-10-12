@@ -10,6 +10,40 @@ $(function(){
     $('.wz_img_list').on('click','input',function(){
         $(this).parents("li:not(.more)").toggleClass('active');
     });
+    // 确认添加图片
+    $('.add-img').on('click',function(){
+        var id = $(this).attr("id");
+        // 查询所有 选择的图片
+        var comps = $('.wz_img_list').find('.active');
+        var imgurl="";//各个图片的url
+        // 收集所有要提交 图片的url
+        for(var c=0; c < $(comps).length;c++)
+        {
+            imgurl += $(comps[c]).attr('data-img-src')+",";
+        }
+        //删除最后一个无效的 逗号
+        imgurl = imgurl.substring(0, imgurl.lastIndexOf(","));
+        var str = imgurl.split(",");
+        var html = '';
+        var htmls = '';
+        for(var i=0;i<str.length;i++){
+            //alert(str[i]);
+            str[i];
+            html += "<div class=\"img-item\"><img src=\""+str[i]+"\"/></div>";
+        }
+        //增加一个图片显示格式的标识（1，2，3，分别表示一张图，两张图，大于等于3张图）
+        if(str.length == 1){
+            htmls += "<div class=\"wz-item img-one\">"+html+"</div>";
+        } else if (str.length == 2){
+            htmls += "<div class=\"wz-item img-two\">"+html+"</div>";
+        } else{
+            htmls += "<div class=\"wz-item img-sum\">"+html+"</div>";
+        }
+        $('#'+id).append(htmls);
+        noticeTis("添加成功");
+        $('#'+id+'>'+'.edit-addtool').remove();
+        $.closeModal('.popup-img');
+    });
     // 第一次添加组件的内容 
     $('.page-a').on('click','[data-action="empty-addColumn"]',function(){
       console.log(222);
@@ -108,7 +142,33 @@ $(function(){
         return false;
     });
 
-    //提交插入或者修改文字
+    // 文本面板控件 
+    $('.tinsert_hl ul li').click(function(){
+        var pid=$(this).attr('pid');
+        textsub(parseInt(pid));
+    })
+
+    // 背景颜色
+    $('.bgcolor ul li').click(function(){
+         textstyle(1,$(this));
+    })
+
+    // 字体颜色
+    $('.color ul li').click(function(){
+        textstyle(2,$(this));
+    })
+
+    // 字体大小
+    $('.check_size ul li').click(function(){
+        textstyle(3,$(this));
+    })
+
+    // 隐藏编辑框 （包括插入 及修改);
+    $('.boxNo').click(function(){
+        var pid=$(this).attr('pid');
+        hidebox(pid);
+    })
+    // 提交插入或者修改文字
     $('.boxYes').click(function(){
         instrd(parseInt($(this).attr('pid')));
         initMethod.hideBtOperatebox();
@@ -134,8 +194,8 @@ var initMethod={
             operateHtml += '<span class="closeboxbtn fr"><i class="icon-wz_close"></i></span>';
         }
         operateHtml += '<span class="fl">';
-        operateHtml += '<em class="moveUp"><i class="icon-wz_up"></i>上移</em>';
-        operateHtml += '<em class="moveDown"><i class="icon-wz_down"></i>下移</em>';
+        operateHtml += '<em class="moveUp"><i class="icon-wz_up"></i></em>';
+        operateHtml += '<em class="moveDown"><i class="icon-wz_down"></i></em>';
         operateHtml += '</span>';
         operateHtml += '</div>';
         if(deleteFg == 1){
@@ -297,13 +357,12 @@ var initMethod={
     // 编辑跳转
     goHtml: function (gourl,goid,goType) {
       if (gourl == "go-text") {
-            noticeTis("选中要编辑文字");
             word(1,goid);
         } else if (gourl == "go-text" && goType == 2) {
           word(2,goid);
         } else if (gourl == "go-img") {
-            noticeTis("选中要添加图片");
             $.popup('.popup-img');
+            $('.add-img').attr("id",goid);
             //location.href = 'wz_img.html';
         } else if (gourl == "go-link") {
             noticeTis("选中要添加链接");

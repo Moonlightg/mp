@@ -18,7 +18,12 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+    <style type="text/css">
+      .wz-item {
+        padding: 10px;
+        line-height: 180%;
+      }
+    </style>
   </head>
   <body>
     <div id="app" class="mp-main">
@@ -269,7 +274,7 @@
               取消
             </a>
             <p class="header-tit">添加图片</p>
-            <a href="javascript:;" class="header-return" style="color: #068bfe;">
+            <a href="javascript:;" class="header-return add-img" style="color: #068bfe;">
               确定
             </a>
           </header>
@@ -280,55 +285,55 @@
                 <span>上传图片</span>
                 <input type="file" id="file" name="file" value="" accept="images/*">
               </li>
-              <li class="active">
+              <li data-img-src="images/wz3.jpg" class="active">
                 <img src="images/wz3.jpg">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" checked="" name="img1"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/wz3.jpg">
                 <img src="images/wz3.jpg">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img2"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/user.jpg">
                 <img src="images/user.jpg">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img3"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/wz3.jpg">
                 <img src="images/wz3.jpg">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img4"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/wz3.jpg">
                 <img src="images/wz3.jpg">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img5"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/user4.png">
                 <img src="images/user4.png">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img2"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/user3.png">
                 <img src="images/user3.png">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img3"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/user.jpg">
                 <img src="images/user.jpg">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img4"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li>
+              <li data-img-src="images/user3.jng">
                 <img src="images/user3.png">
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img5"><i class="bui-checkbox"></i>

@@ -171,3 +171,81 @@ function popInputbox(options){
     }
   });
 }
+
+//文字编辑面板 子面板
+function textsub(e){
+   var m=$('.text_word');
+    switch(e){
+        case 1:
+            if(m.css('font-weight')=="bold"){
+                m.css('font-weight','');
+            } else{
+                m.css('font-weight','bold');
+            }
+        break;
+        case 2:
+            $('.text_color').show();
+        break;
+        case 3:
+            $('.text_bgcolor').show();
+        break;
+        case 4:
+            $('.text_size').show();
+        break;
+        case 5:
+            m.css('textAlign','left');
+        break;
+        case 6:
+            m.css('textAlign','center');
+        break;
+        case 7:
+            m.css('textAlign','right');
+        break;
+        default:
+            m.val('');
+            m.removeAttr('style');
+            $('.nowcolor').css("background",'rgb(51, 51, 51)');
+    }
+}
+
+//取消 输入框 或者video 输入
+
+function hidebox(i){
+    switch(parseInt(i)){
+        case 1:
+            $('.text_insert').hide();
+        break;
+        case 2:
+            $('.text_video').hide();
+        case 3:
+            $('.text_url').hide();
+        case 4:
+            $('.text_title').hide();
+        break;
+    }
+    xg=false;
+    $('.mask').hide();
+}
+
+// 文字编辑面板 子面板 事件
+function textstyle(i,t){
+
+    switch(i){
+        case 1:
+            $('.text_word').css('background',t.children('span').css('backgroundColor'));
+            $('.text_bgcolor').hide();
+        break;
+        case 2:
+            var c=t.children('span').css('backgroundColor');
+            $('.text_word').css('color',c);
+            $('.nowcolor').css("background",c);
+            $('.text_color').hide();
+        break;
+        case 3:
+            $('.text_word').css('fontSize',t.html());
+            $('.text_size').hide();
+        break;
+        case 4:
+            $('.text_word').removeAttr('style').val('');
+    }
+}

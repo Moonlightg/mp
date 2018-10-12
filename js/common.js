@@ -42,6 +42,7 @@ $(function(){
         $('#'+id).append(htmls);
         noticeTis("添加成功");
         $('#'+id+'>'+'.edit-addtool').remove();
+        initMethod.hideBtOperatebox();
         $.closeModal('.popup-img');
     });
     // 第一次添加组件的内容 
@@ -356,7 +357,7 @@ var initMethod={
     },
     // 编辑跳转
     goHtml: function (gourl,goid,goType) {
-      if (gourl == "go-text") {
+      if (gourl == "go-text" && goType == 1) {
             word(1,goid);
         } else if (gourl == "go-text" && goType == 2) {
           word(2,goid);

@@ -477,5 +477,14 @@
 
     <script src="js/function.js"></script>
     <script src="js/common.js"></script>
+    <script>
+      // 文章列表tab切换
+      var $tab_li = $('.mp-tab a');
+      $tab_li.click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var index = $tab_li.index(this);
+        $(".swiper-wrapper > .swiper-slide").eq(index).show().siblings().hide();
+      });
+    </script>
   </body>
 </html>

@@ -1065,7 +1065,7 @@ label.bui-switch-label.bui-switch-animbg input:checked + .bui-switch:before {
 }
 .noticeTis-toast {
   position: absolute;
-  z-index: 7;
+  z-index: 70000;
   text-align: center;
   top: 50%;
   width: 100%;
@@ -3681,6 +3681,7 @@ h3.circle-name {
   justify-content: center;
   width: 5rem;
   height: 5rem;
+  line-height: 5rem;
   margin: 2rem auto;
   border-radius: 5rem;
   background: #000;

@@ -308,7 +308,6 @@ var initMethod={
         }else{
             $('#miniDetail').append(html);
             item = false;
-            $('.minpage-empty-box').hide();
         }
     },
     // 添加组件
@@ -346,14 +345,12 @@ var initMethod={
         noticeTis("删除成功");
         obj.remove();
         $('.addtool-btn').remove();
-        if($("#miniDetail>div").length==0){
-          $('.ms-add-btn').show();
-        }
+        $('.ms-add-btn').show();
     },
     // 跳转到音乐
     addMusic: function () {
         noticeTis("选中要设置音乐");
-        //location.href = 'Music.html';
+        location.href = 'Music.html';
     },
     // 编辑跳转
     goHtml: function (gourl,goid,goType) {
@@ -364,13 +361,12 @@ var initMethod={
         } else if (gourl == "go-img") {
             $.popup('.popup-img');
             $('.add-img').attr("id",goid);
-            //location.href = 'wz_img.html';
         } else if (gourl == "go-link") {
-            noticeTis("选中要添加链接");
-            //location.href = 'wz_link.html';
+            $('.text_url').show();
+            $('.mask').show();
         } else if (gourl == "go-video") {
-            noticeTis("选中要添加视频");
-            //location.href = 'wz_video.html';
+            $('.text_video').show();
+            $('.mask').show();
         } else if (gourl == "go-dt") {
             noticeTis("选中要添加地图");
             //location.href = 'wz_dt.html';
@@ -507,11 +503,11 @@ function instrd(i){
         case 2:  //插入视频
         var video=$('input[name=video]').val();
         if(video==''){
-            $.toast('视频地址不能为空');
+            noticeTis('视频地址不能为空');
             return false;
         }
         if(video.search(/v\.qq\.com/)<0){
-            $.toast('请输入有效的腾讯视频网址');
+            noticeTis('请输入有效的腾讯视频网址');
             return false;
         }
         if(video.search(/vid=/)>0){
@@ -519,12 +515,11 @@ function instrd(i){
         } else{
             var v=video.substr(video.length-16,11);
         }
-        var s='<p class="wz-item" style="max-width:100%; margin:4px"><iframe frameborder="0" src="//v.qq.com/iframe/player.html?vid='+v+'&amp;auto=0" style="z-index: 1; width: 100% ! important; height: 231.75px ! important; overflow: hidden;" class="video_iframe" scrolling="no"></iframe><span class="edit-video-title">点击这里可编辑视频信息！</span></p>';
+        var s='<p class="wz-item" style="max-width:100%; margin:4px"><iframe frameborder="0" src="https://v.qq.com/iframe/player.html?vid='+v+'&amp;auto=0" style="z-index: 1; width: 100% ! important; height: 231.75px ! important; overflow: hidden;" class="video_iframe" scrolling="no"></iframe><span class="edit-video-title">点击这里可编辑视频信息！</span></p>';
         if(item){
             item.parent().append(s);
             console.log("didididi:"+item.html());
             item.remove();
-            //item.removeClass('eing');
             item=false;
             $('#selp').remove();
         } else{
@@ -538,15 +533,15 @@ function instrd(i){
         var url=$('input[name=text_url]').val();
         var url_name=$('input[name=text_name]').val();
         if(url==''){
-            $.toast('链接不能为空!');
+            noticeTis('链接不能为空!');
             return false;
         }
         if(url_name==''){
-            $.toast('链接名称不能为空!');
+            noticeTis('链接名称不能为空!');
             return false;
         }
         if( url.match(/http:\/\/.+/)==null){
-            $.toast('您输入的网址格式不正确');
+            noticeTis('您输入的网址格式不正确');
             return false;
         }
         $('.text_url').hide();

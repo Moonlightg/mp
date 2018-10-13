@@ -19,9 +19,26 @@
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
+      .edit-show { padding: 5px 0px!important;}
       .wz-item {
-        padding: 10px;
+        padding: 10px 0;
         line-height: 180%;
+      }
+      .img-two {
+        display: flex;
+      }
+      .img-two .img-item{
+        width: 45%;
+        margin-right: 2.4%;
+      }
+      .img-sum {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+      }
+      .img-sum .img-item{
+        width: 32%;
+        margin-bottom: 2.4%;
       }
     </style>
   </head>
@@ -156,6 +173,18 @@
       </section>
       <!-- 背景层 -->
       <div class="mask"></div>
+      <!-- 添加链接 -->
+      <div class="fixedDiv text_url">            
+        <div class="tinsert_head">插入链接</div>            
+        <div class="tinsert_body list-block">
+          <input type="text" name="text_url" placeholder="请输入或者粘贴您的链接">       
+          <input type="text" name="text_name" placeholder="请输入或者链接名称">       
+        </div>            
+        <div class="boxCheck2 tinsert_foot">                
+          <button type="button" class="boxYes" pid="3">提交</button>                
+          <button type="button" class="boxNo" pid="3">取消</button>            
+        </div>        
+      </div>  
       <!-- 添加文本 -->
       <div class="fixedDiv text_insert">            
         <div class="tinsert_head">                

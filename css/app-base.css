@@ -1969,7 +1969,10 @@ footer .mp-popup.active {
   position: relative;
   padding-right: 7rem;
 }
-.article-list.wz_wz li .wz_wz_btn {
+.article-list.wz_wz li.active .wz_wz_btn {
+  display: block;
+}
+.wz_wz_btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -1980,9 +1983,6 @@ footer .mp-popup.active {
   color: #fff;
   background: #038bfe;
   display: none;
-}
-.article-list.wz_wz li.active .wz_wz_btn {
-  display: block;
 }
 .article-list-start {
   width: 4.8rem;
@@ -3800,6 +3800,9 @@ h3.circle-name {
   margin-top: 23px;
 }
 .edit-addtool i {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
   font-size: 1.6rem;
   position: absolute;
   top: 2px;

@@ -4,7 +4,7 @@ $(function(){
     /* 文章设置 */ 
     // 点击选择文章
     $('.wz_wz').on('click','li',function(){
-        $(this).toggleClass('active');
+        $(this).toggleClass('active').siblings().removeClass('active');
     });
     // 点击选择图片
     $('.wz_img_list').on('click','input',function(){
@@ -12,7 +12,7 @@ $(function(){
     });
     // 确认添加图片
     $('.add-img').on('click',function(){
-        var id = $(this).attr("id");
+        var id = $(this).attr("pid");
         // 查询所有 选择的图片
         var comps = $('.wz_img_list').find('.active');
         var imgurl="";//各个图片的url
@@ -27,7 +27,6 @@ $(function(){
         var html = '';
         var htmls = '';
         for(var i=0;i<str.length;i++){
-            //alert(str[i]);
             str[i];
             html += "<div class=\"img-item\"><img src=\""+str[i]+"\"/></div>";
         }
@@ -39,11 +38,44 @@ $(function(){
         } else{
             htmls += "<div class=\"wz-item img-sum\">"+html+"</div>";
         }
+        // 每次添加前先清空已添加的图片，保证唯一id下只存在一组图片
+        $('#'+id).empty();
         $('#'+id).append(htmls);
         noticeTis("添加成功");
         $('#'+id+'>'+'.edit-addtool').remove();
         initMethod.hideBtOperatebox();
         $.closeModal('.popup-img');
+    });
+
+    // 确认添加文章
+    $('.add-article').on('click',function(){
+        var id = $(this).attr("pid");
+        // 查询所有 选择的文章
+        var comps = $('.article-list').find('.active');
+        var article = "";//各个文章的内容
+        // 收集所有要提交 文章的内容
+        for(var c=0; c < $(comps).length;c++)
+        {
+            article += $(comps[c]).not(".wz_wz_btn").html()+",";
+        }
+        //删除最后一个无效的 逗号
+        article = article.substring(0, article.lastIndexOf(","));
+        var str = article.split(",");
+        var html = '';
+        var htmls = '';
+        for(var i=0;i<str.length;i++){
+            str[i];
+            html += "<li>"+str[i]+"</li>";
+        }
+        htmls += "<div class=\"wz-item\"><ul class=\"article-list\">"+html+"</ul></div>";
+        // 每次添加前先清空已添加的文章，保证唯一id下只存在一篇文章
+        $('#'+id).empty();
+        $('#'+id).append(htmls);
+        noticeTis("添加成功");
+        $('#'+id+'>'+'.edit-addtool').remove();
+        initMethod.hideBtOperatebox();
+        $.closeModal('.popup-wz');
+
     });
     // 第一次添加组件的内容 
     $('.page-a').on('click','[data-action="empty-addColumn"]',function(){
@@ -360,7 +392,7 @@ var initMethod={
           word(2,goid);
         } else if (gourl == "go-img") {
             $.popup('.popup-img');
-            $('.add-img').attr("id",goid);
+            $('.add-img').attr("pid",goid);
         } else if (gourl == "go-link") {
             $('.text_url').show();
             $('.mask').show();
@@ -373,7 +405,7 @@ var initMethod={
         } else if (gourl == "go-wz") {
             noticeTis("选中要选择文章");
             $.popup('.popup-wz');
-            //location.href = 'wz_wz.html';
+            $('.add-article').attr("pid",goid);
         }
     },
     // 组件上移

@@ -1972,6 +1972,9 @@ footer .mp-popup.active {
 .article-list.wz_wz li.active .wz_wz_btn {
   display: block;
 }
+.wz-item .article-list li {
+  border: 1px solid #eee;
+}
 .wz_wz_btn {
   position: absolute;
   top: 0;

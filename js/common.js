@@ -5,6 +5,7 @@ $(function(){
     // 点击选择文章
     $('.wz_wz').on('click','li',function(){
         $(this).toggleClass('active').siblings().removeClass('active');
+        $(this).parents('.swiper-slide').siblings().find('li').removeClass('active');
     });
     // 点击选择图片
     $('.wz_img_list').on('click','input',function(){
@@ -403,7 +404,6 @@ var initMethod={
             noticeTis("选中要添加地图");
             //location.href = 'wz_dt.html';
         } else if (gourl == "go-wz") {
-            noticeTis("选中要选择文章");
             $.popup('.popup-wz');
             $('.add-article').attr("pid",goid);
         }

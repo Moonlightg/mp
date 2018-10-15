@@ -29,13 +29,19 @@ $(function(){
         var htmls = '';
         for(var i=0;i<str.length;i++){
             str[i];
-            html += "<div class=\"img-item\"><img src=\""+str[i]+"\"/></div>";
+            html += "<div class=\"img-item\"><figure style=\"background-image:url("+str[i]+")\"><img src=\""+str[i]+"\"/></figure></div>";
         }
         //增加一个图片显示格式的标识（1，2，3，分别表示一张图，两张图，大于等于3张图）
         if(str.length == 1){
             htmls += "<div class=\"wz-item img-one\">"+html+"</div>";
         } else if (str.length == 2){
             htmls += "<div class=\"wz-item img-two\">"+html+"</div>";
+        } else if (str.length == 3){
+            htmls += "<div class=\"wz-item img-three\">"+html+"</div>";
+        } else if (str.length == 4){
+            htmls += "<div class=\"wz-item img-four\">"+html+"</div>";
+        } else if (str.length == 5){
+            htmls += "<div class=\"wz-item img-five\">"+html+"</div>";
         } else{
             htmls += "<div class=\"wz-item img-sum\">"+html+"</div>";
         }

@@ -24,22 +24,6 @@
         padding: 10px 0;
         line-height: 180%;
       }
-      .img-two {
-        display: flex;
-      }
-      .img-two .img-item{
-        width: 45%;
-        margin-right: 2.4%;
-      }
-      .img-sum {
-        display: flex;
-        justify-content: space-between;
-        flex-flow: wrap;
-      }
-      .img-sum .img-item{
-        width: 32%;
-        margin-bottom: 2.4%;
-      }
     </style>
   </head>
   <body>
@@ -308,62 +292,88 @@
             </a>
           </header>
           <section class="mp-container mp-tab-wrap">     
-            <ul class="wz_img_list">
+            <ul class="wz_img_list figure-list">
               <li class="more">
                 <i class="icon-add"></i>
                 <span>上传图片</span>
                 <input type="file" id="file" name="file" value="" accept="images/*">
               </li>
-              <li data-img-src="images/wz3.jpg" class="active">
-                <img src="images/wz3.jpg">
+              <!-- <li data-img-src="images/w1.jpg" class="active">
+                <div class="wz_img_box">
+                  <img src="images/w1.jpg">
+                </div>
+                <label class="bui-checkbox-label bui-checkbox-anim">
+                    <input type="checkbox" checked="" name="img1"><i class="bui-checkbox"></i>
+                </label>
+              </li> -->
+              <li data-img-src="images/w1.jpg" class="active">
+                <figure style="background-image:url(images/w1.jpg)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" checked="" name="img1"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li data-img-src="images/wz3.jpg">
-                <img src="images/wz3.jpg">
+              <li data-img-src="images/w2.jpg">
+                <figure style="background-image:url(images/w2.jpg)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img2"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li data-img-src="images/user.jpg">
-                <img src="images/user.jpg">
+              <li data-img-src="images/w3.jpg">
+                <figure style="background-image:url(images/w3.jpg)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img3"><i class="bui-checkbox"></i>
                 </label>
               </li>
-              <li data-img-src="images/wz3.jpg">
-                <img src="images/wz3.jpg">
+              <li data-img-src="images/w4.jpg">
+                <figure style="background-image:url(images/w4.jpg)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img4"><i class="bui-checkbox"></i>
                 </label>
               </li>
               <li data-img-src="images/wz3.jpg">
-                <img src="images/wz3.jpg">
+                <figure style="background-image:url(images/wz3.jpg)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img5"><i class="bui-checkbox"></i>
                 </label>
               </li>
               <li data-img-src="images/user4.png">
-                <img src="images/user4.png">
+                <figure style="background-image:url(images/user4.png)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img2"><i class="bui-checkbox"></i>
                 </label>
               </li>
               <li data-img-src="images/user3.png">
-                <img src="images/user3.png">
+                <figure style="background-image:url(images/user3.png)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img3"><i class="bui-checkbox"></i>
                 </label>
               </li>
               <li data-img-src="images/user.jpg">
-                <img src="images/user.jpg">
+                <figure style="background-image:url(images/user.jpg)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img4"><i class="bui-checkbox"></i>
                 </label>
               </li>
               <li data-img-src="images/user3.jng">
-                <img src="images/user3.png">
+                <figure style="background-image:url(images/user3.png)">
+                  <a href="#"></a>
+                </figure>
                 <label class="bui-checkbox-label bui-checkbox-anim">
                     <input type="checkbox" name="img5"><i class="bui-checkbox"></i>
                 </label>

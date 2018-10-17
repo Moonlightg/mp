@@ -4028,6 +4028,17 @@ h3.circle-name {
   top: 0;
   bottom: 0;
 }
+.popup-img .native-scroll {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.popup-img .footer-del {
+  line-height: 50px;
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+  color: red;
+}
 /*
  * template.less
  * v1.0 MIT License

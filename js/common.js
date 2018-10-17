@@ -54,6 +54,24 @@ $(function(){
         $.closeModal('.popup-img');
     });
 
+    // 删除选中的图片
+    $('.del-img').on('click',function(){
+        // 查询所有 选择的图片
+        var comps = $('.wz_img_list').find('.active');
+        var imgpid="";//各个图片的pid
+        // 收集所有要删除 图片的pid
+        for(var c=0; c < $(comps).length;c++)
+        {
+            imgpid += $(comps[c]).attr('pid')+",";
+        }
+        //删除最后一个无效的 逗号
+        imgpid = imgpid.substring(0, imgpid.lastIndexOf(","));
+        // comps.remove();
+        noticeTis("将要删除pid为："+imgpid+"的图片。");
+        confirm("确定要删除选中的图片？",initMethod.deleteImg,comps);
+        
+    });
+
     // 确认添加文章
     $('.add-article').on('click',function(){
         var id = $(this).attr("pid");
@@ -82,7 +100,6 @@ $(function(){
         $('#'+id+'>'+'.edit-addtool').remove();
         initMethod.hideBtOperatebox();
         $.closeModal('.popup-wz');
-
     });
     // 第一次添加组件的内容 
     $('.page-a').on('click','[data-action="empty-addColumn"]',function(){
@@ -385,6 +402,11 @@ var initMethod={
         obj.remove();
         $('.addtool-btn').remove();
         $('.ms-add-btn').show();
+    },
+    // 删除选中的图片
+    deleteImg:function(comps){
+        noticeTis("删除成功");
+        comps.remove();
     },
     // 跳转到音乐
     addMusic: function () {
